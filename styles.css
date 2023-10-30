@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+.main{
+    width: 100%;
+    background: linear-gradient(to bottom, white, #7393B3);
+    background-position: center;
+    background-size: cover;
+    height: 109vh;
+}
+
+.navbar{
+    width:1200px;
+    height: 75px;
+    margin: auto;
+}
+
+.icon{
+    width: 200px;
+    float: left;
+    height: 70px;
+}
+
+
+/*might not need this*/
+.logo{
+        color:green;
+
+}
+/*3:26*/
+
+
+.menu{
+    width: 400px;
+    float: left;
+    height: 70px;
+}
+
+/* This deals with the navigation and menu bars*/
+ul{
+float:left;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+
+
+ul li{
+    list-style: none;
+    margin-left: 90px;
+    margin-top: 20px;
+    font-size: 16px;
+}
+/*Home, About, Ministries, ETC...*/
+ul li a{
+    text-decoration: none;
+    color: green;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    transition: .5s ease-in-out;
+}
+/*transition hovering color*/
+ul li a:hover{
+    color: rgb(214, 193, 0);
+}
