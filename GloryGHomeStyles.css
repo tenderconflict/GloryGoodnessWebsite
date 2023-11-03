@@ -9,8 +9,11 @@
 
 .main{
     width: 100%;
-    background: linear-gradient(to bottom, white, #7393B3);
-    
+    /*    background: linear-gradient(to bottom, white, #7393B3);
+*/
+    /*background: linear-gradient(to bottom, white, rgb(49, 94, 49));*/
+
+    background: linear-gradient(to bottom, white, #4a4279);
     background-position: center;
     background-size: cover;
     height: 210vh;
