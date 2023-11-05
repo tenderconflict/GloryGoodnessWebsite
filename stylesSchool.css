@@ -1,0 +1,122 @@
+.main{
+	width: 100%;
+	height: 150vh;
+}
+.top{
+	background-color: white;
+}
+.logo{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: auto;
+	list-style: none;
+
+}
+.login{
+	display: flex;
+	justify-content: right;	
+	color: green;
+	text-decoration: none;
+	font-size: 16px;
+	padding-right: 30px;
+}
+.navbar{
+
+	width: 100%;
+	height: auto;
+	background-color: white;
+	padding: 20px;
+}
+
+.menu{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+ul{
+	float: left;
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
+ul li a{
+	color: green;
+
+}
+
+.menu ul li {
+	list-style: none;
+	text-decoration: none;
+	margin-left: 20px;
+	font-size: 16px;
+}
+
+.content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: url(School.jpg);
+	background-position: center;
+	height: 300px;
+	color: white;
+}
+
+.middle{
+	/*background: linear-gradient(to bottom, #32CD32, white );*/
+
+	   /* background: linear-gradient(to bottom, white, #7393B3);*/
+
+    background: linear-gradient(to bottom, rgb(49, 94, 49), white);
+	height: auto;
+}
+.info{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	flex-direction: column;
+	padding-left: 200px;
+	padding-right: 200px;
+	height: 30vh;
+	color: white;
+}
+
+.calendar{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-size: 40px;
+    font-family: "Arial", sans-serif;
+	color: white;
+	padding-bottom: 30px;
+}
+
+.verse {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	color: white;
+	background-color: rgb(49, 94, 49);
+	font-size: 30px;
+	padding-bottom: 30px;
+}
+.verse p2 {
+	font-size: 25px;
+}
+
+.bottomPage p{
+	width: 100%;
+    position: relative;
+	bottom: 15px;
+    background-color: #333; 
+    color: #fff;
+    text-align: center; 
+ 
+    font-size: 14px; 
+}
