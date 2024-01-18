@@ -1,7 +1,12 @@
+*{margin:0;
+padding:0;
+font-family: Arial, Helvetica, sans-serif;}
+
 .main{
 	width: 100%;
 	height: 150vh;
-}
+	background: linear-gradient(to bottom, white, #4a4279);
+background-size: cover; }
 .top{
 	background-color: white;
 }
@@ -67,8 +72,8 @@ ul li a{
 	align-items: center;
 	background-image: url(School.jpg);
 	background-position: center;
-	height: 300px;
-	color: white;
+	height: 100px;
+	color: green;
 }
 
 .middle{
@@ -76,9 +81,12 @@ ul li a{
 
 	   /* background: linear-gradient(to bottom, white, #7393B3);*/
 
-    background: linear-gradient(to bottom, rgb(49, 94, 49), white);
+    background: linear-gradient(to bottom, rgb(111, 121, 111), white);
+	
 	height: auto;
+	padding-bottom: 500px;
 }
+
 .info{
 	display: flex;
 	justify-content: center;
@@ -88,13 +96,19 @@ ul li a{
 	padding-left: 200px;
 	padding-right: 200px;
 	height: 30vh;
-	color: white;
+	color: black;
 	font-family: Arial, Helvetica, sans-serif;
 	
     
 }
-.info h1 {
-	color:green;
+.info p {
+	color:white;
+	font-family: Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	font-size: 40px;
+	padding-bottom: 10px;
+
+	
 }
 
 .calendar{
