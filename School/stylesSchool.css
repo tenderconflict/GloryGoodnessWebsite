@@ -7,21 +7,24 @@
 }
 .logo{
 	display: flex;
-	justify-content: center;
+	justify-content: left;
 	align-items: center;
 	height: auto;
 	list-style: none;
 
 }
-.login{
-	display: flex;
-	justify-content: right;	
-	color: green;
-	text-decoration: none;
-	font-size: 16px;
-	padding-right: 30px;
-	font-family: Arial, Helvetica, sans-serif;
+.login a {
+    list-style-type: none;
+    list-style: none;
+    text-decoration: none;
+    color: green;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    transition: .5s ease-in-out;
+    font-size: 18px;
+    outline: 0; 
 }
+
 .navbar{
 
 	width: 100%;
@@ -48,7 +51,7 @@ ul li a{
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: bold;
     transition: .5s ease-in-out;
-
+	text-decoration: none;
 }
 
 .menu ul li {
