@@ -181,7 +181,7 @@ ul li:hover .submenu {
     justify-content: center;
     align-items: center;
     height: 400px;
-    background-image: url(HomepageBannerImage.jpg);
+    background-image: url(../Pictures/HomepageBannerImage.jpg);
     background-position: center;
     font-size: 24px;
     font-family: "Arial", sans-serif;
