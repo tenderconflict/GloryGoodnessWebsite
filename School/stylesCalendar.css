@@ -1,8 +1,12 @@
+*{margin:0;
+padding:0;
+font-family: Arial, Helvetica, sans-serif;}
+
 .main{
 	width: 100%;
-	height: 150vh;
-	
-}
+	height: 114vh;
+	/* background: linear-gradient(to bottom, white, #4a4279); */
+background-size: cover; }
 .top{
 	background-color: white;
 }
@@ -68,9 +72,8 @@ ul li a{
 	align-items: center;
 	background-image: url(School.jpg);
 	background-position: center;
-	height: 300px;
-	color: white;
-
+	height: 100px;
+	color:#2c3093;
 }
 
 .middle{
@@ -78,10 +81,28 @@ ul li a{
 
 	   /* background: linear-gradient(to bottom, white, #7393B3);*/
 
-    background: linear-gradient(to bottom, rgb(49, 94, 49), white);
+    background: linear-gradient(to bottom, rgb(206, 212, 206), white);
+	
 	height: auto;
 	
 }
+.button {
+	border: none;
+	color: #2c3093;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 20px;
+	margin: 4px 2px;
+	cursor: pointer;
+	background-color: #dad8e4;
+	font-weight: bold;
+	letter-spacing: .1px;
+	
+  }
+  
+
 .info{
 	display: flex;
 	justify-content: center;
@@ -90,47 +111,46 @@ ul li a{
 	flex-direction: column;
 	padding-left: 200px;
 	padding-right: 200px;
-	height: auto;
-	color: white;
+	padding-top:10px;
+	height: 90vh;
+	color: black;
 	font-family: Arial, Helvetica, sans-serif;
-
+	
 	
     
 }
-.UpcomingEvents{
-	
-    width: 60%;
-    position: relative;
 
-    top: 275px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-    font-family: "Arial", sans-serif;
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    opacity: 0.9;
 
-    flex-direction: column;
+.info p {
+	color:black;
+	font-family: Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	font-size: 30px;
+	padding-top: 10px;
+
 	
+	
+
 	
 
 }
-.UpcomingEvents p{
-
-    padding: 20px;
-    font-size: 19px; 
-
+.info p2 {
+	padding-bottom: 10px;
+	padding-top:10px;
 }
-
-
+.side-by-side { 
+	display: flex; 
+	flex-direction: row; 
+	flex-wrap: wrap; 
+	justify-content: center;
+} 
+.leftrightbutton {
+	
+	padding: 10px;
+}
 
 .calendar{
-	padding-top: 200px;
+	padding-top: 20px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -140,7 +160,6 @@ ul li a{
 	color: white;
 	padding-bottom: 30px;
 	font-family: Arial, Helvetica, sans-serif;
-	
 	
   
 }
