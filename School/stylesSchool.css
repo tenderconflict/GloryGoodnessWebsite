@@ -23,21 +23,23 @@ list-style-type: none;
 list-style: none;
 text-decoration: none;
 color: green;
+
 font-family: Arial, Helvetica, sans-serif;
 font-weight: bold;
 transition: .5s ease-in-out;
 font-size: 18px;
 outline: 0; 
 }
-.schoollogin {
-padding-bottom: 25px;
-}
 
+/*this adjusts the sign in in the school box - j*/
 .schoollogin a {
+padding-left:130px;
+justify-content: center;
 list-style-type: none;
 list-style: none;
 text-decoration: none;
-color: green;
+/* color: green; */
+color:#2c3093;
 font-family: Arial, Helvetica, sans-serif;
 font-weight: bold;
 transition: .5s ease-in-out;
@@ -56,13 +58,14 @@ padding: 20px;
 .schoolmenu {
 
 
-background-color: #dddddd;
+/* background-color: #dddddd; changes the color of the side box */
 display: block;	  
-color: green;
-padding: 12px; 
+/* color:#2c3093; */
+padding-top:25px;
 text-decoration: none; 
 font-size : 20px;
 height:300px;
+justify-content: middle;
 }
 
 .menu{
@@ -84,8 +87,9 @@ margin: 0;
 padding: 0;
 }
 
-ul li a{
+.menu ul li a{
 color: green;
+
 font-family: Arial, Helvetica, sans-serif;
 font-weight: bold;
 transition: .5s ease-in-out;
@@ -101,11 +105,21 @@ font-size: 20px;
 .menu2 ul li {
 list-style: none;
 text-decoration: none;
-margin-left: 20px;
+margin-left: 5px;
 font-size: 20px;
-padding:10px;
+padding:15px;
+
 
 }
+.menu2 ul li a {
+	color:#2c3093;
+	
+font-family: Arial, Helvetica, sans-serif;
+font-weight: bold;
+transition: .5s ease-in-out;
+text-decoration: none;
+}
+
 
 .content {
 display: flex; 
@@ -162,7 +176,10 @@ color: black;
 
 .grid-container {
 display: grid;
-grid-template-columns: 300px auto;
+grid-template-columns: 200px auto;
+grid-template-rows: 50px	
+					auto;
+padding-bottom: 20px;
 
 
 
@@ -174,14 +191,26 @@ grid-template-rows: auto;
 
 
 
+
+
 }
+/*changes the color of the school side menu*/
+.grid-item:nth-child(1) {
+	background-color: #dddddd;
+	
+  }
+  .grid-item:nth-child(3) {
+	background-color: #dddddd;
+  }
 .grid-item {
 background-color: rgba(255, 255, 255, 0.8);
 
-padding: 20px;
+
 font-size: 30px;
 text-align: center;
+/* border:1px solid black; shows the border of the divs for the top part of the school website -j  */
 }
+
 .grid-item2 {
 background-color: rgba(255, 255, 255, 0.8);
 
