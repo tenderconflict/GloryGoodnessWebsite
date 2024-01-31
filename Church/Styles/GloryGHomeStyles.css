@@ -55,13 +55,17 @@
 
 
 .menu{
-    display: flex;
+    display:flex;
     justify-content: center;
     align-items: center;
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 35px;
+    
+    
 
+   /* padding-left: 30px;
+    padding-right: 30px;*/
 }
 
 /* This deals with the navigation and menu bars-TD*/
@@ -333,7 +337,7 @@ text-align: center;
 
 /*Copyright Information -TD*/
 .ContactChurch p4 {
-  width: 100%;
+  width: 20%;
     position: relative;
 bottom: -32px;
     background-color: #333; 
