@@ -39,7 +39,7 @@ list-style-type: none;
 list-style: none;
 text-decoration: none;
 /* color: green; */
-color:#2c3093;
+color: #2c3093;
 font-family: Arial, Helvetica, sans-serif;
 font-weight: bold;
 transition: .5s ease-in-out;
@@ -112,7 +112,7 @@ padding:15px;
 
 }
 .menu2 ul li a {
-	color:#2c3093;
+	color: #2c3093;
 	
 font-family: Arial, Helvetica, sans-serif;
 font-weight: bold;
@@ -146,7 +146,8 @@ height: auto;
 
    /* background: linear-gradient(to bottom, white, #7393B3);*/
 
-background: linear-gradient(to bottom, rgb(49, 94, 49), white);
+background-color: #dee6de;
+
 height: auto;
 
 }
@@ -160,7 +161,7 @@ padding-top: 60px;
 padding-left: 200px;
 padding-right: 200px;
 height: auto;
-color: white;
+/* color: white; */
 font-family: Arial, Helvetica, sans-serif;
 
 
@@ -196,14 +197,14 @@ grid-template-rows: auto;
 }
 /*changes the color of the school side menu*/
 .grid-item:nth-child(1) {
-	background-color: #dddddd;
+	background-color:#dee6de;
 	
   }
   .grid-item:nth-child(3) {
-	background-color: #dddddd;
+	background-color: #dee6de;
   }
 .grid-item {
-background-color: rgba(255, 255, 255, 0.8);
+/* background-color: rgba(255, 255, 255, 0.8); */
 
 
 font-size: 30px;
@@ -212,7 +213,7 @@ text-align: center;
 }
 
 .grid-item2 {
-background-color: rgba(255, 255, 255, 0.8);
+/* background-color: rgba(255, 255, 255, 0.8); */
 
 padding: 20px;
 font-size: 30px;
