@@ -39,7 +39,7 @@ list-style-type: none;
 list-style: none;
 text-decoration: none;
 /* color: green; */
-color: #2c3093;
+color: white;
 font-family: Arial, Helvetica, sans-serif;
 font-weight: bold;
 transition: .5s ease-in-out;
@@ -112,7 +112,7 @@ padding:15px;
 
 }
 .menu2 ul li a {
-	color: #2c3093;
+	color: white;
 	
 font-family: Arial, Helvetica, sans-serif;
 font-weight: bold;
@@ -197,11 +197,12 @@ grid-template-rows: auto;
 }
 /*changes the color of the school side menu*/
 .grid-item:nth-child(1) {
-	background-color:#dee6de;
+	background-color:  rgb(49, 94, 49);
 	
   }
+ 
   .grid-item:nth-child(3) {
-	background-color: #dee6de;
+	background-color:  rgb(49, 94, 49);
   }
 .grid-item {
 /* background-color: rgba(255, 255, 255, 0.8); */
