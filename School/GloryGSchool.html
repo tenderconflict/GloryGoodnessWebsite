@@ -38,15 +38,17 @@
 	
 		
 	  <div class="grid-container">
-		<div class ='grid-item'><div class="schoollogin">
-						
-							<li type="none"><a href="#">Sign in</a></li>
-						
-					</div> </div>
+		<div class ='grid-itemgreen'>
+			<div class="schoollogin">
+				
+				<li type="none"><span class="menu-icon" onclick="toggleMenu()">&#9776;</span><a href="#">Sign in</a></li>
+			</div>
+				
+			 </div>
 		<div class = 'grid-item'> </div> 
 		<!-- the div above is supposed to be empty- jillian  -->
-		<div class="grid-item">
-			<div class = 'menu2'>   
+		<div class="grid-itemgreen">
+			<div id ="school-menu" class = 'menu2'>   
 			
 	 
 				<ul class = schoolmenu>
@@ -94,6 +96,19 @@
 	  		<p>&copy; Glory Goodness Church 2023. All rights reserved.<p>
 	  </div>
     </div>
+	<script>
+		function toggleMenu() {
+			var menu = document.getElementById("school-menu");
+			menu.style.display = (menu.style.display === 'block' || menu.style.display === '') ? 'none' : 'block';
+	
+			var gridItems = document.querySelectorAll(".grid-itemgreen");
+			gridItems.forEach(function(item) {
+				item.classList.toggle("white-background");
+			});
+		}
+	</script>
+	
+	
 </body>
 </html>
 
