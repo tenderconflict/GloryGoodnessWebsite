@@ -1,6 +1,7 @@
 /*code may be messy, sorry!! -TD*/
-/* Lines 1-360 written by Thomas D*/
+/* Lines 1-450 written by TD*/
 *{
+    
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -8,6 +9,10 @@
 }
 
 .main{
+    max-width: 100%;
+    
+    overflow-x: hidden; /*allows the mobile format to look right*/
+    
     width: 100%;
     /*    background: linear-gradient(to bottom, white, #7393B3);
 */
@@ -283,7 +288,7 @@ background-position-x: -10;
 
 
 .ChurchCalendar{
-width: 150%;
+width: 100%;
     position: relative;
 left: -25%;
     top: 275px;
@@ -340,7 +345,24 @@ left: -25%;
 
 
 
-
+.button {
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 20px;
+	margin: 4px 2px;
+	cursor: pointer;
+	background-color: rgb(49, 94, 49);
+	font-weight: bold;
+	letter-spacing: .1px;
+	
+  }
+.button:hover {
+	background-color: darkgoldenrod;
+}
 
 
 
@@ -360,7 +382,7 @@ left: -25%;
     position: relative;
     font-size: 12px;
     
-    top: 580px;
+    top: 500px;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
@@ -405,7 +427,6 @@ text-align: center;
 .ContactChurch p3 {
   
     text-align: center;    
-
     padding: 2px;
     padding-left: 80px;
     padding-right: 80px;
@@ -418,9 +439,9 @@ text-align: center;
 
 /*Copyright Information -TD*/
 .ContactChurch p4 {
-  width: 30%;
+  width: 100%;
     position: relative;
-bottom: -20px;
+bottom:0px;
     background-color: #333; 
     color: #fff;
     text-align: center; 
