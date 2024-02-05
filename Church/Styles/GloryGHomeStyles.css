@@ -227,23 +227,19 @@ background-position-x: -10;
 
 
 
-
 .UpcomingEvents{
-    
-    width: 400px;
+    width: 40%;
     position: relative;
 
     top: 275px;
-    left: 30%;
-    transform: translate(-50%, -50%);
+    transform: translate(0%, -50%);
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items:normal;
     font-size: 20px;
     font-family: "Arial", sans-serif;
     color: #fff;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
+    padding: 60px;
     opacity: 0.9;
 
     flex-direction: column;
@@ -267,7 +263,6 @@ background-position-x: -10;
     transition: .5s ease-in-out;
     display: flex;
     justify-content: space-between;
-    width: 50%;
   }
   
   .UpcomingEvents a:hover {
@@ -278,10 +273,75 @@ background-position-x: -10;
 
 
 .UpcomingEventsSection {
+    
     /* Added a new class for the wrapper div */
     display: flex;
     justify-content: space-between;
+    
 }
+
+
+
+.ChurchCalendar{
+width: 150%;
+    position: relative;
+left: -25%;
+    top: 275px;
+    transform: translate(0, -50%);
+    display: flex;
+    justify-content: left;
+    align-items:normal;
+    font-size: 20px;
+    font-family: "Arial", sans-serif;
+    color: #fff;
+    padding: 20px;
+    opacity: 0.9;
+    border-left: 2px solid #b9fcd2;
+    flex-direction: column;
+
+    
+}
+
+
+
+.ChurchCalendar p{
+
+    padding: 20px;
+    font-size: 19px; 
+
+}
+
+
+.ChurchCalendar a {
+    
+    font-size: 19px; 
+    text-decoration: none; 
+    color: #b9fcd2;
+    padding: 20px;
+    
+    transition: .5s ease-in-out;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+
+
+
+
+.ChurchCalendar {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
