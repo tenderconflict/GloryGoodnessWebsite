@@ -4,7 +4,7 @@
 }
 .main{
 width: 100%;
-height: 150vh;
+height: 120vh;
 
 
 
@@ -73,7 +73,7 @@ padding: 20px;
 /* background-color: #dddddd; changes the color of the side box */
 display: block;	  
 /* color:#2c3093; */
-padding-top:25px;
+padding-top:5px;
 text-decoration: none; 
 font-size : 20px;
 height:300px;
@@ -132,7 +132,9 @@ font-family: Arial, Helvetica, sans-serif;
 font-weight: bold;
 transition: .5s ease-in-out;
 text-decoration: none;
+
 }
+
 
 
 .content {
@@ -147,13 +149,8 @@ padding-left:35px ;
 
 }
 
-.side-by-side {
-display: flex; 
-flex-direction: row; 
-flex-wrap: wrap; 
-/* justify-content: center; */
-height: auto;
-}
+
+
 
 .middle{
 /*background: linear-gradient(to bottom, #32CD32, white );*/
@@ -203,8 +200,8 @@ padding-bottom: 20px;
 
 .grid-container2 {
 display: grid;
-grid-template-columns: 300px auto;
-grid-template-rows: auto;
+grid-template-columns: 50% 50%;
+grid-template-rows: 400px;
 
 
 
@@ -224,7 +221,11 @@ grid-template-rows: auto;
     background-color: rgb(49, 94, 49);
     font-size: 30px;
 	
+
+	
+	
 }
+
 
 .grid-itemgreen.white-background {
     background-color: white;
@@ -245,6 +246,7 @@ text-align: center;
 padding: 20px;
 font-size: 30px;
 text-align: center;
+/* border:1px solid black; */
 }
 .grid-item2 h1 {
 color: black;
@@ -300,7 +302,34 @@ font-family: Arial, Helvetica, sans-serif;
 
 
 }
-
+.button {
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 20px;
+	margin: 4px 2px;
+	cursor: pointer;
+	background-color: rgb(49, 94, 49);
+	font-weight: bold;
+	letter-spacing: .1px;
+	
+  }
+.button:hover {
+	background-color: darkgoldenrod;
+}
+.leftrightbutton {
+	
+	padding: 10px;
+	
+}
+.grid-item2 h1 {
+	padding-bottom: 15px;
+	font-size: 25px;
+	color: darkgoldenrod;
+}
 .verse {
 display: flex;
 flex-direction: column;
@@ -309,7 +338,7 @@ text-align: center;
 align-items: center;
 color: white;
 background-color: rgb(49, 94, 49);
-font-size: 30px;
+font-size: 25px;
 padding-bottom: 30px;
 font-family: Arial, Helvetica, sans-serif;
 }
