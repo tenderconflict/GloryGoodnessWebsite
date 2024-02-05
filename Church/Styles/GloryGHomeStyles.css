@@ -1,6 +1,7 @@
 /*code may be messy, sorry!! -TD*/
-
+/* Lines 1-450 written by TD*/
 *{
+    
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -8,15 +9,21 @@
 }
 
 .main{
+    max-width: 100%;
+    
+    overflow-x: hidden; /*allows the mobile format to look right*/
+    
     width: 100%;
     /*    background: linear-gradient(to bottom, white, #7393B3);
 */
     /*background: linear-gradient(to bottom, white, rgb(49, 94, 49));*/
 
-    background: linear-gradient(to bottom, white, #4a4279);
+    /*heres the old right color background: linear-gradient(to bottom, white, #4a4279);*/
+    background: linear-gradient(to bottom, white, rgb(0, 0, 145));
+    position: relative;
     background-position: center;
     background-size: cover;
-    height: 210vh;
+    height: 2050px;
 }
 
 
@@ -41,6 +48,7 @@
 /*might not need this-TD*/
 
 .login a {
+    
     list-style-type: none;
     list-style: none;
     text-decoration: none;
@@ -55,13 +63,16 @@
 
 
 .menu{
-    display: flex;
-    justify-content: center;
+    display:flex;
+    justify-content: space-around;
+    text-align: center;
     align-items: center;
     list-style: none;
-    margin: 0;
-    padding: 0;
+    margin: 0;/* -40 margin makes it go up. might be useful*/
+    
 
+   /* padding-left: 30px;
+    padding-right: 30px;*/
 }
 
 /* This deals with the navigation and menu bars-TD*/
@@ -76,7 +87,8 @@ align-items: center;
 
 .menu ul li {
     list-style: none;
-    margin-left: 20px;
+    margin-left: 25px;
+    margin-right: 25px;/* This spaces out the tabs-TD*/
     font-size: 20px;
     position: relative;
 }
@@ -109,17 +121,21 @@ ul li a:hover{
 
 /*when hovering this will show the submenus-TD*/
 ul .submenu {
+    
+    text-align: left;
+    margin: 0;
+    z-index: 2;/*wow now it finally doesnt go under the banner, big headache figuring this out*/
     display: none;
     position: absolute;
-    top: 100%; 
+    top: 90%; 
     left: 0;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    padding: 10px;
+    padding: 5px;
     width: 300%; 
     /*gives it some space between submenu lines, so annoying initially-TD*/
-    line-height: 27px;
+    line-height: 26px;
 }
 
 
@@ -150,7 +166,7 @@ ul li:hover .submenu {
 /*putting this here so header isnt beside the paragraph content -TD*/
 .header-content {
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     list-style-type: none;
     
 }
@@ -171,16 +187,18 @@ ul li:hover .submenu {
 
 
 .SloganBanner {
+    z-index: 1; /*wow now it finally doesnt go over the submenu*/
+background-position-x: -10;
     width: 100%;
     position: relative;
 
-    top: 240px;
+    top: 250px;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 400px;
+    height: 460px;
     background-image: url(../Pictures/HomepageBannerImage.jpg);
     background-position: center;
     font-size: 24px;
@@ -189,7 +207,6 @@ ul li:hover .submenu {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
     opacity: 0.9;
-
     flex-direction: column;
     border-radius: 25px;
     box-shadow: 0 30px 40px rgba(0,0,0,.1);
@@ -215,22 +232,19 @@ ul li:hover .submenu {
 
 
 
-
 .UpcomingEvents{
-    width: 60%;
+    width: 40%;
     position: relative;
 
     top: 275px;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(0%, -50%);
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items:normal;
     font-size: 20px;
     font-family: "Arial", sans-serif;
     color: #fff;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
+    padding: 60px;
     opacity: 0.9;
 
     flex-direction: column;
@@ -245,18 +259,110 @@ ul li:hover .submenu {
 
 
 .UpcomingEvents a {
+    
     font-size: 19px; 
     text-decoration: none; 
     color: #b9fcd2;
     padding: 20px;
     
     transition: .5s ease-in-out;
+    display: flex;
+    justify-content: space-between;
   }
   
   .UpcomingEvents a:hover {
     color: rgb(214, 193, 0);
   }
 
+
+
+
+.UpcomingEventsSection {
+    
+    /* Added a new class for the wrapper div */
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+
+
+.ChurchCalendar{
+width: 100%;
+    position: relative;
+left: -25%;
+    top: 275px;
+    transform: translate(0, -50%);
+    display: flex;
+    justify-content: left;
+    align-items:normal;
+    font-size: 20px;
+    font-family: "Arial", sans-serif;
+    color: #fff;
+    padding: 20px;
+    opacity: 0.9;
+    border-left: 2px solid #b9fcd2;
+    flex-direction: column;
+
+    
+}
+
+
+
+.ChurchCalendar p{
+
+    padding: 20px;
+    font-size: 19px; 
+
+}
+
+
+.ChurchCalendar a {
+    
+    font-size: 19px; 
+    text-decoration: none; 
+    color: #b9fcd2;
+    padding: 20px;
+    
+    transition: .5s ease-in-out;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+
+
+
+
+.ChurchCalendar {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+
+
+
+
+.button {
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 20px;
+	margin: 4px 2px;
+	cursor: pointer;
+	background-color: rgb(49, 94, 49);
+	font-weight: bold;
+	letter-spacing: .1px;
+	
+  }
+.button:hover {
+	background-color: darkgoldenrod;
+}
 
 
 
@@ -274,14 +380,15 @@ ul li:hover .submenu {
 .ContactChurch{
     width: 100%;
     position: relative;
-
-    top: 580px;
+    font-size: 12px;
+    
+    top: 500px;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 20px;
+   
     font-family: "Arial", sans-serif;
     color: #fff;
     background-color: rgba(0, 0, 0, 0.5);
@@ -298,12 +405,11 @@ padding-bottom: 20px;
 
 }
 .ContactChurch iframe{
-    height: 400px;
+    height: 450px;
     width: 500px;
     padding-top: 20px;
     font-size: 19px; 
     border-radius: 70px;
-
 
 }
 
@@ -314,13 +420,13 @@ padding-bottom: 20px;
     padding-top:60px;
     font-size: 23px; 
     color: rgb(253, 238, 151);
+    
 text-align: center;    
 }
 
 .ContactChurch p3 {
   
     text-align: center;    
-
     padding: 2px;
     padding-left: 80px;
     padding-right: 80px;
@@ -335,103 +441,10 @@ text-align: center;
 .ContactChurch p4 {
   width: 100%;
     position: relative;
-bottom: -32px;
+bottom:0px;
     background-color: #333; 
     color: #fff;
     text-align: center; 
  
     font-size: 14px; 
 }
-
-
-/*IGNORE ALL BELOW -TD*/
-
-
-
-/*information below is unneeded tests -TD*/
-
-
-
-/* for left and right info buttons
-
-.SloganBanner {
-    width: 80%;
-    position: relative;
-
-    top: 250px;
-    left: 40%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 400px;
-    background-image: url(HomepageBannerImage.jpg);
-    background-position: center;
-    font-size: 24px;
-    font-family: "Arial", sans-serif;
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    opacity: 0.9;
-
-
-    border-radius: 25px;
-    box-shadow: 0 30px 40px rgba(0,0,0,.1);
-
-    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-}
-
-
-
-
-.BibleVerseBottom {
-    
-    position: absolute;
-    bottom: 0px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    margin: 0;
-    padding: 20px; 
-    text-align: center;
-    color: gold;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-}
-
-
-
-
-
-.BibleVerseBottom {
-    position: relative;
-top:220px;   
-align-items: center;
- width: 90%;
-left: 5%;
-    color: gold;
-    text-align: center; 
-    
-}
-
-.BibleVerseBottom p {
-    margin: 0;
-    font-size: 24px;
-}
-*/
-/*this looks terrible
-.BibleVerseBottom {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-
-    color: gold;
-    text-align: center; 
-    
-}
-
-.BibleVerseBottom p {
-    margin: 0;
-    font-size: 24px;
-}
-*/

@@ -1,3 +1,6 @@
+//Lines 1-23 by Thomas D, needs to be changed, this mock login is temporary til we get
+//the website running and can test a real login
+
 document.getElementById('loginForm').addEventListener('submit', function(event) {
     event.preventDefault();
     //gathering both fields
