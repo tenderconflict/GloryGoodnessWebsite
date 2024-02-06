@@ -66,7 +66,9 @@ width: 100%;
 height: auto;
 background-color: white;
 padding: 20px;
+margin-bottom: 20px;
 }
+
 /*lines 70-88 written by Jillian*/
 .schoolmenu {
 
@@ -182,11 +184,12 @@ text-decoration: none;
 }
 
 .menu ul li {
-list-style: none;
-text-decoration: none;
-margin-left: 20px;
-font-size: 20px;
-}
+	list-style: none;
+	text-decoration: none;
+	margin-left: 20px;
+	font-size: 20px;
+	}
+
 .menu2 ul li {
 list-style: none;
 text-decoration: none;
