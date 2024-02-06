@@ -1,0 +1,52 @@
+/* Lines 1- 55 written by TD*/
+*{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+.loginMain{
+    font-size: larger;
+    width: 100%;
+    color: green;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    background: linear-gradient(to bottom, rgb(255, 255, 255), #dee6de);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    transition: .5s ease-in-out;
+    
+}
+
+
+.input-container {
+    font-size: 18px; 
+}
+
+.input-container input[type="text"] {
+   
+    font-size: 15px; 
+}
+
+.input-container input[type="password"] {
+    
+    font-size: 15px; 
+}
+
+
+button {
+    
+    width: 150px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: green;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }

@@ -19,11 +19,11 @@
     /*background: linear-gradient(to bottom, white, rgb(49, 94, 49));*/
 
     /*heres the old right color background: linear-gradient(to bottom, white, #4a4279);*/
-    background: linear-gradient(to bottom, white, rgb(0, 0, 145));
+    background: linear-gradient(to bottom, white, rgb(52, 52, 156));
     position: relative;
     background-position: center;
     background-size: cover;
-    height: 2050px;
+    height: fit-content;
 }
 
 
@@ -192,9 +192,7 @@ background-position-x: -10;
     width: 100%;
     position: relative;
 
-    top: 250px;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -208,11 +206,7 @@ background-position-x: -10;
     padding: 20px;
     opacity: 0.9;
     flex-direction: column;
-    border-radius: 25px;
-    box-shadow: 0 30px 40px rgba(0,0,0,.1);
-
-    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-}
+ }
 
 .SloganBanner p {
     padding: 20px;
@@ -231,158 +225,12 @@ background-position-x: -10;
 
 
 
-
-.UpcomingEvents{
-    width: 40%;
-    position: relative;
-
-    top: 275px;
-    transform: translate(0%, -50%);
-    display: flex;
-    justify-content: center;
-    align-items:normal;
-    font-size: 20px;
-    font-family: "Arial", sans-serif;
-    color: #fff;
-    padding: 60px;
-    opacity: 0.9;
-
-    flex-direction: column;
-
-}
-.UpcomingEvents p{
-
-    padding: 20px;
-    font-size: 19px; 
-
-}
-
-
-.UpcomingEvents a {
-    
-    font-size: 19px; 
-    text-decoration: none; 
-    color: #b9fcd2;
-    padding: 20px;
-    
-    transition: .5s ease-in-out;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .UpcomingEvents a:hover {
-    color: rgb(214, 193, 0);
-  }
-
-
-
-
-.UpcomingEventsSection {
-    
-    /* Added a new class for the wrapper div */
-    display: flex;
-    justify-content: space-between;
-    
-}
-
-
-
-.ChurchCalendar{
-width: 100%;
-    position: relative;
-left: -25%;
-    top: 275px;
-    transform: translate(0, -50%);
-    display: flex;
-    justify-content: left;
-    align-items:normal;
-    font-size: 20px;
-    font-family: "Arial", sans-serif;
-    color: #fff;
-    padding: 20px;
-    opacity: 0.9;
-    border-left: 2px solid #b9fcd2;
-    flex-direction: column;
-
-    
-}
-
-
-
-.ChurchCalendar p{
-
-    padding: 20px;
-    font-size: 19px; 
-
-}
-
-
-.ChurchCalendar a {
-    
-    font-size: 19px; 
-    text-decoration: none; 
-    color: #b9fcd2;
-    padding: 20px;
-    
-    transition: .5s ease-in-out;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-
-
-
-
-.ChurchCalendar {
-    display: flex;
-    justify-content: space-between;
-}
-
-
-
-
-
-
-
-
-.button {
-	border: none;
-	color: white;
-	padding: 15px 32px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 20px;
-	margin: 4px 2px;
-	cursor: pointer;
-	background-color: rgb(49, 94, 49);
-	font-weight: bold;
-	letter-spacing: .1px;
-	
-  }
-.button:hover {
-	background-color: darkgoldenrod;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .ContactChurch{
     width: 100%;
     position: relative;
     font-size: 12px;
     
-    top: 500px;
+    top: 100px;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
@@ -391,25 +239,10 @@ left: -25%;
    
     font-family: "Arial", sans-serif;
     color: #fff;
-    background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
     opacity: 0.9;
 padding-bottom: 20px;
     flex-direction: column;
-
-}
-.ContactChurch p{
-
-    padding: 0px;
-    font-size: 19px; 
-
-}
-.ContactChurch iframe{
-    height: 450px;
-    width: 500px;
-    padding-top: 20px;
-    font-size: 19px; 
-    border-radius: 70px;
 
 }
 
@@ -441,9 +274,10 @@ text-align: center;
 .ContactChurch p4 {
   width: 100%;
     position: relative;
-bottom:0px;
+bottom:-29px;
     background-color: #333; 
     color: #fff;
     text-align: center; 
+ 
     font-size: 14px; 
 }
