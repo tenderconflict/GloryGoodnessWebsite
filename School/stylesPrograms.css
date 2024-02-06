@@ -164,9 +164,6 @@ display: flex;
 text-align: center;
 }
 
-.menu2 ul {
-	padding-top: 21px;
-}
 
 ul{
 float: left;
@@ -237,7 +234,6 @@ flex-direction: column;
 padding-left: 200px;
 padding-right: 200px;
 height: auto;
-width:600px;
 /* color: white; */
 font-family: Arial, Helvetica, sans-serif;
 
@@ -259,10 +255,11 @@ color: black;
 }
 
 .grid-container {
-display:flex;
-
+display: grid;
+grid-template-columns: 200px auto;
+grid-template-rows: 50px	
+					300px;
 padding-bottom: 20px;
-
 
 
 
@@ -292,14 +289,10 @@ grid-template-rows: 400px;
     background-color: rgb(49, 94, 49);
     font-size: 30px;
 	
-	height: 350px;
-	width: 200px;
-	
 
 	
 	
 }
-
 
 
 .grid-itemgreen.white-background {
@@ -312,8 +305,6 @@ grid-template-rows: 400px;
 
 font-size: 30px;
 text-align: center;
-height:500px;
-width:400px;
 /* border:1px solid black; shows the border of the divs for the top part of the school website -j  */
 }
 
@@ -369,21 +360,6 @@ font-family: "Arial", sans-serif;
 	color: darkgoldenrod;
 }
 /*lines 355-385 written by Brandon*/
-.calendar{
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	font-size: 40px;
-
-	color: white;
-	
-	font-family: Arial, Helvetica, sans-serif;
-	
-	
-  
-}
 .verse {
 display: flex;
 flex-direction: column;
