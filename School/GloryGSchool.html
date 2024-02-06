@@ -19,6 +19,7 @@
 		</div>
 		
 	  </div>
+	  <!-- Lines 22-91 written by Thomas -->
 	  <div class="navbar">
 	  
 		<div class="menu">
@@ -88,13 +89,13 @@
 			</ul>
 		</div>
 	  </div>
-	
+	<!-- Lines 91-121 written by Jillian -->
 		
 	  <div class="grid-container">
 		<div class ='grid-itemgreen'>
 			<div class="schoollogin">
 				
-				<li type="none"><span class="menu-icon" onclick="toggleMenu()">&#9776;</span><a href="#">Sign in</a></li>
+				<li type="none"><span class="menu-icon" onclick="toggleMenu()">&#9776;</span><a href="#" id="school-login">Sign in</a></li>
 			</div>
 				
 			 </div>
@@ -108,7 +109,7 @@
 	
 					
 					<li><a href="#">Home</a></li>
-					<li><a href="#">About GGS</a></li>
+					<li><a href="../School/AboutUs.html">About GGS</a></li>
 					<li><a href="#">Why GGS</a></li>
 				<li> <a href="../School/calendar.html">Calendar</a></li>	
 				<li><a href="#">Programs</a></li>
@@ -119,6 +120,7 @@
 		 
 		</div>
 		<div class="grid-item">
+			<!-- lines 122-127 written by Brandon -->
 			<div class="info">
 				
 				<p2>Glory Goodness School uses Accelerated Christian Education(ACE). ACE provides a Christian K-12 education. They learn not only the skills they will need in life, but spiritual 
@@ -127,7 +129,7 @@
 		</div>
 		
 		</div>
-	
+	<!-- Lines 131 - 144 written by Jillian -->
 	  <div class="middle">
 		<div class="grid-container2">
 			<div class ="grid-item2"><h1>Upcoming Events</h1>
@@ -144,7 +146,7 @@
 	  	
 		
 	  	
-	  
+	  <!-- lines 147-155 written by Brandon  -->
 	  <div class="verse">
 			<p>James 1:17</p>
 			<p2>Every good gift and every perfect gift is from above, coming down from the Father of lights, with whom there is no variation or shadow due to change.</p2>
@@ -153,10 +155,13 @@
 	  		<p>&copy; Glory Goodness Church 2023. All rights reserved.<p>
 	  </div>
     </div>
+	<!--lines 156-169 written by Jillian -->
 	<script>
 		function toggleMenu() {
 			var menu = document.getElementById("school-menu");
 			menu.style.display = (menu.style.display === 'block' || menu.style.display === '') ? 'none' : 'block';
+			var menu2 = document.getElementById("school-login");
+			menu2.style.display = (menu2.style.display === 'inline' || menu2.style.display === '') ? 'none' : 'inline';
 	
 			var gridItems = document.querySelectorAll(".grid-itemgreen");
 			gridItems.forEach(function(item) {

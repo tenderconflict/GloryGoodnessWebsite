@@ -20,7 +20,7 @@
 		
 	  </div>
 	  <div class="navbar">
-	  
+	  <!-- Lines 23-91 written by Thomas -->
 		<div class="menu">
 			<ul>
 				<!-- clicking home should bring you to the homepage-TD -->
@@ -89,13 +89,13 @@
 		</div>
 	  </div>
 	
-	
+	<!-- Lines 92-146 written by Jillian -->
 	  <div class="grid-container">
 		
 		<div class ='grid-itemgreen'>
 			<div class="schoollogin">
 				
-				<li type="none"><span class="menu-icon" onclick="toggleMenu()">&#9776;</span><a href="#">Sign in</a></li>
+				<li type="none"><span class="menu-icon" onclick="toggleMenu()">&#9776;</span><a href="#" id="school-login">Sign in</a></li>
 			</div>
 				
 			 </div>
@@ -108,8 +108,8 @@
 				<ul class = schoolmenu>
 	
 					
-					<li><a href="#">Home</a></li>
-					<li><a href="#">About GGS</a></li>
+					<li><a href="../School/GloryGSchool.html">Home</a></li>
+					<li><a href="../School/AboutUs.html">About GGS</a></li>
 					<li><a href="#">Why GGS</a></li>
 				<li> <a href="../School/calendar.html">Calendar</a></li>	
 				<li><a href="#">Programs</a></li>
@@ -121,7 +121,7 @@
 		</div>
 		<div class="grid-item">
 			<div class="info">
-				
+				<h1>About GGS</h1>
 				<p2>placeholder paragraph: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p2>
 			  </div>
 		</div>
@@ -143,7 +143,7 @@
 		</div>
 	  	
 		
-	  	
+	  	<!-- lines 146-155 written by Brandon -->
 	  
 	  <div class="verse">
 			<p>James 1:17</p>
@@ -153,10 +153,13 @@
 	  		<p>&copy; Glory Goodness Church 2023. All rights reserved.<p>
 	  </div>
     </div>
+	<!-- lines 157-169 written by Jillian -->
 	<script>
 		function toggleMenu() {
 			var menu = document.getElementById("school-menu");
 			menu.style.display = (menu.style.display === 'block' || menu.style.display === '') ? 'none' : 'block';
+			var menu2 = document.getElementById("school-login");
+			menu2.style.display = (menu2.style.display === 'inline' || menu2.style.display === '') ? 'none' : 'inline';
 	
 			var gridItems = document.querySelectorAll(".grid-itemgreen");
 			gridItems.forEach(function(item) {
