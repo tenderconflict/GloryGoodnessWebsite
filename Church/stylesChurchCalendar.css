@@ -1,0 +1,194 @@
+*{margin:0;
+    padding:0;
+    font-family: Arial, Helvetica, sans-serif;}
+    
+    .main{
+        width: 100%;
+        height: 114vh;
+        /* background: linear-gradient(to bottom, white, #4a4279); */
+    background-size: cover; }
+    .top{
+        background-color: white;
+    }
+    .logo{
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        height: auto;
+        list-style: none;
+    
+    }
+    .login a {
+        list-style-type: none;
+        list-style: none;
+        text-decoration: none;
+        color: green;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        transition: .5s ease-in-out;
+        font-size: 18px;
+        outline: 0; 
+    }
+    
+    .navbar{
+    
+        width: 100%;
+        height: auto;
+        background-color: white;
+        padding: 20px;
+    }
+    
+    .menu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    ul{
+        float: left;
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+    
+    ul li a{
+        color: green;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        transition: .5s ease-in-out;
+        text-decoration: none;
+    }
+    
+    .menu ul li {
+        list-style: none;
+        text-decoration: none;
+        margin-left: 20px;
+        font-size: 20px;
+    }
+    
+    .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url(School.jpg);
+        background-position: center;
+        height: 100px;
+        color:#2c3093;
+    }
+    
+    .middle{
+        /*background: linear-gradient(to bottom, #32CD32, white );*/
+    
+           /* background: linear-gradient(to bottom, white, #7393B3);*/
+    
+        background: linear-gradient(to bottom, rgb(206, 212, 206), white);
+        
+        height: auto;
+        
+    }
+    .button {
+        border: none;
+        color: #2c3093;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        margin: 4px 2px;
+        cursor: pointer;
+        background-color: #dad8e4;
+        font-weight: bold;
+        letter-spacing: .1px;
+        
+      }
+      
+    
+    .info{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        padding-left: 200px;
+        padding-right: 200px;
+        padding-top:10px;
+        height: 90vh;
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        
+        
+        
+    }
+    
+    
+    .info p {
+        color:black;
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        font-size: 30px;
+        padding-top: 10px;
+    
+        
+        
+    
+        
+    
+    }
+    .info p2 {
+        padding-bottom: 10px;
+        padding-top:10px;
+    }
+    .side-by-side { 
+        display: flex; 
+        flex-direction: row; 
+        flex-wrap: wrap; 
+        justify-content: center;
+    } 
+    .leftrightbutton {
+        
+        padding: 10px;
+    }
+    
+    .calendar{
+        padding-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: 40px;
+    
+        color: white;
+        padding-bottom: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        
+      
+    }
+    
+    .verse {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        color: white;
+        background-color: rgb(49, 94, 49);
+        font-size: 30px;
+        padding-bottom: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .verse p2 {
+        font-size: 25px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .bottomPage p{
+        width: 100%;
+        position: relative;
+        bottom: 15px;
+        background-color: #333; 
+        color: #fff;
+        text-align: center; 
+     
+        font-size: 14px; 
+        font-family: Arial, Helvetica, sans-serif;
+    }
