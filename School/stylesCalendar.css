@@ -66,6 +66,7 @@ width: 100%;
 height: auto;
 background-color: white;
 padding: 20px;
+margin-bottom: 20px;
 }
 /*lines 70-88 written by Jillian*/
 .schoolmenu {
@@ -165,7 +166,7 @@ text-align: center;
 }
 
 .menu2 ul {
-	padding-top: 21px;
+	padding-top: 20px;
 }
 
 ul{
