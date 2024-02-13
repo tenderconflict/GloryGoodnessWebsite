@@ -281,6 +281,12 @@ grid-template-rows: 400px;
 
 
 }
+.side-by-side { 
+	display: flex; 
+	flex-direction: row; 
+	flex-wrap: wrap; 
+	justify-content: center;
+} 
 /*changes the color of the school side menu*/
 /* .grid-item:nth-child(1) {
 	background-color:  rgb(49, 94, 49);
@@ -329,6 +335,7 @@ font-size: 20px;
 .grid-item2 p {
 font-size: 19px; 
 font-family: "Arial", sans-serif;
+
 }
 
 
