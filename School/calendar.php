@@ -1,8 +1,19 @@
+<?php
+session_start();
+
+
+if (!isset($_SESSION["authenticated"]) || !$_SESSION["authenticated"]) {
+    header("Location: schoolLogin.php");
+    exit();
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <title>Glory Goodness School</title>
-  <link rel="stylesheet" href="stylesAboutUs.css">
+  <link rel="stylesheet" href="stylesCalendar.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
 </head>
@@ -21,92 +32,90 @@
 		
 	  </div>
 	  <div class="navbar">
-	  <!-- Lines 23-91 written by Thomas -->
-	  <div class="menu">
-		<ul>
-			<!-- clicking home should bring you to the homepage-TD -->
-			<!-- <li><a href="#"><img src="GGCLogo.png" alt="ChurchLogo" height= "70"></a></li> -->
+		<!-- Lines 23-91 written by Thomas -->
+		  <div class="menu">
+			  <ul>
+				  <!-- clicking home should bring you to the homepage-TD -->
+				  <!-- <li><a href="#"><img src="GGCLogo.png" alt="ChurchLogo" height= "70"></a></li> -->
+  
+  
+				  <!-- <li><a href="#">HOME</a></li>-->
+  
+  
+  
+  
+				  <li><a href="../GloryGHome.html">Home <br><span style="color: rgb(18, 18, 161);">Chủ</span></a></li>
+  
+  
+  
+				  <li class="has-submenu"><a href="#">About Us <br> <span style="color: rgb(18, 18, 161);">Thông
+							  tin</span></a>
+  
+  
+					  <ul class="submenu">
+						  <li><a href="../Church/AboutUs/MissionVision.html">Mission & Vision <br><span style="color: rgb(18, 18, 161);">Khát
+									  vọng</span></a></li>
+						  <li><a href="../Church/AboutUs/ChurchStaff.html">Church Staff <br><span style="color: rgb(18, 18, 161);">Nhân viên</span></a>
+						  </li>
+						  <li><a href="../Church/AboutUs/ChurchHistory.html">Church History <br> <span style="color: rgb(18, 18, 161);">Lịch
+									  sử</span></a></li>
+						  <!--more may be added in the future here -TD -->
+					  </ul>
+  
+  
+				  </li>
+  
+  
+				  <li><a href="#">Ministries <br><span style="color: rgb(18, 18, 161);">Bộ</span></a>
+  
+					  <ul class="submenu">
+						  <li><a href="../Church/ChurchEventCalandar.html">Church Event Calendar <br><span
+									  style="color: rgb(18, 18, 161);">Lịch</span></a></li>
+						  <li><a href="../Church/WeeklyActivitiy.html">Weekly Activity <br><span style="color: rgb(18, 18, 161);">Hoạt
+									  động</span></a></li>
+						  <li><a href="../Church/WeeklyBibleReadings.html">Yearly Bible Reading <br><span style="color: rgb(18, 18, 161);">Đọc Kinh
+									  Thánh</span></a></li>
+  
+					  </ul>
+  
+  
+				  </li>
+  
+  
+				  <li><a href="../Church/Giving.html">Giving <br><span style="color: rgb(18, 18, 161);">Cho</span></a></li>
+  
+  
+  
+				  <li><a href="#">School <br><span style="color: rgb(18, 18, 161);">Trường học</span></a>
+  
+					  <ul class="submenu">
+						  <li><a href="../School/GloryGSchool.html">Glory Goodness School <br><span
+									  style="color: rgb(18, 18, 161);">Trường học</span></a></li>
+  
+					  </ul>
+  
+  
+				  </li>
+  
+			  </ul>
+		  </div>
+		</div>
 
-
-			<!-- <li><a href="#">HOME</a></li>-->
-
-
-
-
-			<li><a href="../GloryGHome.html">Home <br><span style="color: rgb(18, 18, 161);">Chủ</span></a></li>
-
-
-
-			<li class="has-submenu"><a href="#">About Us <br> <span style="color: rgb(18, 18, 161);">Thông
-						tin</span></a>
-
-
-				<ul class="submenu">
-					<li><a href="../Church/AboutUs/MissionVision.html">Mission & Vision <br><span style="color: rgb(18, 18, 161);">Khát
-								vọng</span></a></li>
-					<li><a href="../Church/AboutUs/ChurchStaff.html">Church Staff <br><span style="color: rgb(18, 18, 161);">Nhân viên</span></a>
-					</li>
-					<li><a href="../Church/AboutUs/ChurchHistory.html">Church History <br> <span style="color: rgb(18, 18, 161);">Lịch
-								sử</span></a></li>
-					<!--more may be added in the future here -TD -->
-				</ul>
-
-
-			</li>
-
-
-			<li><a href="#">Ministries <br><span style="color: rgb(18, 18, 161);">Bộ</span></a>
-
-				<ul class="submenu">
-					<li><a href="../Church/ChurchEventCalandar.html">Church Event Calendar <br><span
-								style="color: rgb(18, 18, 161);">Lịch</span></a></li>
-					<li><a href="../Church/WeeklyActivitiy.html">Weekly Activity <br><span style="color: rgb(18, 18, 161);">Hoạt
-								động</span></a></li>
-					<li><a href="../Church/WeeklyBibleReadings.html">Yearly Bible Reading <br><span style="color: rgb(18, 18, 161);">Đọc Kinh
-								Thánh</span></a></li>
-
-				</ul>
-
-
-			</li>
-
-
-			<li><a href="../Church/Giving.html">Giving <br><span style="color: rgb(18, 18, 161);">Cho</span></a></li>
-
-
-
-			<li><a href="#">School <br><span style="color: rgb(18, 18, 161);">Trường học</span></a>
-
-				<ul class="submenu">
-					<li><a href="../School/GloryGSchool.html">Glory Goodness School <br><span
-								style="color: rgb(18, 18, 161);">Trường học</span></a></li>
-
-				</ul>
-
-
-			</li>
-
-		</ul>
-	</div>
-	  </div>
-
-	  <div class="space">
+		<div class="space">
 			
-	  </div>
-	
-	<!-- Lines 92-160 written by Jillian -->
+		</div>
+	<!-- Lines 92-134 written by Jillian -->
 	  <div class="grid-container">
 		
-		<div class ='grid-itemgreen'>
+		
+		
+		<!-- the div above is supposed to be empty- jillian  -->
+		<div class="grid-itemgreen">
 			<div class="schoollogin">
 				
 				<li type="none"><span class="menu-icon" onclick="toggleMenu()">&#9776;</span><a href="../School/schoolLogin.php" id="school-login">Sign in</a></li>
 			</div>
 				
-			 </div>
-		<div class = 'grid-item'> </div> 
-		<!-- the div above is supposed to be empty- jillian  -->
-		<div class="grid-itemgreen">
 			<div id ="school-menu" class = 'menu2'>   
 			
 	 
@@ -116,7 +125,7 @@
 					<li><a href="../School/GloryGSchool.html">Home</a></li>
 					<li><a href="../School/AboutUs.html">About GGS</a></li>
 					<li><a href="../School/WhyGGS.html">Why GGS</a></li>
-				<li> <a href="../School/calendar.php">Calendar</a></li>	
+				<li> <a href="../School/calendar.html">Calendar</a></li>	
 				<li><a href="../School/Programs.html">Programs</a></li>
 		
 			
@@ -124,45 +133,23 @@
 		</div>
 		 
 		</div>
-		<div class="grid-item">
-			<div class="info">
-				<h1>About Glory Goodness School</h1>
-				<p2>Glory Goodness School is located in Lorton, Virgina and offers a unique classroom enviroment. The school is founded upon the 
-					principles of the Bible, and allows students to grow both spirtually and academically. Glory Goodness School goes beyond academics, engaging students through 
-					daily devotionals, and group Bible studies. 
-				</p2>
-			  </div>
+		<div class="info">
+			
+				<h1>Calendar</h1>
+				<div class="calendar">
+					
+					<iframe src="http://calendar.google.com/calendar/embed?src=c_2b56cd83bd27a9c08d46e6fbaa518d688b220b040bf4717b00ed3a4bc80d4edb%40group.calendar.google.com&ctz=America%2FNew_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+				  </div>
 		</div>
 		
 		</div>
 	
 	  <div class="middle">
-		<div class="grid-container2">
-			<div class ="grid-item2"><h1>Location</h1>
-				<div class="leftrightbutton"><a href = 'https://maps.app.goo.gl/sM3XWHCUVFwTNYUw5'><button class = "button">Google Maps</button></a></div>
-				<div class="leftrightbutton"><a href = 'https://maps.app.goo.gl/sM3XWHCUVFwTNYUw5'><button class = "button">bản đồ Google</button></a></div>
-				<p>9201 Treasure Oak Ct.
-				   <br>Lorton, VA 22079
-				</p>
-				
-				<h1></h1>
-					 
-				  <!-- <div class ='leftrightbutton'><a href = '#'><button class = "button">Sự kiện</button></a></div>  -->
-			  </div>
-			<div class ="grid-item2">
-				<h1>Contact GGS</h1>
-				<div class="leftrightbutton"><a href = '#'><button class = "button">Application</button></a></div>
-				<div class="leftrightbutton"><a href = '#'><button class = "button">Ứng dụng</button></a></div>
-			
-				<p>info@glorygoodnesschurch.org</p>
-				
-				<!-- <div class="leftrightbutton"><a href = '../School/calendar.html'><button class = "button">Calendar</button></a></div>
-				  <div class ='leftrightbutton'><a href = '../School/calendar.html'><button class = "button">Lịch sự kiện</button></a></div> -->
-			  </div></div>
+	
 		</div>
 	  	
 		
-	  	<!-- lines 160-169 written by Brandon -->
+	  	<!-- lines 136-146 written by Brandon -->
 	  
 	  <div class="verse">
 			<p>James 1:17</p>
@@ -172,7 +159,7 @@
 	  		<p>&copy; Glory Goodness Church 2023. All rights reserved.<p>
 	  </div>
     </div>
-	<!-- lines 170-169 written by Jillian -->
+	<!-- lines 146-159 written by Jillian -->
 	<script>
 		function toggleMenu() {
 			var menu = document.getElementById("school-menu");
