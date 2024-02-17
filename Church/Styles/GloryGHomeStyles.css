@@ -201,6 +201,7 @@ background-position-x: -10;
     height: 460px;
     background-image: url(../Pictures/HomepageBannerImage.jpg);
     background-position: center;
+    background-size: cover; 
     font-size: 24px;
     font-family: "Arial", sans-serif;
     color: #fff;
