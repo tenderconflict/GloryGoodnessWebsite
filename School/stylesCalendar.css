@@ -161,6 +161,13 @@ ul .submenu {
 ul li:hover .submenu {
     display:block; 
 }
+
+.space {
+	height: 60px;
+	background-color: rgb(49, 94, 49);
+	width: 100%;
+	margin-bottom: 20px;
+}
 /*lines 160-209 written by Jillian */
 .menu2{
 display: flex;

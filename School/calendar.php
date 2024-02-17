@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+
+if (!isset($_SESSION["authenticated"]) || !$_SESSION["authenticated"]) {
+    header("Location: schoolLogin.php");
+    exit();
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -102,7 +113,7 @@
 		<div class="grid-itemgreen">
 			<div class="schoollogin">
 				
-				<li type="none"><span class="menu-icon" onclick="toggleMenu()">&#9776;</span><a href="../School/SchoolLogin.html" id="school-login">Sign in</a></li>
+				<li type="none"><span class="menu-icon" onclick="toggleMenu()">&#9776;</span><a href="../School/schoolLogin.php" id="school-login">Sign in</a></li>
 			</div>
 				
 			<div id ="school-menu" class = 'menu2'>   
@@ -127,7 +138,7 @@
 				<h1>Calendar</h1>
 				<div class="calendar">
 					
-					<iframe src="https://calendar.google.com/calendar/embed?src=c_2b56cd83bd27a9c08d46e6fbaa518d688b220b040bf4717b00ed3a4bc80d4edb%40group.calendar.google.com&ctz=America%2FNew_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+					<iframe src="http://calendar.google.com/calendar/embed?src=c_2b56cd83bd27a9c08d46e6fbaa518d688b220b040bf4717b00ed3a4bc80d4edb%40group.calendar.google.com&ctz=America%2FNew_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 				  </div>
 		</div>
 		
