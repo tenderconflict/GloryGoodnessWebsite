@@ -69,6 +69,7 @@ body {
     margin: 0 auto;
     box-sizing: border-box; /* Added box-sizing */
 	background-color: 	#6082B6;
+	
     border-radius: 10px 10px 0px 0px;
   
   }
@@ -134,8 +135,8 @@ body {
 /* width: 100%; */
 height: auto;
 background-color: white;
-padding: 20px;
-margin-bottom: 20px;
+  padding: 20px; 
+margin-bottom: 10px; 
 }
 
 
@@ -221,7 +222,7 @@ ul li:hover .submenu {
     justify-content: center;
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
-	height: 20vh;
+	height: 15vh;
 	padding-bottom: 10px;
 	background-color: #ebebf7;
 }
@@ -285,6 +286,7 @@ text-decoration: none;
     display: grid;
     gap: 10px;
 	
+	
   }
 
   .payment-item{
@@ -306,8 +308,10 @@ text-decoration: none;
    /* background: linear-gradient(to bottom, white, #7393B3);*/
 
 background-color: 	#6082B6;
+
 padding-top: 30px;
 height: auto;
+padding-bottom: 30px;
 
 }
 /*lines 226-355 written by Jillian*/
@@ -469,6 +473,7 @@ font-family: "Arial", sans-serif;
   
 }
 .verse {
+padding-top: 10px;
 display: flex;
 flex-direction: column;
 justify-content: center;
