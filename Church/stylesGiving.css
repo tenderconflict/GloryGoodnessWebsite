@@ -1,8 +1,9 @@
 
 *{
 	text-decoration: none;
+	margin: 0;
+    padding: 0; /*this makes it go all the way to the left of the page*/
 }
-
 .main{
 	max-width:100%;
 	width: 100%;
@@ -46,24 +47,88 @@ transition: .5s ease-in-out;
 font-size: 18px;
 outline: 0; 
 }
-/*lines 45-60 written by Jillian*/
-/*this adjusts the sign in in the school box - j*/
-.schoollogin a {
-padding-left:90px;
-justify-content: center;
-list-style-type: none;
-list-style: none;
-text-decoration: none;
-/* color: green; */
-color:darkgoldenrod;
-font-family: Arial, Helvetica, sans-serif;
-font-weight: bold;
-transition: .5s ease-in-out;
-font-size: 18px;
-outline: 0; 
+/*CODE FOR PAYMENT OPTIONS TABS*/
+/* Style the tab */
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
 }
+body {
+    font-family: Arial;
+  }
+  
+  /* Style the tab */
+  #Zelle.tab button {
+	border-radius: 0 0 0 10px; /* Square bottom-left corner for "Zelle" tab */
+  }
+  .tab {
+    overflow: hidden;
+    /* border: 1px solid #ccc; */
+    background-color: #f1f1f1;
+    width: 75%;
+    margin: 0 auto;
+    box-sizing: border-box; /* Added box-sizing */
+	background-color: 	#6082B6;
+    border-radius: 10px 10px 0px 0px;
+  
+  }
+  
+  /* Style the buttons inside the tab */
+  .tab button {
+    
+	background-color: #2c3093;
+	box-sizing: border-box;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+    transition: 0.3s;
+    font-size: 14px;
+    box-sizing: border-box; /* Added box-sizing */
+    border-radius: 10px 10px 0 0; 
+	color: white;
+    margin-right: 10px;
+	padding: 18px 20px;
+  font-size: 20px;
 
-
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: #B0C4DE;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color: #B0C4DE;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+	box-sizing: border-box;
+	background-color: white;
+    display: none;
+    padding: 6px;
+    /* border: 1px solid #ccc; */
+    border-top: none;
+    width: 75%;
+    margin: 0 auto;
+    box-sizing: border-box; /* Added box-sizing */
+	border-radius: 0 10px 10px 10px;
+	height: auto;
+  }
+  
+  .tabcontent h3{
+	padding-bottom: 20px;
+	padding-left: 10px;
+	font-size: 20px; 
+	font-family: Arial, Helvetica, sans-serif;
+	
+  }
+  .tabcontent p {
+	line-height: 40px;
+  }
 .navbar{
 
 /* width: 100%; */
@@ -72,19 +137,7 @@ background-color: white;
 padding: 20px;
 margin-bottom: 20px;
 }
-/*lines 70-88 written by Jillian*/
-.schoolmenu {
 
-
-/* background-color: #dddddd; changes the color of the side box */
-display: block;	  
-/* color:#2c3093; */
-padding-top:5px;
-text-decoration: none; 
-font-size : 20px;
-height:300px;
-justify-content: center;
-}
 
 .menu{
 display: flex;
@@ -164,10 +217,13 @@ ul li:hover .submenu {
 }
 
 .space {
-	height: 60px;
-	background-color: rgb(49, 94, 49);
-	width: 100%;
-	margin-bottom: 20px;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+	height: 20vh;
+	padding-bottom: 10px;
+	background-color: #ebebf7;
 }
 /*lines 160-209 written by Jillian */
 .menu2{
@@ -176,6 +232,9 @@ display: flex;
 text-align: center;
 }
 
+.menu2 ul {
+	padding-top: 20px;
+}
 
 ul{
 float: left;
@@ -222,7 +281,23 @@ text-decoration: none;
 
 
 
+.grid-containerpayment {
+    display: grid;
+    gap: 10px;
+	
+  }
 
+  .payment-item{
+    text-align: center;
+	border-bottom: 2px solid #ccc; /* Add a bottom border to create a division line */
+    padding-bottom: 10px;
+  }
+
+  .payment-item img {
+    width: 75%;
+    height: auto;
+	margin-left: 10px;
+  }
 
 
 .middle{
@@ -230,8 +305,8 @@ text-decoration: none;
 
    /* background: linear-gradient(to bottom, white, #7393B3);*/
 
-background-color: #dee6de;
-
+background-color: 	#6082B6;
+padding-top: 30px;
 height: auto;
 
 }
@@ -246,6 +321,7 @@ flex-direction: column;
 padding-left: 200px;
 padding-right: 200px;
 height: auto;
+width:600px;
 /* color: white; */
 font-family: Arial, Helvetica, sans-serif;
 
@@ -267,11 +343,10 @@ color: black;
 }
 
 .grid-container {
-display: grid;
-grid-template-columns: 200px auto;
-grid-template-rows: 50px	
-					300px;
+display:flex;
+
 padding-bottom: 20px;
+
 
 
 
@@ -282,8 +357,7 @@ padding-bottom: 20px;
 display: grid;
 grid-template-columns: 50% 50%;
 grid-template-rows: 400px;
-justify-content: center;
-align-items: center;
+
 
 
 
@@ -302,10 +376,14 @@ align-items: center;
     background-color: rgb(49, 94, 49);
     font-size: 30px;
 	
+	height: 350px;
+	width: 200px;
+	
 
 	
 	
 }
+
 
 
 .grid-itemgreen.white-background {
@@ -318,6 +396,8 @@ align-items: center;
 
 font-size: 30px;
 text-align: center;
+height:500px;
+width:400px;
 /* border:1px solid black; shows the border of the divs for the top part of the school website -j  */
 }
 
@@ -337,7 +417,6 @@ font-size: 20px;
 .grid-item2 p {
 font-size: 19px; 
 font-family: "Arial", sans-serif;
-
 }
 
 
@@ -374,6 +453,21 @@ font-family: "Arial", sans-serif;
 	color: darkgoldenrod;
 }
 /*lines 355-385 written by Brandon*/
+.calendar{
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-size: 40px;
+
+	color: white;
+	
+	font-family: Arial, Helvetica, sans-serif;
+	
+	
+  
+}
 .verse {
 display: flex;
 flex-direction: column;
@@ -381,13 +475,13 @@ justify-content: center;
 text-align: center;
 align-items: center;
 color: white;
-background-color: rgb(49, 94, 49);
-font-size: 25px;
+background-color: #2c3093;
+font-size: 20px;
 padding-bottom: 30px;
 font-family: Arial, Helvetica, sans-serif;
 }
 .verse p2 {
-font-size: 25px;
+font-size: 20px;
 font-family: Arial, Helvetica, sans-serif;
 }
 
