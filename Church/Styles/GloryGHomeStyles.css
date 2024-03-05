@@ -10,7 +10,7 @@
 
 .main{
     max-width: 100%;
-    
+    overflow-y: hidden;
     overflow-x: hidden; /*allows the mobile format to look right*/
     
     width: 100%;
@@ -135,7 +135,7 @@ ul .submenu {
     padding: 5px;
     width: 300%; 
     /*gives it some space between submenu lines, so annoying initially-TD*/
-    line-height: 26px;
+    line-height: 120%;
 }
 
 
@@ -149,6 +149,30 @@ ul .submenu {
 ul li:hover .submenu {
     display:block; 
 }
+
+
+
+
+
+
+@media only screen and (max-width: 623px) {/*mobile view -TD*/
+    .menu ul li {
+
+        font-size: 15px; 
+        margin: 0; 
+
+
+    }
+    ul .submenu {
+    
+        width: 110%; 
+  
+    }
+}
+
+
+
+
 
 
 
