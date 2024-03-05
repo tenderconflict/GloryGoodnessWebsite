@@ -10,6 +10,11 @@
 </head>
 
 <body>
+  <?php
+  $pdf_dir = "uploads/";
+  $pdf_file = $pdf_dir . "weeklyactivity.pdf";
+?>
+ 
    
  <div class="main">
 	  <div class="top">
@@ -93,7 +98,7 @@
 		  </div>
 		</div>
 
-<div class ="space"><h1>Weekly Message</h1></div>
+<div class ="space"><h1>Weekly Activity</h1></div>
 
 
     
@@ -105,19 +110,21 @@
         <div class = "gridcontent">
       <h1 class = "dashed-linebottom">This Weeks Sermon Message</h1>
        <div class = "currentbiblemessage">
-        <h2><a href="../Church/TestWeeklyActivity.html" class = "current-link-style">Jesus is present in the storm of your life</a> -March 1st 2024</h2>
+        <h2>  <a href="<?php echo $pdf_file; ?>" target="_blank"> Click this link to access this weeks activity!</a>
+          </h2>
 
+      
 
        </div>
 
-      
+<!--       
        <div class = "prevsermonmessage">
         <h1 class ="dashed-linebottom">Previous Sermon Message</h1>
         <h2><a href="../Church/TestWeeklyActivity.html" class = "current-link-style">Jesus is present in the storm of your life</a> -March 1st 2024</h2>
        
 
 
-       </div>
+       </div> -->
     </div>
     <div class = "servicetimes"><h1>Service Times</h1>
     <p class="dashed-line">Every Sunday at 11:00am</p></div>

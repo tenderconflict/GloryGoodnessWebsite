@@ -7,11 +7,12 @@
 .main{
 	max-width:100%;
 	width: 100%;
-	height: 120vh;
+	/* height: 120vh; */
 	position: relative;
 	background-position: center;
 	background-size: cover;
-	/* overflow-x: hidden; */
+	overflow-x: hidden;
+	overflow-y: hidden;
 
 }
 
@@ -301,6 +302,86 @@ text-decoration: none;
 	margin-left: 10px;
   }
 
+  .grid-containerpaypal {
+    display: grid;
+    gap: 10px;
+	
+	
+  }
+
+  .paypal-item{
+    text-align: center;
+	border-bottom: 2px solid #ccc; /* Add a bottom border to create a division line */
+    padding-bottom: 10px;
+  }
+
+  .paypal-item img {
+    width: 75%;
+    height: auto;
+	margin-left: 10px;
+  }
+
+
+  .grid-containertxt2give {
+    display: grid;
+    gap: 10px;
+	
+	
+  }
+
+  .txt2give-item{
+    text-align: center;
+	border-bottom: 2px solid #ccc; /* Add a bottom border to create a division line */
+    padding-bottom: 10px;
+  }
+
+  .txt2give-item img {
+    width: 75%;
+    height: auto;
+	margin-left: 10px;
+  }
+
+  .grid-containerinperson {
+    display: grid;
+    gap: 10px;
+	
+	
+  }
+
+  .inperson-item{
+    text-align: center;
+	border-bottom: 2px solid #ccc; /* Add a bottom border to create a division line */
+    padding-bottom: 10px;
+  }
+
+  .inperson-item img {
+    width: 75%;
+    height: auto;
+	margin-left: 10px;
+  }
+
+
+  .grid-containerbld {
+    display: grid;
+    gap: 10px;
+	
+	
+  }
+
+  .bldpledge-item{
+    text-align: center;
+	border-bottom: 2px solid #ccc; /* Add a bottom border to create a division line */
+    padding-bottom: 10px;
+  }
+
+  .bldpledge-item img {
+    width: 75%;
+    height: auto;
+	margin-left: 10px;
+  }
+
+
+
 
 .middle{
 /*background: linear-gradient(to bottom, #32CD32, white );*/
@@ -310,7 +391,7 @@ text-decoration: none;
 background-color: 	#6082B6;
 
 padding-top: 30px;
-height: auto;
+
 padding-bottom: 30px;
 
 }

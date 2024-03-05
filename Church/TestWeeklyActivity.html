@@ -2,65 +2,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Test Weekly Activity</title>
+  <title>Admin Weekly Activity</title>
   <link rel="stylesheet" href="../Church/Styles/stylesWeeklyMessage.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
-  <style> 
-.gridcontent h1 {
-    text-align: center;
-}
-.gridcontent p {
-    padding-top: 1vw;
-    line-height: 2.5vw;
-}
-.block-text {
-    margin-left: 2vw;
-    margin-right: 2vw;
-    line-height: 2.5vw;
-
-    
-}
-
-.other-messages {
-    flex-basis: 30%;
-    margin-top: 20px; /* Add margin to create space between the boxes */
-   
-    padding: 10px;
-    box-sizing: border-box;
-    /* overflow-y: auto;  
-  */
-    background-color: rgba(235, 235, 247, 0.7);
-    margin-left: 20px;
-    margin-right: 20px ;
-   
-}
-.side-content {
-    display: flex;
-    flex-direction: column; /* Stack the items vertically */
-}
-.other-messages h1 { 
-    font-size: 2vw;
-    color: #2c3093;
-    padding-bottom: 1vw;
-    text-align: center;
-  }
-  .other-messages p {
-    text-align: center;
-    padding-top: .5vw;
-  padding-bottom:.5vw;
-  }
-      .link-style {
-        color: black;
-    }
-    .link-style:hover {
-        color: #2c3093;
-    }
-    .link-style:active {
-        color: gold;
-    }
-
-</style>
+  
 </head>
 
 <body>
@@ -147,7 +93,7 @@
 		  </div>
 		</div>
 
-<div class ="space"><h1>Weekly Message</h1></div>
+<div class ="space"><h1>Weekly Activity - Admin Upload</h1></div>
 
 
     
@@ -157,38 +103,28 @@
 
 
         <div class = "gridcontent">
-      <h1 class = "dashed-linebottom">Jesus is Present in the Storm of Your Life</h1>
+      <h1 class = "dashed-linebottom">This Weeks Sermon Message</h1>
        <div class = "currentbiblemessage">
+        <h2><form action="upload.php" method="post" enctype="multipart/form-data">
+            Select file to upload
+            <input type="file" name="fileToUpload" id="fileToUpload">
+            <input type="submit" value="Upload File" name="submit">
+          </form></h2>
         
-                <p>Sometimes in life we feel as though we are all alone in the storm. However, as shown in Matthew 8:34, Jesus 
-                    can calm any storm. </p>
 
-                    <p class="block-text">Matthew 8:34 says, "Then he got into the boat and his disciples followed him. Suddenly a 
-                        furious storm came up on the lake, so that the waves swept over the boat. But Jesus was sleeping.
-                        The disciples went and work him, saying, "Lord save us! We're going to drown!" He replied, <span style=color:red;>"You
-                        of little faith, why are you so afraid?</span> Then he got up and rebuked the winds and the waves, and it was completely 
-                        calm. Then men were amazed and asked "What kind of main is this? Even the winds and waves obey him" 
-                        <p>
        </div>
 
       
-     
-    </div>
-    <div class ="side-content">
-    <div class = "servicetimes"><h1>Service Times</h1>
-    <p class="dashed-line">Every Sunday at 11:00am</p></div>
-    <div class="other-messages">
-        <h1><a href="../Church/WeeklyActivitiy.html" style="color: #2c3093;" onclick="this.style.color='gold'">Message</a></h1>
-        <p class="dashed-line"><a href="../Church/TestWeeklyActivity.html" class="link-style">The Sermon on the Mount</a></p>
-        <p class="dashed-line"><a href="../Church/TestWeeklyActivity.html" class="link-style">Lord's Supper</a></p>
-        <p class="dashed-line"><a href="../Church/TestWeeklyActivity.html" class="link-style">The Lord's Prayer</a></p>
-        <p class="dashed-line"><a href="../Church/TestWeeklyActivity.html" class="link-style">Jesus is Present</a></p>
-        
+       <!-- <div class = "prevsermonmessage">
+        <h1 class ="dashed-linebottom">Previous Sermon Message</h1>
+        <h2><a href="../Church/TestWeeklyActivity.html" class = "current-link-style">Jesus is present in the storm of your life</a> -March 1st 2024</h2>
        
 
 
+       </div> -->
     </div>
-</div>
+    <div class = "servicetimes"><h1>Service Times</h1>
+    <p class="dashed-line">Every Sunday at 11:00am</p></div>
 		</div>
 	  	
 		
@@ -266,7 +202,7 @@
     color: #007bff;
     margin-right: 5px;
   }
-</styl>
+</style>
     </style>
 
     <body>
@@ -370,4 +306,27 @@
     
         
     </p>
-   -->
+  
+
+
+
+
+
+
+
+
+
+
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
