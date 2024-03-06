@@ -64,7 +64,14 @@
 
 </style>
 </head>
+<?php
+$pdf_dir = "uploads/";
+$pdf_fileschedule = $pdf_dir . "schedule.pdf";
+$pdf_fileprayer = $pdf_dir . "prayer.pdf";
+$pdf_filebiblestudy = $pdf_dir . "biblestudy.pdf";
+$pdf_filebiblereading = $pdf_dir . "biblestudy.pdf";
 
+?>
 <body>
 
  <div class="main">
@@ -162,25 +169,25 @@
       <h1 class = "dashed-linebottom">Schedule</h1>
       
 
-        <h2>  <a href="<?php echo $pdf_file; ?>" target="_blank"> Click this link to access this week's schedule!</a>
+        <h2>  <a href="<?php echo $pdf_fileschedule; ?>" target="_blank"> Click this link to access this week's schedule!</a>
         </h2>
 
         <h1 class = "dashed-linebottom">Prayer</h1>
       
 
-        <h2>  <a href="<?php echo $pdf_file; ?>" target="_blank"> Click this link to access this week's prayer list!</a>
+        <h2>  <a href="<?php echo $pdf_fileprayer; ?>" target="_blank"> Click this link to access this week's prayer list!</a>
         </h2>
 
         <h1 class = "dashed-linebottom">Bible Study</h1>
       
 
-        <h2>  <a href="<?php echo $pdf_file; ?>" target="_blank"> Click this link to access this week's bible study!</a>
+        <h2>  <a href="<?php echo $pdf_filebiblestudy; ?>" target="_blank"> Click this link to access this week's bible study!</a>
         </h2>
 
         <h1 class = "dashed-linebottom">Bible Reading</h1>
       
 
-        <h2>  <a href="<?php echo $pdf_file; ?>" target="_blank"> Click this link to access this week's bible reading!</a>
+        <h2>  <a href="<?php echo $pdf_filebiblereading; ?>" target="_blank"> Click this link to access this week's bible reading!</a>
         </h2>
        
 
