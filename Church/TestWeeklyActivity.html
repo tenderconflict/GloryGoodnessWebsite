@@ -2,15 +2,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Admin Weekly Activity</title>
+  <title>Test Weekly Activity -Admin View</title>
   <link rel="stylesheet" href="../Church/Styles/stylesWeeklyMessage.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
-  
+  <style> 
+/* .gridcontent h1 {
+    text-align: center;
+} */
+.gridcontent p {
+    padding-top: 1vw;
+    line-height: 2.5vw;
+}
+.block-text {
+    margin-left: 2vw;
+    margin-right: 2vw;
+    line-height: 2.5vw;
+
+
+}
+
+.notes {
+  max-width: 250px;
+    flex-basis: 30%;
+    margin-top: 20px; /* Add margin to create space between the boxes */
+
+    padding: 10px;
+    box-sizing: border-box;
+    /* overflow-y: auto;  
+  */
+    background-color: rgba(235, 235, 247, 0.7);
+    margin-left: 20px;
+    margin-right: 20px ;
+    
+
+}
+.side-content {
+    display: flex;
+    flex-direction: column; /* Stack the items vertically */
+}
+.notes h1 { 
+    font-size: 2vw;
+    color: #2c3093;
+    padding-bottom: 1vw;
+    text-align: center;
+  }
+  .notes p {
+    text-align: center;
+    padding-top: .5vw;
+  padding-bottom:.5vw;
+  }
+      .link-style {
+        color: black;
+    }
+    .link-style:hover {
+        color: #2c3093;
+    }
+    .link-style:active {
+        color: gold;
+    }
+
+</style>
 </head>
 
 <body>
-   
+
  <div class="main">
 	  <div class="top">
 		<div class="login">
@@ -21,7 +77,7 @@
 		<div class="logo">
 			<li><a href="../GloryGHome.html"><img src="../Church/Pictures/GGCLogo.png" alt="ChurchLogo" height= "80"></a></li>			
 		</div>
-		
+
 	  </div>
 	  <div class="navbar">
 		<!-- Lines 23-91 written by Thomas -->
@@ -29,21 +85,21 @@
 			  <ul>
 				  <!-- clicking home should bring you to the homepage-TD -->
 				  <!-- <li><a href="#"><img src="GGCLogo.png" alt="ChurchLogo" height= "70"></a></li> -->
-  
-  
+
+
 				  <!-- <li><a href="#">HOME</a></li>-->
-  
-  
-  
-  
+
+
+
+
 				  <li><a href="../GloryGHome.html">Home <br><span style="color: rgb(18, 18, 161);">Chủ</span></a></li>
-  
-  
-  
+
+
+
 				  <li class="has-submenu"><a href="#">About Us <br> <span style="color: rgb(18, 18, 161);">Thông
 							  tin</span></a>
-  
-  
+
+
 					  <ul class="submenu">
 						  <li><a href="../Church/AboutUs/MissionVision.html">Mission & Vision <br><span style="color: rgb(18, 18, 161);">Khát
 									  vọng</span></a></li>
@@ -53,13 +109,13 @@
 									  sử</span></a></li>
 						  <!--more may be added in the future here -TD -->
 					  </ul>
-  
-  
+
+
 				  </li>
-  
-  
+
+
 				  <li><a href="#">Ministries <br><span style="color: rgb(18, 18, 161);">Bộ</span></a>
-  
+
 					  <ul class="submenu">
 						  <li><a href="../Church/ChurchEventCalandar.html">Church Event Calendar <br><span
 									  style="color: rgb(18, 18, 161);">Lịch</span></a></li>
@@ -67,265 +123,116 @@
 									  động</span></a></li>
 						  <li><a href="../Church/WeeklyBibleReadings.html">Yearly Bible Reading <br><span style="color: rgb(18, 18, 161);">Đọc Kinh
 									  Thánh</span></a></li>
-  
+
 					  </ul>
-  
-  
+
+
 				  </li>
-  
-  
+
+
 				  <li><a href="../Church/Giving.html">Giving <br><span style="color: rgb(18, 18, 161);">Cho</span></a></li>
-  
-  
-  
+
+
+
 				  <li><a href="#">School <br><span style="color: rgb(18, 18, 161);">Trường học</span></a>
-  
+
 					  <ul class="submenu">
 						  <li><a href="../School/GloryGSchool.html">Glory Goodness School <br><span
 									  style="color: rgb(18, 18, 161);">Trường học</span></a></li>
-  
+
 					  </ul>
-  
-  
+
+
 				  </li>
-  
+
 			  </ul>
 		  </div>
 		</div>
 
-<div class ="space"><h1>Weekly Activity - Admin Upload</h1></div>
+<div class ="space"><h1>Weekly Message</h1></div>
 
 
-    
-	
-	
+
+
+
 	  <div class="middle">
 
 
         <div class = "gridcontent">
-      <h1 class = "dashed-linebottom">This Weeks Sermon Message</h1>
-       <div class = "currentbiblemessage">
-        <h2><form action="upload.php" method="post" enctype="multipart/form-data">
-            Select file to upload
-            <input type="file" name="fileToUpload" id="fileToUpload">
-            <input type="submit" value="Upload File" name="submit">
-          </form></h2>
-        
-
-       </div>
-
+      <h1 class = "dashed-linebottom">Schedule</h1>
       
-       <!-- <div class = "prevsermonmessage">
-        <h1 class ="dashed-linebottom">Previous Sermon Message</h1>
-        <h2><a href="../Church/TestWeeklyActivity.html" class = "current-link-style">Jesus is present in the storm of your life</a> -March 1st 2024</h2>
+
+      <h2><form action="upload.php" method="post" enctype="multipart/form-data">
+        Select file to upload
+        <input type="file" name="fileToUpload" id="fileToUpload">
+        <input type="submit" value="Upload File" name="submit">
+      </form></h2>
+
+        <h1 class = "dashed-linebottom">Prayer</h1>
+      
+
+        <h2><form action="upload.php" method="post" enctype="multipart/form-data">
+          Select file to upload
+          <input type="file" name="fileToUpload" id="fileToUpload">
+          <input type="submit" value="Upload File" name="submit">
+        </form></h2>
+        <h1 class = "dashed-linebottom">Bible Study</h1>
+      
+
+        <h2><form action="upload.php" method="post" enctype="multipart/form-data">
+          Select file to upload
+          <input type="file" name="fileToUpload" id="fileToUpload">
+          <input type="submit" value="Upload File" name="submit">
+        </form></h2>
+        <h1 class = "dashed-linebottom">Bible Reading</h1>
+      
+
+          <h2><form action="upload.php" method="post" enctype="multipart/form-data">
+          Select file to upload
+          <input type="file" name="fileToUpload" id="fileToUpload">
+          <input type="submit" value="Upload File" name="submit">
+        </form></h2>
        
 
 
-       </div> -->
+
     </div>
+    <div class ="side-content">
     <div class = "servicetimes"><h1>Service Times</h1>
     <p class="dashed-line">Every Sunday at 11:00am</p></div>
+    <div class="notes">
+       <h1>Notes</h1>
+       <p>based on the weather, we will be meeting virtually this week</p>
+       
+
+
+
+
+    </div>
+</div>
 		</div>
-	  	
-		
-	  
+
+
+
 	  <div class="verse">
 			<p>2nd Peter 1:3</p>
-			
-	  
-	  
+
+
+
                     <p2>By his divine power, God has given us everything we need for living a godly life. We have
                         received all of this by coming to know him, the one who called us to himself by means of his
                         marvelous glory and excellence.</p2>
 					</div>
 
-                  
+
 	  <div class="bottomPage">
 	  		<p>&copy; Glory Goodness Church 2023. All rights reserved.<p>
 	  </div>
     </div>
 
-	
+
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-    <head>
-
-        <title>Weekly Bible Readings</title>
-        <link rel="stylesheet" href="Styles/LoginChurch.css">
-        <script src="LoginSystemChurch.js"></script> 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta charset="UTF-8">
-    
-    </head>
-
-    <style>
-        
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-  }
-  h1 {
-    text-align: center;
-    margin-top: 20px;
-  }
-  h2 {
-    margin-top: 30px;
-  }
-  p, ul {
-    margin-bottom: 15px;
-  }
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  ul li:before {
-    content: "•";
-    color: #007bff;
-    margin-right: 5px;
-  }
-</style>
-    </style>
-
-    <body>
-
-        
-        <h1>Weekly Message</h1>
-
-<h2>Facebook Live</h2>
-<p>If you're looking for today's service, head on over to Facebook at 10:30 am for our LIVE Service.</p>
-<p>View the CCC Facebook page <a href="https://www.facebook.com/CCCpage">here</a>.</p>
-<p>If you arrive at the page before we start streaming, you may need to refresh when it's time to start. On a mobile device, you will need the Facebook app and an account to see the live stream.</p>
-
-<h2>Message from Sept 13, 2020</h2>
-<p>Pastor Jeff's Message – Sept 13, 2020</p>
-
-<h2>Our Journey</h2>
-<p>We are continuing our Sunday School series, A Study of the Sermon on the Mount – Inside-out Righteousness How We Treat Others, by Perry Seip. To accompany each Sunday, download the PDF.</p>
-
-<h2>Previous Weekly Services</h2>
-<ul>
-  <li>God's Timeless Truths for Big & Little Kids – Micah Corder – August 16, 2020</li>
-  <li>Perry Seip's Message – August 9, 2020</li>
-  <li>Geoff Howard's Message – August 2, 2020</li>
-  <li>Micah Corder's Message – July 26, 2020</li>
-  <li>Pastor Jeff's Message – July 19, 2020</li>
-  <li>Pastor Jeff's Message – July 12, 2020</li>
-  <li>Pastor Jeff's Message – July 5, 2020</li>
-  <li>Pastor Jeff's Message – June 28, 2020</li>
-</ul>
-
-<h2>YouTube Messages</h2>
-<ul>
-  <li>Pastor Jeff's Father's Day Message – June 21, 2020</li>
-  <li>Perry Seip's Message – June 14, 2020</li>
-  <li>Pastor Jeff speaks humbly at the foot of the cross about George Floyd – June 7, 2020</li>
-  <li>God is preparing us for the "new normal" – Pastor Jeff Good – May 31, 2020</li>
-  <li>Ask your Questions – Confess Your Confidence – Pastor Jeff Good – May 24, 2020</li>
-  <li>Jesus Calming the Storm – Micah Corder – May 17, 2020</li>
-  <li>God is Pursuing You – Pastor Jeff Good – May 10, 2020</li>
-  <li>Need of Endurance – May 3, 2020</li>
-  <li>His Word First Word – April 26, 2020</li>
-  <li>Find Purpose in this Time – April 19, 2020</li>
-  <li>Easter Sunday – April 12, 2020</li>
-  <li>Palm Sunday – Hosanna, Do Not Fear, See the King – April 5, 2020</li>
-  <li>God's Truth – March 29, 2020</li>
-  <li>Choose Love Over Fear – March 22, 2020</li>
-</ul>
-
-<h2>Children's Sermon</h2>
-<ul>
-  <li>Lesa McAdow – Children's Sermon – May 24, 2020</li>
-  <li>Lesa McAdow – Children's Sermon – April 19, 2020</li>
-  <li>Luke Melton – Children's Sermon – April 5, 2020</li>
-  <li>Lesa McAdow – Children's Sermon – March 29, 2020</li>
-</ul>
-
-
-
-
-        <div class="main">
-            <div class="top">
-              <div class="login">
-                  <span style="float:right;">
-                      <li type="none"><a href="../Church/LoginChurch.html">Sign in</a></li>
-                  </span>
-              </div>
-
-        <div class="container">
-            <embed src="" type="application/pdf" width="100%" height="600px" />
-             Eventually when pdf is found to use put it in the src above -->
-             <!-- use google docs 
-
-        </div>
-
-        <div class="navbar">
-            <div class="menu">
-               <ul>
-               
-               <li><a href="calendar.html">Calendar</a></li>	
-     
-               <li><a href="convention.html">Convention Info</a></li>
-     
-               <li><a href="#">School Handbook</a></li>
-     
-               <li><a href="../School/GloryGSchool.html">Education</a></li>
-               </ul>		
-     
-            </div>
-           </div>
-
-    </body>
-
-
-
-
-     makes it so logo's in the top left and login is in the top right-TD 
-
-    <p style="text-align:center;">
-        clicking home should bring you to the homepage-TD 
-        <li><a href="../GloryGHome.html"><img src="Pictures/GGCLogo.png" alt="ChurchLogo" height= "80"></a></li>
-    
-        
-    </p>
-  
-
-
-
-
-
-
-
-
-
-
- -->
-
-
-
-
-
-
-
-
 
 
 
