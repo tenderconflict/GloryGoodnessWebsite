@@ -181,9 +181,11 @@ ul li:hover .submenu {
     justify-content: center;
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
-    
-    padding: 20px;
-    margin: 20px;
+
+    color: royalblue;
+    text-shadow: 0 0 3px #ffffff, 0 0 5px #ffffff;
+
+    padding: 40px;
 }
 
 
@@ -198,7 +200,6 @@ ul li:hover .submenu {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     
-    color: rgb(1, 19, 37);
 }
 
 
