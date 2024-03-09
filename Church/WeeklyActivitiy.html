@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title> Weekly Activity</title>
+  <title>Test Weekly Activity</title>
   <link rel="stylesheet" href="../Church/Styles/stylesWeeklyMessage.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
@@ -64,21 +64,24 @@
 
 </style>
 </head>
-<?php
-$pdf_dir = "uploads/";
-$pdf_fileschedule = $pdf_dir . "schedule.pdf";
-$pdf_fileprayer = $pdf_dir . "prayer.pdf";
-$pdf_filebiblestudy = $pdf_dir . "biblestudy.pdf";
-$pdf_filebiblereading = $pdf_dir . "biblestudy.pdf";
 
-?>
 <body>
+  <?php
+    $pdf_dir = "uploads/";
+    $pdf_fileschedule = $pdf_dir . "schedule.pdf";
+    $pdf_fileprayer = $pdf_dir . "prayer.pdf";
+    $pdf_filebible_study = $pdf_dir . "bible_study.pdf"
+    $pdf_filebible_reading = $pdf_dir . "bible_reading.pdf";
+?>
+    
+       
+   
 
  <div class="main">
 	  <div class="top">
 		<div class="login">
 			<span style="float:right;">
-				<li type="none"><a href="../Church/LoginChurch.html">Sign in</a></li>
+				<li type="none"><a href="weeklyactivityadmin.php">Sign in</a></li>
 			</span>
 		</div>
 		<div class="logo">
@@ -156,7 +159,7 @@ $pdf_filebiblereading = $pdf_dir . "biblestudy.pdf";
 		  </div>
 		</div>
 
-<div class ="space"><h1>Weekly Message</h1></div>
+<div class ="space"><h1>Weekly Activity</h1></div>
 
 
 
@@ -181,13 +184,13 @@ $pdf_filebiblereading = $pdf_dir . "biblestudy.pdf";
         <h1 class = "dashed-linebottom">Bible Study</h1>
       
 
-        <h2>  <a href="<?php echo $pdf_filebiblestudy; ?>" target="_blank"> Click this link to access this week's bible study!</a>
+        <h2>  <a href="<?php echo $pdf_filebible_study; ?>" target="_blank"> Click this link to access this week's bible study!</a>
         </h2>
 
         <h1 class = "dashed-linebottom">Bible Reading</h1>
       
 
-        <h2>  <a href="<?php echo $pdf_filebiblereading; ?>" target="_blank"> Click this link to access this week's bible reading!</a>
+        <h2>  <a href="<?php echo $pdf_filebible_reading; ?>" target="_blank"> Click this link to access this week's bible reading!</a>
         </h2>
        
 
