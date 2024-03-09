@@ -3,7 +3,6 @@
 
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,7 +24,7 @@
             </div>
 
 
-          
+            <!-- makes it so logo's in the top left and login is in the top right-TD -->
             <div class="login">
                 <span style="float:right;">
                     <li><a href="Church/LoginChurch.html">Sign in</a></li>
@@ -59,21 +58,18 @@
 
 
 
-                    <li><a href="GloryGHome.html#">Home <br><span style="color: rgb(18, 18, 161);">Chủ</span></a></li>
+                    <li><a href="GloryGHome.html#">Home <br><span style="color: rgb(18, 18, 161);">Trang chủ</span></a></li>
 
 
 
-                    <li class="has-submenu"><a href="#">About Us <br> <span style="color: rgb(18, 18, 161);">Thông
-                                tin</span></a>
+                    <li class="has-submenu"><a href="#">About Us <br> <span style="color: rgb(18, 18, 161);">Về Hội Thánh</span></a>
 
 
                         <ul class="submenu">
-                            <li><a href="Church/AboutUs/MissionVision.html">Mission & Vision <br><span style="color: rgb(18, 18, 161);">Khát
-                                        vọng</span></a></li>
-                            <li><a href="Church/AboutUs/ChurchStaff.html">Church Staff <br><span style="color: rgb(18, 18, 161);">Nhân viên</span></a>
+                            <li><a href="Church/AboutUs/MissionVision.html">Mission & Vision <br><span style="color: rgb(18, 18, 161);">Sứ Mạng và Tầm Nhìn</span></a></li>
+                            <li><a href="Church/AboutUs/ChurchStaff.html">Church Staff <br><span style="color: rgb(18, 18, 161);">Thành viên</span></a>
                             </li>
-                            <li><a href="Church/AboutUs/ChurchHistory.html">Church History <br> <span style="color: rgb(18, 18, 161);">Lịch
-                                        sử</span></a></li>
+                            <li><a href="Church/AboutUs/ChurchHistory.html">Church History <br> <span style="color: rgb(18, 18, 161);">Lịch sử</span></a></li>
                             <!--more may be added in the future here -TD -->
                         </ul>
 
@@ -81,15 +77,13 @@
                     </li>
 
 
-                    <li><a href="#">Ministries <br><span style="color: rgb(18, 18, 161);">Bộ</span></a>
+                    <li><a href="#">Ministries <br><span style="color: rgb(18, 18, 161);">Mục Vụ</span></a>
 
                         <ul class="submenu">
                             <li><a href="Church/ChurchEventCalandar.html">Church Event Calendar <br><span
-                                        style="color: rgb(18, 18, 161);">Lịch</span></a></li>
-                            <li><a href="Church/WeeklyActivitiy.html">Weekly Activity <br><span style="color: rgb(18, 18, 161);">Hoạt
-                                        động</span></a></li>
-                            <li><a href="Church/WeeklyBibleReadings.html">Weekly Bible Reading <br><span style="color: rgb(18, 18, 161);">Đọc Kinh
-                                        Thánh</span></a></li>
+                                        style="color: rgb(18, 18, 161);">Thời Khoá Biểu của</span></a></li>
+                            <li><a href="Church/WeeklyActivitiy.html">Weekly Activity <br><span style="color: rgb(18, 18, 161);">Hoạt Động Hằng Tuần</span></a></li>
+                            <li><a href="Church/WeeklyBibleReadings.html">Weekly Bible Reading <br><span style="color: rgb(18, 18, 161);">Lịch đọc Kinh Thánh Hằng Năm</span></a></li>
 
                         </ul>
 
@@ -97,14 +91,14 @@
                     </li>
 
 
-                    <li><a href="Church/Giving.html">Giving <br><span style="color: rgb(18, 18, 161);">Cho</span></a></li>
+                    <li><a href="Church/Giving.html">Giving <br><span style="color: rgb(18, 18, 161);">Dâng Hiến</span></a></li>
 
 
 
-                    <li><a href="#">School <br><span style="color: rgb(18, 18, 161);">Trường học</span></a>
+                    <li><a href="#">Education <br><span style="color: rgb(18, 18, 161);">Giáo Dục</span></a>
 
                         <ul class="submenu">
-                            <li><a href="School/GloryGSchool.html">Glory Goodness School <br><span
+                            <li><a href="School/GloryGSchool.html">School <br><span
                                         style="color: rgb(18, 18, 161);">Trường học</span></a></li>
 
                         </ul>
@@ -115,6 +109,7 @@
                 </ul>
             </div>
         </div>
+
 <!-- lines 123-137 written by Jillian -->
 <script>
 		function toggleMenu() {
