@@ -367,11 +367,18 @@ text-decoration: none;
 	
 	
   }
+  .grid-containerbld h3 {
+    text-align: center;
+    padding-top: 1vw;
+  }
 
   .bldpledge-item{
     text-align: center;
 	border-bottom: 2px solid #ccc; /* Add a bottom border to create a division line */
     padding-bottom: 10px;
+  }
+  .bldpledge-item p {
+    padding:1vw;
   }
 
   .bldpledge-item img {
@@ -519,13 +526,13 @@ font-family: "Arial", sans-serif;
 	font-size: 20px;
 	margin: 4px 2px;
 	cursor: pointer;
-	background-color: rgb(49, 94, 49);
+		background-color: #2c3093;
 	font-weight: bold;
 	letter-spacing: .1px;
 	
   }
 .button:hover {
-	background-color: darkgoldenrod;
+	background-color:#6082B6; 
 }
 .leftrightbutton {
 	
