@@ -32,7 +32,7 @@ session_start();
 
             <p style="text-align:center;">
                 <!-- clicking home should bring you to the homepage-TD -->
-                <li><a href="GloryGHome.html#"><img src="Church/Pictures/GGCLogo.png" alt="ChurchLogo" height="80"></a>
+                <li><a href="GloryGHome.php#"><img src="Church/Pictures/GGCLogo.png" alt="ChurchLogo" height="80"></a>
                 </li>
 
 
@@ -57,7 +57,7 @@ session_start();
 
 
 
-                    <li><a href="GloryGHome.html#">Home <br><span style="color: rgb(18, 18, 161);">Trang chủ</span></a></li>
+                    <li><a href="GloryGHome.php#">Home <br><span style="color: rgb(18, 18, 161);">Trang chủ</span></a></li>
 
 
 
@@ -65,10 +65,10 @@ session_start();
 
 
                         <ul class="submenu">
-                            <li><a href="Church/AboutUs/MissionVision.html">Mission & Vision <br><span style="color: rgb(18, 18, 161);">Sứ Mạng và Tầm Nhìn</span></a></li>
-                            <li><a href="Church/AboutUs/ChurchStaff.html">Church Staff <br><span style="color: rgb(18, 18, 161);">Thành viên</span></a>
+                            <li><a href="Church/AboutUs/MissionVision.php">Mission & Vision <br><span style="color: rgb(18, 18, 161);">Sứ Mạng và Tầm Nhìn</span></a></li>
+                            <li><a href="Church/AboutUs/ChurchStaff.php">Church Staff <br><span style="color: rgb(18, 18, 161);">Thành viên</span></a>
                             </li>
-                            <li><a href="Church/AboutUs/ChurchHistory.html">Church History <br> <span style="color: rgb(18, 18, 161);">Lịch sử</span></a></li>
+                            <li><a href="Church/AboutUs/ChurchHistory.php">Church History <br> <span style="color: rgb(18, 18, 161);">Lịch sử</span></a></li>
                             <!--more may be added in the future here -TD -->
                         </ul>
 
@@ -79,10 +79,10 @@ session_start();
                     <li><a href="#">Ministries <br><span style="color: rgb(18, 18, 161);">Mục Vụ</span></a>
 
                         <ul class="submenu">
-                            <li><a href="Church/ChurchEventCalandar.html">Church Event Calendar <br><span
+                            <li><a href="Church/ChurchEventCalendar.php">Church Event Calendar <br><span
                                         style="color: rgb(18, 18, 161);">Thời Khoá Biểu của</span></a></li>
                             <li><a href="Church/WeeklyActivitiy.html">Weekly Activity <br><span style="color: rgb(18, 18, 161);">Hoạt Động Hằng Tuần</span></a></li>
-                            <li><a href="Church/WeeklyBibleReadings.html">Weekly Bible Reading <br><span style="color: rgb(18, 18, 161);">Lịch đọc Kinh Thánh Hằng Năm</span></a></li>
+                            <li><a href="Church/WeeklyBibleReadings.php">Weekly Bible Reading <br><span style="color: rgb(18, 18, 161);">Lịch đọc Kinh Thánh Hằng Năm</span></a></li>
 
                         </ul>
 
@@ -90,14 +90,14 @@ session_start();
                     </li>
 
 
-                    <li><a href="Church/Giving.html">Giving <br><span style="color: rgb(18, 18, 161);">Dâng Hiến</span></a></li>
+                    <li><a href="Church/Giving.php">Giving <br><span style="color: rgb(18, 18, 161);">Dâng Hiến</span></a></li>
 
 
 
                     <li><a href="#">Education <br><span style="color: rgb(18, 18, 161);">Giáo Dục</span></a>
 
                         <ul class="submenu">
-                            <li><a href="School/GloryGSchool.html">School <br><span
+                            <li><a href="School/GloryGSchool.php">School <br><span
                                         style="color: rgb(18, 18, 161);">Trường học</span></a></li>
 
                         </ul>
@@ -143,8 +143,8 @@ session_start();
                 <div class="ChurchCalendar">
                     <h1>Church Calendar<br><span style="color: rgb(234, 255, 235);">Lịch</span></h1>
 
-                    <div class="leftrightbutton"><a href = 'Church/ChurchEventCalandar.html'><button class = "button">View Calendar</button></a></div>
-                    <div class="leftrightbutton"><a href = 'Church/ChurchEventCalandar.html'><button class = "button">Lịch</button></a></div>
+                    <div class="leftrightbutton"><a href = 'Church/ChurchEventCalendar.php'><button class = "button">View Calendar</button></a></div>
+                    <div class="leftrightbutton"><a href = 'Church/ChurchEventCalendar.php'><button class = "button">Lịch</button></a></div>
                 </div>
 
 

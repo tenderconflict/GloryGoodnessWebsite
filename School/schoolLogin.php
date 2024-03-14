@@ -56,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
 
 <head>
     <title>Glory Goodness Church</title>
-    <link rel="stylesheet" href="LoginSchool.css">
+    <link rel="stylesheet" href="Styles/LoginSchool.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>

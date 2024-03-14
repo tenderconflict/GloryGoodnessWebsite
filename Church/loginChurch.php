@@ -65,7 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
 
 <p style="text-align:center;">
     <!-- clicking home should bring you to the homepage-TD -->
-    <li><a href="../GloryGHome.html"><img src="Pictures/GGCLogo.png" alt="ChurchLogo" height= "80"></a></li>
+    <li><a href="../GloryGHome.php"><img src="Pictures/GGCLogo.png" alt="ChurchLogo" height= "80"></a></li>
 
     
 </p>

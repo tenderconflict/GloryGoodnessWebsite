@@ -1,8 +1,11 @@
+<?php
+session_start();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Test Weekly Activity</title>
+  <title>Test Weekly Activity -Admin View</title>
   <link rel="stylesheet" href="../Church/Styles/stylesWeeklyMessage.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
@@ -66,22 +69,12 @@
 </head>
 
 <body>
-  <?php
-    $pdf_dir = "uploads/";
-    $pdf_fileschedule = $pdf_dir . "schedule.pdf";
-    $pdf_fileprayer = $pdf_dir . "prayer.pdf";
-    $pdf_filebible_study = $pdf_dir . "bible_study.pdf"
-    $pdf_filebible_reading = $pdf_dir . "bible_reading.pdf";
-?>
-    
-       
-   
 
  <div class="main">
 	  <div class="top">
 		<div class="login">
 			<span style="float:right;">
-				<li type="none"><a href="../Church/loginChurch.php">Sign in</a></li>
+				<li type="none"><a href="">Sign in</a></li>
 			</span>
 		</div>
 		<div class="logo">
@@ -159,7 +152,7 @@
 		  </div>
 		</div>
 
-<div class ="space"><h1>Weekly Activity</h1></div>
+<div class ="space"><h1>Weekly Message</h1></div>
 
 
 
@@ -172,28 +165,38 @@
       <h1 class = "dashed-linebottom">Schedule</h1>
       
 
-        <h2>  <a href="<?php echo $pdf_fileschedule; ?>" target="_blank"> Click this link to access this week's schedule!</a>
-        </h2>
+      <h2><form action="../Church/upload.php" method="post" enctype="multipart/form-data">
+        Select file to upload
+        <input type="file" name="section" id="schedule">
+        <input type="submit" value="Upload File" name="submit">
+      </form></h2>
 
         <h1 class = "dashed-linebottom">Prayer</h1>
       
 
-        <h2>  <a href="<?php echo $pdf_fileprayer; ?>" target="_blank"> Click this link to access this week's prayer list!</a>
-        </h2>
-
+        <h2><form action="../Church/upload.php" method="post" enctype="multipart/form-data">
+          Select file to upload
+          <input type="file" name="section" id="prayer">
+          <input type="submit" value="Upload File" name="submit">
+        </form></h2>
         <h1 class = "dashed-linebottom">Bible Study</h1>
       
 
-        <h2>  <a href="<?php echo $pdf_filebible_study; ?>" target="_blank"> Click this link to access this week's bible study!</a>
-        </h2>
-
+        <h2><form action="../Church/upload.php" method="post" enctype="multipart/form-data">
+          Select file to upload
+          <input type="file" name="section" id="bible_study">
+          <input type="submit" value="Upload File" name="submit">
+        </form></h2>
         <h1 class = "dashed-linebottom">Bible Reading</h1>
       
 
-        <h2>  <a href="<?php echo $pdf_filebible_reading; ?>" target="_blank"> Click this link to access this week's bible reading!</a>
-        </h2>
-       
-
+    
+        <form action="../Church/upload.php" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="section" value="bible_reading">
+    Select file to upload:
+    <input type="file" name="fileToUpload" id="fileToUpload">
+    <input type="submit" value="Upload File" name="submit">
+</form>
 
 
     </div>
@@ -233,6 +236,7 @@
 
 </body>
 </html>
+
 
 
 
