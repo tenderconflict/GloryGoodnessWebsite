@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!-- Lines 1-147 written by Thomas -->
 <!DOCTYPE html>
 <html lang="en">
