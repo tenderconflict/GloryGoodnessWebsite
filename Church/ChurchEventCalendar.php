@@ -13,32 +13,11 @@ session_start();
 
 <body>
     <div class="main">
-	  <div class="top">
-		<div class="login">
-			<span style="float:right;">
-				<li type="none"><a href="../Church/loginChurch.php">Sign in</a></li>
-			</span>
-		</div>
-		<div class="logo">
-			<li><a href="../GloryGHome.php"><img src="GGCLogo.png" alt="ChurchLogo" height= "80"></a></li>			
-		</div>
-		
-	  </div>
 	  <div class="navbar">
-	   <div class="menu">
-	      <ul>
-		  
-		  <li><a href="calendar.html">Calendar</a></li>	
-
-		  <li><a href="convention.html">Convention Info</a></li>
-
-		  <li><a href="#">School Handbook</a></li>
-
-		  <li><a href="../School/GloryGSchool.php">Education</a></li>
-	      </ul>		
-
-
-	   </div>
+			<?php 
+                include('../Header.php');
+                include('../Menu.php');
+            ?>
 	  </div>
 	  
 	  <div class="content">
