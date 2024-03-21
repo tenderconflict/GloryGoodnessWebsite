@@ -17,11 +17,10 @@
         /*background: linear-gradient(to bottom, white, rgb(49, 94, 49));*/
     
         /*heres the old right color background: linear-gradient(to bottom, white, #4a4279);*/
-        background: linear-gradient(to bottom, white, rgb(0, 0, 145));
         position: relative;
         background-position: center;
         background-size: cover;
-        height: 2050px;
+        height: auto;
     }
 
     .navbar{

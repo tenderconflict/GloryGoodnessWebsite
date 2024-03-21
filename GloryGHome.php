@@ -90,7 +90,7 @@ session_start();
                     <p4>&copy; Glory Goodness Church 2023. All rights reserved.</p4>
 
         </div>
-
+    </div>
 </body>
 
 </html>
