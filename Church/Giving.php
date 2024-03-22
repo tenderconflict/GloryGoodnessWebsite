@@ -103,8 +103,8 @@ session_start();
 	  <div class="middle">
 	<div class="tab">
 	<button class="tablinks" onclick="openGiving(event, 'Zelle')"id ="DefaultOpen">Zelle</button>
-	<button class="tablinks" onclick="openGiving(event, 'Text to Give')">Text to Give</button>
-	<button class="tablinks" onclick="openGiving(event, 'PayPal')">PayPal</button>
+	<!-- <button class="tablinks" onclick="openGiving(event, 'Text to Give')">Text to Give</button> -->
+	<!-- <button class="tablinks" onclick="openGiving(event, 'PayPal')">PayPal</button> -->
 	<button class="tablinks" onclick="openGiving(event, 'In-Person')">In-Person</button>
 	<button class="tablinks" onclick="openGiving(event, 'Building Pledge')">Building Pledge</button>
   </div>
@@ -160,7 +160,7 @@ session_start();
  
   </div>
   
-  <div id="Text to Give" class="tabcontent">
+  <!-- <div id="Text to Give" class="tabcontent">
 	
 	<h3>Step 1</h3>
 	<div class="grid-containertxt2give">
@@ -186,61 +186,61 @@ session_start();
 
 	 
 	</div>
-  </div>
+  </div> -->
 
   
 
 
 
 
-  <div id="PayPal" class="tabcontent">
+  <!-- <div id="PayPal" class="tabcontent">
 	
 	<h3>Step 1</h3>
-	<div class="grid-containerpaypal">
+	<div class="grid-containerpaypal"> -->
 	
-	  <div class="paypal-item">
-	
-		<button type="button" style="float: left; margin-right: 20px;" class ="button">Donate</button>
-		<p>Click the donation button to the left to donate through PayPal</p>
-	  </div>
-	  <h3>Step 2</h3>
-	  <div class="paypal-item">
+		<!-- <div class="paypal-item">
 		
-		<img src="../Church/Pictures/zelle2.PNG" alt="Zelle Image2" style="float: left; margin-right: 10px; width: 200px; height: 450px;" >
-		<p>Once in the send money section, select <span style="color: #20ccfa; font-weight: bold;">Send</span> </p>
-	  </div>
+			<button type="button" style="float: left; margin-right: 20px;" class ="button">Donate</button>
+			<p>Click the donation button to the left to donate through PayPal</p>
+		</div>
+		<h3>Step 2</h3>
+		<div class="paypal-item">
+			
+			<img src="../Church/Pictures/zelle2.PNG" alt="Zelle Image2" style="float: left; margin-right: 10px; width: 200px; height: 450px;" >
+			<p>Once in the send money section, select <span style="color: #20ccfa; font-weight: bold;">Send</span> </p>
+		</div>
 
-	  <h3>Step 3</h3>
-	  <div class="paypal-item">
-		
-		<img src="../Church/Pictures/zelle3.PNG" alt="Zelle Image2" style="float: left; margin-right: 10px; width: 200px; height: 450px;" >
-		<p>Select search, and input "5717897855". Then press <span style="color: #20ccfa; font-weight: bold;">add 5717897855</span> </p>
-	  </div>
+		<h3>Step 3</h3>
+		<div class="paypal-item">
+			
+			<img src="../Church/Pictures/zelle3.PNG" alt="Zelle Image2" style="float: left; margin-right: 10px; width: 200px; height: 450px;" >
+			<p>Select search, and input "5717897855". Then press <span style="color: #20ccfa; font-weight: bold;">add 5717897855</span> </p>
+		</div>
 
-	  <h3>Step 4</h3>
-	  <div class="paypal-item">
-		
-		<img src="../Church/Pictures/zelle4.PNG" alt="Zelle Image2" style="float: left; margin-right: 10px; width: 200px; height: 450px;" >
-		<p>Put Glory Goodness Church for name, and then select <span style="color: #20ccfa; font-weight: bold;">continue</span> </p>
-	  </div>
+		<h3>Step 4</h3>
+		<div class="paypal-item">
+			
+			<img src="../Church/Pictures/zelle4.PNG" alt="Zelle Image2" style="float: left; margin-right: 10px; width: 200px; height: 450px;" >
+			<p>Put Glory Goodness Church for name, and then select <span style="color: #20ccfa; font-weight: bold;">continue</span> </p>
+		</div>
 
-	  <h3>Step 5</h3>
-	  <div class="paypal-item">
-		
-		<img src="../Church/Pictures/zelle5.PNG" alt="Zelle Image2" style="float: left; margin-right: 10px; width: 200px; height: 450px;" >
-		<p>Double check the phone number you have entered, and that Zelle says "You're sending money to GLORY GOODNESS CHURCH INC Accounts" <br> select <span style="color: #20ccfa; font-weight: bold;">continue</span> </p>
-	  </div>
+		<h3>Step 5</h3>
+		<div class="paypal-item">
+			
+			<img src="../Church/Pictures/zelle5.PNG" alt="Zelle Image2" style="float: left; margin-right: 10px; width: 200px; height: 450px;" >
+			<p>Double check the phone number you have entered, and that Zelle says "You're sending money to GLORY GOODNESS CHURCH INC Accounts" <br> select <span style="color: #20ccfa; font-weight: bold;">continue</span> </p>
+		</div>
 
-	  <h3>Step 6</h3>
-	  <div class="paypal-item">
+		<h3>Step 6</h3>
+		<div class="paypal-item">
+			
+			<img src="../Church/Pictures/zelle6.PNG" alt="Zelle Image2" style="float: left; margin-right: 10px; width: 200px; height: 450px;" >
+			<p>Enter the donation amount along with a memo. Select <span style="color: #20ccfa; font-weight: bold;">review</span> <br> On the next screen, select send to send your donation</p>
+		</div>
 		
-		<img src="../Church/Pictures/zelle6.PNG" alt="Zelle Image2" style="float: left; margin-right: 10px; width: 200px; height: 450px;" >
-		<p>Enter the donation amount along with a memo. Select <span style="color: #20ccfa; font-weight: bold;">review</span> <br> On the next screen, select send to send your donation</p>
-	  </div>
-	 
-	</div>
-	
-  </div>
+		</div>
+		
+	</div> -->
   <div id="In-Person" class="tabcontent">
 	<h3>Cash</h3>
 	<div class="grid-containerinperson">
@@ -249,11 +249,11 @@ session_start();
 		
 		<p>During church service hours, find a staff member to give you an offering envelope. Place your cash donation in the envelope and return it to the staff member</p>
 	  </div>
-	  <h3>Credit Card</h3>
+	  <h3>Check</h3>
 	  <div class="inperson-item">
 		
 		
-		<p>During church service hours, head to the reception area and tell a staff member that you want to donate with your credit card.  </p>
+	  <p>During church service hours, head to the reception area and tell a staff member that you want to donate with a check. The check should be made out to Glory Goodness Church.  </p>
 	  </div>
 
 	  

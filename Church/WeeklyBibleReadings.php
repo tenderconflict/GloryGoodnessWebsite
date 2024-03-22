@@ -108,7 +108,7 @@ session_start();
 	
 	  <div class="middle">
 	
-	  <iframe width="90%" height="600" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTmU0vu4s7Ku-4uALo7qZUGn1k4fmq6FUwYHE6CPxEMfU7skG7_7WjJRKxS5D3uKsBlrRy1TlAqisLa/pubhtml?&amp;widget=true&amp;headers=false"></iframe>
+	  <iframe width="90%" height="1260" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTmU0vu4s7Ku-4uALo7qZUGn1k4fmq6FUwYHE6CPxEMfU7skG7_7WjJRKxS5D3uKsBlrRy1TlAqisLa/pubhtml?&amp;widget=true&amp;headers=false"></iframe>
 		</div>
 	  	
 		
