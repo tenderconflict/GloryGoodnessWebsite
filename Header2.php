@@ -11,10 +11,10 @@ session_start();
                 $role = $_SESSION['user']['UserRole'];
                 switch ($role) {
                     case 'admin':
-                        echo '<li type="none"><a href="../../dashboard.php">Dashboard</a></li>';
+                        echo '<li type="none"><a href="../../Church/dashboard.php">Dashboard</a></li>';
                         break;
                     default:
-                        echo '<li type="none"><a href="loginChurch.php">Login</a></li>';
+                        echo '<li type="none"><a href="../loginChurch.php">Login</a></li>';
                         break;
                 }
             } else {
@@ -25,7 +25,7 @@ session_start();
 		</span>
 	</div>
 	<div class="logo">
-		<li><a href="../GloryGHome.php"><img src="../Church/Pictures/GGCLogo.png" alt="ChurchLogo" height= "80"></a></li>			
+		<li><a href="../../GloryGHome.php"><img src="../../Church/Pictures/GGCLogo.png" alt="ChurchLogo" height= "80"></a></li>			
 	</div>
 
 </div>

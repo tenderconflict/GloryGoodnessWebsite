@@ -1,12 +1,12 @@
 <?php
-session_start();
+session_start(); 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <title>Test Weekly Activity -Admin View</title>
-  <link rel="stylesheet" href="../Church/Styles/stylesWeeklyMessage.css">
+  <link rel="stylesheet" href="../Styles/stylesWeeklyMessage.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
   <style> 
@@ -72,11 +72,11 @@ session_start();
 
  <div class="main">
     <?php
-    		include('../Header2.php');
-    		include('../Menu2.php');
+    		require_once('../../Header2.php');
+    		require_once('../../Menu2.php');
   	?>
 
-<div class ="space"><h1>Weekly Message</h1></div>
+    <div class ="space"><h1>Weekly Message</h1></div>
 
 
 
@@ -120,7 +120,7 @@ session_start();
     Select file to upload:
     <input type="file" name="fileToUpload" id="fileToUpload">
     <input type="submit" value="Upload File" name="submit">
-</form>
+    </form>
 
 
     </div>
@@ -136,7 +136,7 @@ session_start();
 
 
     </div>
-</div>
+    </div>
 		</div>
 
 
@@ -149,13 +149,13 @@ session_start();
                     <p2>By his divine power, God has given us everything we need for living a godly life. We have
                         received all of this by coming to know him, the one who called us to himself by means of his
                         marvelous glory and excellence.</p2>
-					</div>
+		</div>
 
 
 	  <div class="bottomPage">
 	  		<p>&copy; Glory Goodness Church 2023. All rights reserved.<p>
 	  </div>
-    </div>
+  </div>
 
 
 </body>

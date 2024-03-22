@@ -16,10 +16,10 @@ session_start();
         $role = $_SESSION['user']['UserRole'];
         switch ($role) {
             case 'admin':
-                echo '<li><a href="../../dashboard.php">Dashboard</a></li>';
+                echo '<li><a href="../../Church/dashboard.php">Dashboard</a></li>';
                 break;
             default:
-                echo '<li><a href="loginChurch.php">Login</a></li>';
+                echo '<li><a href="../../Church/loginChurch.php">Login</a></li>';
                 break;
         }
     } else {
