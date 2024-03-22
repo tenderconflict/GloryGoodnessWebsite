@@ -13,32 +13,11 @@ session_start();
 
 <body>
     <div class="main">
-	  <div class="top">
-		<div class="login">
-			<span style="float:right;">
-				<li type="none"><a href="../Church/loginChurch.php">Sign in</a></li>
-			</span>
-		</div>
-		<div class="logo">
-			<li><a href="../GloryGHome.php"><img src="GGCLogo.png" alt="ChurchLogo" height= "80"></a></li>			
-		</div>
-		
-	  </div>
 	  <div class="navbar">
-	   <div class="menu">
-	      <ul>
-		  
-		  <li><a href="calendar.html">Calendar</a></li>	
-
-		  <li><a href="convention.html">Convention Info</a></li>
-
-		  <li><a href="#">School Handbook</a></li>
-
-		  <li><a href="../School/GloryGSchool.php">Education</a></li>
-	      </ul>		
-
-
-	   </div>
+			<?php 
+                include('../Header.php');
+                include('../Menu.php');
+            ?>
 	  </div>
 	  
 	  <div class="content">
@@ -47,7 +26,7 @@ session_start();
 	  <div class="middle">
 		<div class="calendar">
 			
-			<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&src=ZWFjaG8uYnJhbmRvbkBnbWFpbC5jb20&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%237986CB&color=%2333B679&color=%230B8043" style="border:solid 1px #777" width="600" height="450" frameborder="0" scrolling="no"></iframe>
+		<iframe src="http://calendar.google.com/calendar/embed?src=c_2b56cd83bd27a9c08d46e6fbaa518d688b220b040bf4717b00ed3a4bc80d4edb%40group.calendar.google.com&ctz=America%2FNew_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 	  	</div>
 		
 	</div>	
