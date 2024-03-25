@@ -36,6 +36,10 @@ session_start();
             <br>
             <li><a href="AdminDocs/signout.php">Sign Out</a></li>
         </div>
+
+        <?php 
+            include('../Footer.php');
+        ?>
     </div>
 </body>
 </html>

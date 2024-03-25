@@ -33,7 +33,7 @@
                         <ul class="submenu">
                             <li><a href="../../Church/ChurchEventCalendar.php">Church Event Calendar <br><span
                                         style="color: rgb(18, 18, 161);">Thời Khoá Biểu của</span></a></li>
-                            <li><a href="../../Church/WeeklyActivitiy.html">Weekly Activity <br><span style="color: rgb(18, 18, 161);">Hoạt Động Hằng Tuần</span></a></li>
+                            <li><a href="../../Church/WeeklyActivitiy.php">Weekly Activity <br><span style="color: rgb(18, 18, 161);">Hoạt Động Hằng Tuần</span></a></li>
                             <li><a href="../../Church/WeeklyBibleReadings.php">Weekly Bible Reading <br><span style="color: rgb(18, 18, 161);">Lịch đọc Kinh Thánh Hằng Năm</span></a></li>
 
                         </ul>
