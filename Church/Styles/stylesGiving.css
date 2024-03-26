@@ -1,6 +1,7 @@
 
 *{
 	text-decoration: none;
+  list-style-type: none;
 	margin: 0;
     padding: 0; /*this makes it go all the way to the left of the page*/
 }
