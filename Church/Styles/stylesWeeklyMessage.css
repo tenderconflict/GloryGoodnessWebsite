@@ -41,18 +41,6 @@ height: auto;
 list-style: none;
 
 }
-.login a {
-list-style-type: none;
-list-style: none;
-text-decoration: none;
-color: green;
-
-font-family: Arial, Helvetica, sans-serif;
-font-weight: bold;
-transition: .5s ease-in-out;
-font-size: 18px;
-outline: 0; 
-}
 /*CODE FOR PAYMENT OPTIONS TABS*/
 /* Style the tab */
 html {
@@ -287,6 +275,18 @@ text-decoration: none;
 
 }
 
+.content {
+  background: linear-gradient(to bottom, white, rgb(243, 219, 83));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+
+  color: royalblue;
+  text-shadow: 0 0 3px #ffffff, 0 0 5px #ffffff;
+
+  padding: 40px;
+}
 
 
 .grid-containerpayment {

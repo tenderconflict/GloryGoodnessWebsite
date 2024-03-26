@@ -80,7 +80,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_user'])) {
 <head>
     
     <title>Glory Goodness Church</title>
-    <link rel="stylesheet" href="../../Church/Styles/GloryGHomeStyles.css">
+    <link rel="stylesheet" href="../../Church/Styles/Dashboard.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
 
@@ -130,6 +130,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_user'])) {
 
             <li><a href="EditUsers.php">Edit Users</a></li>
         </div>
+
+        <?php 
+            include('../../Footer.php');
+        ?>
+
     </div>
 </body>
 

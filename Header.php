@@ -2,6 +2,22 @@
 session_start();
 ?>
 
+<style>
+    .login a {
+    
+    list-style-type: none;
+    list-style: none;
+    text-decoration: none;
+    color: green;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    transition: .5s ease-in-out;
+    font-size: 18px;
+    padding-right: 10px;
+    padding-top: 20px;
+}
+</style>
+
 <div class="icon">
     <h2 class="logo"> </h2>
 </div>

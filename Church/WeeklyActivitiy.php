@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -70,7 +73,7 @@
     $pdf_dir = "uploads/";
     $pdf_fileschedule = $pdf_dir . "schedule.pdf";
     $pdf_fileprayer = $pdf_dir . "prayer.pdf";
-    $pdf_filebible_study = $pdf_dir . "bible_study.pdf"
+    $pdf_filebible_study = $pdf_dir . "bible_study.pdf";
     $pdf_filebible_reading = $pdf_dir . "bible_reading.pdf";
 ?>
     
@@ -78,88 +81,14 @@
    
 
  <div class="main">
-	  <div class="top">
-		<div class="login">
-			<span style="float:right;">
-				<li type="none"><a href="../Church/LoginChurch.html">Sign in</a></li>
-			</span>
-		</div>
-		<div class="logo">
-			<li><a href="../GloryGHome.html"><img src="../Church/Pictures/GGCLogo.png" alt="ChurchLogo" height= "80"></a></li>			
-		</div>
+    <?php
+    	include('../Header.php');
+    	include('../Menu.php');
+  	?>
 
-	  </div>
-	  <div class="navbar">
-		<!-- Lines 23-91 written by Thomas -->
-		  <div class="menu">
-			  <ul>
-				  <!-- clicking home should bring you to the homepage-TD -->
-				  <!-- <li><a href="#"><img src="GGCLogo.png" alt="ChurchLogo" height= "70"></a></li> -->
-
-
-				  <!-- <li><a href="#">HOME</a></li>-->
-
-
-
-
-				  <li><a href="../GloryGHome.html">Home <br><span style="color: rgb(18, 18, 161);">Chủ</span></a></li>
-
-
-
-				  <li class="has-submenu"><a href="#">About Us <br> <span style="color: rgb(18, 18, 161);">Thông
-							  tin</span></a>
-
-
-					  <ul class="submenu">
-						  <li><a href="../Church/AboutUs/MissionVision.html">Mission & Vision <br><span style="color: rgb(18, 18, 161);">Khát
-									  vọng</span></a></li>
-						  <li><a href="../Church/AboutUs/ChurchStaff.html">Church Staff <br><span style="color: rgb(18, 18, 161);">Nhân viên</span></a>
-						  </li>
-						  <li><a href="../Church/AboutUs/ChurchHistory.html">Church History <br> <span style="color: rgb(18, 18, 161);">Lịch
-									  sử</span></a></li>
-						  <!--more may be added in the future here -TD -->
-					  </ul>
-
-
-				  </li>
-
-
-				  <li><a href="#">Ministries <br><span style="color: rgb(18, 18, 161);">Bộ</span></a>
-
-					  <ul class="submenu">
-						  <li><a href="../Church/ChurchEventCalandar.html">Church Event Calendar <br><span
-									  style="color: rgb(18, 18, 161);">Lịch</span></a></li>
-						  <li><a href="../Church/WeeklyActivitiy.html">Weekly Activity <br><span style="color: rgb(18, 18, 161);">Hoạt
-									  động</span></a></li>
-						  <li><a href="../Church/WeeklyBibleReadings.html">Yearly Bible Reading <br><span style="color: rgb(18, 18, 161);">Đọc Kinh
-									  Thánh</span></a></li>
-
-					  </ul>
-
-
-				  </li>
-
-
-				  <li><a href="../Church/Giving.html">Giving <br><span style="color: rgb(18, 18, 161);">Cho</span></a></li>
-
-
-
-				  <li><a href="#">School <br><span style="color: rgb(18, 18, 161);">Trường học</span></a>
-
-					  <ul class="submenu">
-						  <li><a href="../School/GloryGSchool.html">Glory Goodness School <br><span
-									  style="color: rgb(18, 18, 161);">Trường học</span></a></li>
-
-					  </ul>
-
-
-				  </li>
-
-			  </ul>
-		  </div>
-		</div>
-
-<div class ="space"><h1>Weekly Activity</h1></div>
+  <div class="content">
+      <h1>Weekly Activity</h1>       
+  </div>
 
 
 

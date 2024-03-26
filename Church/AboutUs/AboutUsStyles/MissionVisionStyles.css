@@ -24,6 +24,7 @@
     background-position: center;
     background-size: cover;
     height: fit-content;
+    overflow: hidden;
 }
 
 
@@ -153,13 +154,16 @@ ul li:hover .submenu {
 
 
 .content {
+    background: linear-gradient(to bottom, white, rgb(243, 219, 83));
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
-    
-    padding: 20px;
-    margin: 20px;
+
+    color: royalblue;
+    text-shadow: 0 0 3px #ffffff, 0 0 5px #ffffff;
+
+    padding: 40px;
 }
 
 

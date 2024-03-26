@@ -498,7 +498,7 @@ text-align: center;
     height: 450px;
     width: 100%;
 
-    background: linear-gradient(#342e63, #48508f);
+    background-color: rgb(135, 135, 247);
     display: flex;
     flex-direction: column;
     text-align: center;

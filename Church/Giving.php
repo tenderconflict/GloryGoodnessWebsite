@@ -14,11 +14,13 @@ session_start();
 <body>
  <div class="main">
  	<?php
-    	include('../Header2.php');
-    	include('../Menu2.php');
+    	include('../Header.php');
+    	include('../Menu.php');
   	?>
 
-	<div class ="space"><h1>Tithe/Offering Guide</h1></div>
+	<div class="content">
+        <h1>Tithe/Offering Guide</h1>  
+    </div>
 
 
     
