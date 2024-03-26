@@ -82,11 +82,13 @@ session_start();
 
  <div class="main">
     <?php
-    	include('../Header2.php');
-    	include('../Menu2.php');
+    	include('../Header.php');
+    	include('../Menu.php');
   	?>
 
-<div class ="space"><h1>Weekly Activity</h1></div>
+  <div class="content">
+      <h1>Weekly Activity</h1>       
+  </div>
 
 
 

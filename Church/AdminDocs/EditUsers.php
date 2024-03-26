@@ -11,17 +11,15 @@ function displayUsers() {
     $result = mysqli_query($connection_mysql, $sql);
 
     if ($result->num_rows > 0) {
-        echo "<ul>";
         while ($user = $result->fetch_assoc()) {
-            echo "<li><a href='edit_users.php?id={$user['UserID']}'>{$user['FirstName']} {$user['LastName']}</a></li>";
-            echo "<br><br>";
+            echo "<div><a href='edit_users.php?id={$user['UserID']}'>{$user['FirstName']} {$user['LastName']}</a></div>";
         }
-        echo "</ul>";
     } else {
         echo "No users found.";
     }
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -29,7 +27,7 @@ function displayUsers() {
 <head>
     
     <title>Glory Goodness Church</title>
-    <link rel="stylesheet" href="../Styles/GloryGHomeStyles.css">
+    <link rel="stylesheet" href="../Styles/Dashboard.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
 
@@ -49,10 +47,15 @@ function displayUsers() {
             <h1>Edit a User</h1>
         </div>
 
-        <div class="AddUser">
+        <div class="AddInfo">
             <h2>Pick a User to Edit:</h2>
+            <br>
             <?php displayUsers(); ?>
         </div>
+
+        <?php 
+            include('../../Footer.php');
+        ?>
 
     </div>
 </body>

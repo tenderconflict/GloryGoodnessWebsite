@@ -140,14 +140,18 @@
     }
     
     .content {
+        background: linear-gradient(to bottom, white, rgb(243, 219, 83));
         display: flex;
         justify-content: center;
         align-items: center;
-        background-image: url(School.jpg);
-        background-position: center;
-        height: 100px;
-        color:#2c3093;
+        font-family: Arial, Helvetica, sans-serif;
+    
+        color: royalblue;
+        text-shadow: 0 0 3px #ffffff, 0 0 5px #ffffff;
+    
+        padding: 40px;
     }
+    
 
     @media only screen and (max-width: 623px) {/*mobile view -TD*/
         .menu ul li {
