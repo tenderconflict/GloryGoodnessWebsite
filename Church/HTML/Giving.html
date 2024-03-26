@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <title>Glory Goodness Church Giving</title>
-  <link rel="stylesheet" href="../Church/Styles/stylesGiving.css">
+  <link rel="stylesheet" href="../Styles/stylesGiving.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
 </head>
@@ -99,23 +99,29 @@
 	  <div class="middle">
 	<div class="tab">
 	<button class="tablinks" onclick="openGiving(event, 'Zelle')"id ="DefaultOpen">Zelle</button>
-	<button class="tablinks" onclick="openGiving(event, 'Text to Give')">Text to Give</button>
-	<button class="tablinks" onclick="openGiving(event, 'PayPal')">PayPal</button>
-	<button class="tablinks" onclick="openGiving(event, 'In-Person')">In-Person</button>
+	<!-- <button class="tablinks" onclick="openGiving(event, 'Text to Give')">Text to Give</button> -->
+	<!-- <button class="tablinks" onclick="openGiving(event, 'PayPal')">PayPal</button> -->
+	<button class="tablinks" onclick="openGiving(event, 'In-Person')">In-Person (Gửi trực tiếp) </button>
 	<button class="tablinks" onclick="openGiving(event, 'Building Pledge')">Building Pledge</button>
   </div>
   
   <div id="Zelle" class="tabcontent">
 	
 	
-	<h3>Step 1</h3>
-	<div class="grid-containerpayment">
 	
+	
+	<div class="grid-containerpayment">
+		<enh1>Step 1</enh1>
+		<vh1>Bước 1</vh1>
 	  <div class="payment-item">
 		<img src="../Church/Pictures/zelle1.PNG" alt="Zelle Image" style="float: left; margin-right: 10px; width: 200px; height: 450px;" >
 		<p>If your bank supports Zelle (ex: Wells Fargo, Bank of America) navigate to your bank through their application or on their website <br> In the Pay & Transfer section, select <span style="color: #20ccfa; font-weight: bold;">Send Money</span></p>
-	  </div>
-	  <h3>Step 2</h3>
+	    <p style="padding-top: 5vw;">Nếu ngân hàng của quý vị có Zelle (Wells Fargo, Bank of America), kết nối với ngân hàng thông qua ứng dụng Zelle hoặc trên website của ngân hàng.
+			Ở mục Gửi Tiền và Chuyển tiền, nhấn vào Gửi Tiền</p>
+	</div>
+	
+	<enh1>Step 2</enh1>
+	<vh1>Bước 2</vh1>
 	  <div class="payment-item">
 		
 		<img src="../Church/Pictures/zelle2.PNG" alt="Zelle Image2" style="float: left; margin-right: 10px; width: 200px; height: 450px;" >
@@ -156,7 +162,7 @@
  
   </div>
   
-  <div id="Text to Give" class="tabcontent">
+  <!-- <div id="Text to Give" class="tabcontent">
 	
 	<h3>Step 1</h3>
 	<div class="grid-containertxt2give">
@@ -182,13 +188,13 @@
 
 	 
 	</div>
-  </div>
+  </div> -->
 
   
 
 
 
-
+<!-- 
   <div id="PayPal" class="tabcontent">
 	
 	<h3>Step 1</h3>
@@ -236,21 +242,25 @@
 	 
 	</div>
 	
-  </div>
+  </div> -->
   <div id="In-Person" class="tabcontent">
-	<h3>Cash</h3>
-	<div class="grid-containerinperson">
 	
+	<div class="grid-containerinperson">
+		<enh1>Cash</enh1>
+		<vh1>Tiền mặt</vh1>
 	  <div class="inperson-item">
 		
 		<p>During church service hours, find a staff member to give you an offering envelope. Place your cash donation in the envelope and return it to the staff member</p>
 	  </div>
-	  <h3>Credit Card</h3>
+	  <enh1>Check</enh1>
+	  <vh1>Bằng ngân phiếu</vh1>
+
 	  <div class="inperson-item">
 		
 		
-		<p>During church service hours, head to the reception area and tell a staff member that you want to donate with your credit card.  </p>
-	  </div>
+		<p>During church service hours, head to the reception area and tell a staff member that you want to donate with a check. The check should be made out to Glory Goodness Church.  </p>
+	  
+	</div>
 
 	  
 
@@ -261,7 +271,8 @@
 	<div id="Building Pledge" class="tabcontent">
 	
 		<div class="grid-containerbld">
-			<h3> Donations Building Pledge</h3>
+			<enh1> Donations Building Pledge</enh1>
+			<vh1 style ="color:blue">Dâng hiến cho cam kết xây dựng</vh1>
 		
 		  <div class="bldpledge-item">
 			
@@ -271,7 +282,7 @@
 		</div>
 		  <div class="bldpledge-item">
 			<h3>How to Donate for Building Pledge</h3>
-			<p>to donate for the building pledge, follow the instructions in the previous tabs (ex: Zelle, Text to Give, PayPal, In-Person, B) and include a note "Building Pledge"</p>
+			<p>to donate for the building pledge, follow the instructions in the previous tabs (ex: Zelle or In-Person) and include a note "Building Pledge"</p>
 	
 		  </div>
 	

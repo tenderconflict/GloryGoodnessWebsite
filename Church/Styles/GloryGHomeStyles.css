@@ -494,6 +494,37 @@ text-align: center;
 }
 
 
+.AdminLinks {
+    height: 450px;
+    width: 100%;
+
+    background-color: rgb(135, 135, 247);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    list-style: none;
+}
+
+.AdminLinks li {
+    margin: 0;
+}
+
+.AdminLinks a {
+    color: #fff;
+    text-decoration: none; 
+    font-size: 1.2em;
+    margin: 0 10px;
+}
+
+.AddInfo {
+    height: auto;
+    text-align: center;
+    justify-content: center;
+    background-color: lime;
+}
 
 .BottomContact{
 

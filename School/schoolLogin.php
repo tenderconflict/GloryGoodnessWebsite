@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
         $role = $_SESSION['user']['UserRole'];
         switch ($role) {
             case 'admin':
-                header('Location: GloryGSchool.html');
+                header('Location: GloryGSchool.php');
                 exit();
             case 'student':
                 header('Location: student_dashboard.php');

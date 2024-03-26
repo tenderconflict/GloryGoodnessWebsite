@@ -41,18 +41,6 @@ height: auto;
 list-style: none;
 
 }
-.login a {
-list-style-type: none;
-list-style: none;
-text-decoration: none;
-color: green;
-
-font-family: Arial, Helvetica, sans-serif;
-font-weight: bold;
-transition: .5s ease-in-out;
-font-size: 18px;
-outline: 0; 
-}
 /*CODE FOR PAYMENT OPTIONS TABS*/
 /* Style the tab */
 html {
@@ -287,6 +275,18 @@ text-decoration: none;
 
 }
 
+.content {
+  background: linear-gradient(to bottom, white, rgb(243, 219, 83));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+
+  color: royalblue;
+  text-shadow: 0 0 3px #ffffff, 0 0 5px #ffffff;
+
+  padding: 40px;
+}
 
 
 .grid-containerpayment {
@@ -569,6 +569,53 @@ text-align: center;
 font-size: 14px; 
 font-family: Arial, Helvetica, sans-serif;
 }
+@media screen and (max-width: 768px) {
+  .middle {
+      display: block; /* Change display property to block for smaller screens */
+  }
+  .servicetimes {
+    padding-top: 20px; /* Add padding to the top of servicetimes box for mobile devices */
+    margin-left: 0;
+    width: 86%;
+    
+}
+.notes {margin-right: 0;
+
+}
+.notes {
+  width: 80%;
+ margin-right: 0;
+  box-sizing: content-box;
+  /* overflow-y: auto; */
+  background-color: rgba(235, 235, 247, 0.7);
+ margin-right: 0; 
+
+}
+
+
+.side-content {
+  padding-top: 20px;
+}
+.menu ul li {
+
+  font-size: 15px; 
+  margin: 0; 
+
+
+}
+ul .submenu {
+
+  width: 110%; 
+
+}
+
+
+ul .button{
+width: 92%;
+}
+}
+
+
 
 
 
