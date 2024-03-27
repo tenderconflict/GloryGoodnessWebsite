@@ -15,7 +15,7 @@ session_start();
 
 </head>
 
-<body>
+<body id="editablePage" contentEditable="true">
     <div class="main">
         <div class="navbar">
             <?php 
