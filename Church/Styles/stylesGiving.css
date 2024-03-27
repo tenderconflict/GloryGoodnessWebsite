@@ -1,6 +1,7 @@
 
 *{
-	text-decoration: none;
+	/* text-decoration: none; */
+  list-style-type: none;
 	margin: 0;
     padding: 0; /*this makes it go all the way to the left of the page*/
 }
@@ -174,6 +175,19 @@ margin-bottom: 10px;
     height: auto;
 	margin-left: 10px;
   }
+  .grid-containerpayment enh1{
+    /* padding-top: 1vw; */
+    /* text-align:center;  */
+    font-weight:bold;
+    font-size: 20px;
+  }
+  .grid-containerpayment vh1 {
+  /* text-align:center; */
+color: blue;
+
+/* font-weight: bold; */
+font-size: 18px;
+  }
 
   .grid-containerpaypal {
     display: grid;
@@ -192,6 +206,19 @@ margin-bottom: 10px;
     width: 75%;
     height: auto;
 	margin-left: 10px;
+  }
+  .grid-containerpaypal enh1{
+    /* padding-top: 1vw; */
+    /* text-align:center;  */
+    font-weight:bold;
+    font-size: 20px;
+  }
+  .grid-containerpaypal vh1 {
+  /* text-align:center; */
+color: blue;
+
+/* font-weight: bold; */
+font-size: 18px;
   }
 
 
@@ -220,6 +247,17 @@ margin-bottom: 10px;
 	
 	
   }
+  .grid-containerinperson enh1{
+    padding-top: 1vw;
+    text-align:center; 
+    font-weight:bold;
+    font-size: 2vw;
+  }
+  .grid-containerinperson vh1 {
+  text-align:center;
+color: blue;
+font-size: 1.5vw;
+  }
 
   .inperson-item{
     text-align: center;
@@ -243,6 +281,18 @@ margin-bottom: 10px;
   .grid-containerbld h3 {
     text-align: center;
     padding-top: 1vw;
+  }
+
+  .grid-containerbld enh1{
+    padding-top: 1vw;
+    text-align:center; 
+    font-weight:bold;
+    font-size: 2vw;
+  }
+  .grid-containerbld vh1 {
+  text-align:center;
+color: blue;
+font-size: 1.5vw;
   }
 
   .bldpledge-item{
