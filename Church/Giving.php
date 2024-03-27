@@ -30,7 +30,7 @@ session_start();
 	<div class="tab">
 	<button class="tablinks" onclick="openGiving(event, 'Zelle')"id ="DefaultOpen">Zelle</button>
 	<!-- <button class="tablinks" onclick="openGiving(event, 'Text to Give')">Text to Give</button> -->
-	<!-- <button class="tablinks" onclick="openGiving(event, 'PayPal')">PayPal</button> -->
+	<button class="tablinks" onclick="openGiving(event, 'PayPal')">PayPal</button>
 	<button class="tablinks" onclick="openGiving(event, 'In-Person')">In-Person (Gửi trực tiếp)</button>
 	<button class="tablinks" onclick="openGiving(event, 'Building Pledge')">Building Pledge</button>
   </div>
@@ -128,60 +128,45 @@ Sau khi kiểm tra lại số tiền muốn gửi, nhấn vào Gửi ở trang k
 	 
 	</div>
   </div> -->
+  <div id="PayPal" class="tabcontent">
+	
+	
+	<div class="grid-containerpaypal">
+	<enh1>Step 1</enh1>
+		<vh1>Bước 1</vh1>
+	  <div class="paypal-item">
+		
+		<a href = 'https://www.paypal.com/donate/?hosted_button_id=5CWW5HUH3TV8G'><button type="button" style="float: left; margin-right: 20px;" class ="button">Donate</button></a>
+		<p>Click the donation button to the left to donate through PayPal</p>
+	  </div>
+	  <enh1>Step 2</enh1>
+		<vh1>Bước 2</vh1>
+	  <div class="paypal-item">
+		
+		<img src="../Church/Pictures/paypal1.PNG" alt="Paypal Image 1" style="float: left; margin-right: 10px; width: 200px; height: 450px;" >
+		<p>Enter your donation amount. If you would like to donate through your paypal account, select "Donate with PayPal." Otherwise 
+			you can donate online with your credit/debit card through the PayPal link using the "Donate with Debit or Credit Card"
+		</p>
+	  </div>
 
+	  <enh1>Step 3</enh1>
+		<vh1>Bước 3</vh1>
+	  <div class="paypal-item">
+		
+		<img src="../Church/Pictures/paypal2.PNG" alt="Paypal Image 2" style="float: left; margin-right: 10px; width: 200px; height: 400px;" >
+		<p>After signing into your PayPal account, or entering your card information, write a memo that includes your name + donation amount + current date. Ensure that the card that is selected is the one you want to use and then click "Donate Now" </p>
+	  </div>
+
+	  
+	 
+	</div>
+	
+  </div>
   
 
 
 
 
-  <!-- <div id="PayPal" class="tabcontent">
-	
-	<h3>Step 1</h3>
-	<div class="grid-containerpaypal"> -->
-	
-		<!-- <div class="paypal-item">
-		
-			<button type="button" style="float: left; margin-right: 20px;" class ="button">Donate</button>
-			<p>Click the donation button to the left to donate through PayPal</p>
-		</div>
-		<h3>Step 2</h3>
-		<div class="paypal-item">
-			
-			<img src="../Church/Pictures/zelle2.PNG" alt="Zelle Image2" style="float: left; margin-right: 10px; width: 200px; height: 450px;" >
-			<p>Once in the send money section, select <span style="color: #20ccfa; font-weight: bold;">Send</span> </p>
-		</div>
-
-		<h3>Step 3</h3>
-		<div class="paypal-item">
-			
-			<img src="../Church/Pictures/zelle3.PNG" alt="Zelle Image2" style="float: left; margin-right: 10px; width: 200px; height: 450px;" >
-			<p>Select search, and input "5717897855". Then press <span style="color: #20ccfa; font-weight: bold;">add 5717897855</span> </p>
-		</div>
-
-		<h3>Step 4</h3>
-		<div class="paypal-item">
-			
-			<img src="../Church/Pictures/zelle4.PNG" alt="Zelle Image2" style="float: left; margin-right: 10px; width: 200px; height: 450px;" >
-			<p>Put Glory Goodness Church for name, and then select <span style="color: #20ccfa; font-weight: bold;">continue</span> </p>
-		</div>
-
-		<h3>Step 5</h3>
-		<div class="paypal-item">
-			
-			<img src="../Church/Pictures/zelle5.PNG" alt="Zelle Image2" style="float: left; margin-right: 10px; width: 200px; height: 450px;" >
-			<p>Double check the phone number you have entered, and that Zelle says "You're sending money to GLORY GOODNESS CHURCH INC Accounts" <br> select <span style="color: #20ccfa; font-weight: bold;">continue</span> </p>
-		</div>
-
-		<h3>Step 6</h3>
-		<div class="paypal-item">
-			
-			<img src="../Church/Pictures/zelle6.PNG" alt="Zelle Image2" style="float: left; margin-right: 10px; width: 200px; height: 450px;" >
-			<p>Enter the donation amount along with a memo. Select <span style="color: #20ccfa; font-weight: bold;">review</span> <br> On the next screen, select send to send your donation</p>
-		</div>
-		
-		</div>
-		
-	</div> -->
   <div id="In-Person" class="tabcontent">
 	
 	<div class="grid-containerinperson">
