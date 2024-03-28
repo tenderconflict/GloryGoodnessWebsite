@@ -37,21 +37,29 @@ session_start();
 
         </div>
 
-
-
-
-
         <div class="ContactChurch">
-
-
-                    <h3>John 1:1–3</h3>
+            <h3>John 1:1–3</h3>
                     <p3>In the beginning was the Word, and the Word was with God, and the Word was God. He was in the beginning with God. All things were made through him, and without him was not any thing made that was made.</p3>
 
-
-                    <p4>&copy; Glory Goodness Church 2023. All rights reserved.</p4>
-
+                        <h2><br>Contact Information</h2>
+                        <div class="BottomContact">
+                            <div class="Email">
+                                   
+                                <span>Email: info@glorygoodnesschurch.org</span>
+                            </div>
+                            <div class="BottomInfo">
+                            
+                                <div class="PhoneNumber">
+                                  
+                                    <span>Phone number: +1 (123) 456-7890</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p4>&copy; Glory Goodness Church 2023. All rights reserved.</p4>
+            
         </div>
 
+        
 </body>
 
 </html>

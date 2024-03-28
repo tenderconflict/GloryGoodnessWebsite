@@ -24,31 +24,27 @@ session_start();
             ?>
         </div>
 
-
-        <div class="content">
-            <h1>Mission and Vision</h1>
-        </div>
-
-        <div class="SloganBanner">
-            <h1>The Mission of Glory Goodness Church<h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-        </div>
-
-
-
-
-
         <div class="ContactChurch">
 
 
-                    <h3>1 Corinthians 14:26</h3>
-                    <p3>What then, brothers? When you come together, each one has a hymn, a lesson, a revelation, a tongue, or an interpretation. Let all things be done for building up.</p3>
+                    <h3>2nd Peter 1:3</h3>
+                    <p3> By his divine power, God has given us everything we need for living a godly life. We have
+                        received all of this by coming to know him, the one who called us to himself by means of his
+                        marvelous glory and excellence.</p3>
 
-
-                    <p4>&copy; Glory Goodness Church 2023. All rights reserved.</p4>
-
+                        <h2><br>Contact Information</h2>
+                        <div class="BottomContact">
+                            <div class="Email">
+                                   
+                                <span>Email: info@glorygoodnesschurch.org</span>
+                            </div>
+                            <div class="BottomInfo">
+                            
+                                <div class="PhoneNumber">
+                                  
+                                    <span>Phone number: +1 (123) 456-7890</span>
         </div>
+        
 
 </body>
 

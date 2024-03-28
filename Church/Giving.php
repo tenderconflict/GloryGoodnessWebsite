@@ -30,7 +30,7 @@ session_start();
 	<div class="tab">
 	<button class="tablinks" onclick="openGiving(event, 'Zelle')"id ="DefaultOpen">Zelle</button>
 	<!-- <button class="tablinks" onclick="openGiving(event, 'Text to Give')">Text to Give</button> -->
-	<!-- <button class="tablinks" onclick="openGiving(event, 'PayPal')">PayPal</button> -->
+	<button class="tablinks" onclick="openGiving(event, 'PayPal')">PayPal</button>
 	<button class="tablinks" onclick="openGiving(event, 'In-Person')">In-Person (Gửi trực tiếp)</button>
 	<button class="tablinks" onclick="openGiving(event, 'Building Pledge')">Building Pledge</button>
   </div>
@@ -128,60 +128,45 @@ Sau khi kiểm tra lại số tiền muốn gửi, nhấn vào Gửi ở trang k
 	 
 	</div>
   </div> -->
+  <div id="PayPal" class="tabcontent">
+	
+	
+	<div class="grid-containerpaypal">
+	<enh1>Step 1</enh1>
+		<vh1>Bước 1</vh1>
+	  <div class="paypal-item">
+		
+		<a href = 'https://www.paypal.com/donate/?hosted_button_id=5CWW5HUH3TV8G'><button type="button" style="float: left; margin-right: 20px;" class ="button">Donate</button></a>
+		<p>Click the donation button to the left to donate through PayPal</p>
+	  </div>
+	  <enh1>Step 2</enh1>
+		<vh1>Bước 2</vh1>
+	  <div class="paypal-item">
+		
+		<img src="../Church/Pictures/paypal1.PNG" alt="Paypal Image 1" style="float: left; margin-right: 10px; width: 200px; height: 450px;" >
+		<p>Enter your donation amount. If you would like to donate through your paypal account, select "Donate with PayPal." Otherwise 
+			you can donate online with your credit/debit card through the PayPal link using the "Donate with Debit or Credit Card"
+		</p>
+	  </div>
 
+	  <enh1>Step 3</enh1>
+		<vh1>Bước 3</vh1>
+	  <div class="paypal-item">
+		
+		<img src="../Church/Pictures/paypal2.PNG" alt="Paypal Image 2" style="float: left; margin-right: 10px; width: 200px; height: 400px;" >
+		<p>After signing into your PayPal account, or entering your card information, write a memo that includes your name + donation amount + current date. Ensure that the card that is selected is the one you want to use and then click "Donate Now" </p>
+	  </div>
+
+	  
+	 
+	</div>
+	
+  </div>
   
 
 
 
 
-  <!-- <div id="PayPal" class="tabcontent">
-	
-	<h3>Step 1</h3>
-	<div class="grid-containerpaypal"> -->
-	
-		<!-- <div class="paypal-item">
-		
-			<button type="button" style="float: left; margin-right: 20px;" class ="button">Donate</button>
-			<p>Click the donation button to the left to donate through PayPal</p>
-		</div>
-		<h3>Step 2</h3>
-		<div class="paypal-item">
-			
-			<img src="../Church/Pictures/zelle2.PNG" alt="Zelle Image2" style="float: left; margin-right: 10px; width: 200px; height: 450px;" >
-			<p>Once in the send money section, select <span style="color: #20ccfa; font-weight: bold;">Send</span> </p>
-		</div>
-
-		<h3>Step 3</h3>
-		<div class="paypal-item">
-			
-			<img src="../Church/Pictures/zelle3.PNG" alt="Zelle Image2" style="float: left; margin-right: 10px; width: 200px; height: 450px;" >
-			<p>Select search, and input "5717897855". Then press <span style="color: #20ccfa; font-weight: bold;">add 5717897855</span> </p>
-		</div>
-
-		<h3>Step 4</h3>
-		<div class="paypal-item">
-			
-			<img src="../Church/Pictures/zelle4.PNG" alt="Zelle Image2" style="float: left; margin-right: 10px; width: 200px; height: 450px;" >
-			<p>Put Glory Goodness Church for name, and then select <span style="color: #20ccfa; font-weight: bold;">continue</span> </p>
-		</div>
-
-		<h3>Step 5</h3>
-		<div class="paypal-item">
-			
-			<img src="../Church/Pictures/zelle5.PNG" alt="Zelle Image2" style="float: left; margin-right: 10px; width: 200px; height: 450px;" >
-			<p>Double check the phone number you have entered, and that Zelle says "You're sending money to GLORY GOODNESS CHURCH INC Accounts" <br> select <span style="color: #20ccfa; font-weight: bold;">continue</span> </p>
-		</div>
-
-		<h3>Step 6</h3>
-		<div class="paypal-item">
-			
-			<img src="../Church/Pictures/zelle6.PNG" alt="Zelle Image2" style="float: left; margin-right: 10px; width: 200px; height: 450px;" >
-			<p>Enter the donation amount along with a memo. Select <span style="color: #20ccfa; font-weight: bold;">review</span> <br> On the next screen, select send to send your donation</p>
-		</div>
-		
-		</div>
-		
-	</div> -->
   <div id="In-Person" class="tabcontent">
 	
 	<div class="grid-containerinperson">
@@ -190,7 +175,7 @@ Sau khi kiểm tra lại số tiền muốn gửi, nhấn vào Gửi ở trang k
 	  <div class="inperson-item">
 		
 		<p>During church service hours, find a staff member to give you an offering envelope. Place your cash donation in the envelope and return it to the staff member</p>
-	  	<p style = "padding-top: 5vw;">Xuyên suốt thời gian nhóm, quý vị vui lòng tìm thành viên hội thánh để được nhận phong bì. Tiền sẽ được bỏ vào phong bì và đưa lại cho thành viên của hội thánh. </p>
+	  	<p style = "padding-top: 3vw;">Xuyên suốt thời gian nhóm, quý vị vui lòng tìm thành viên hội thánh để được nhận phong bì. Tiền sẽ được bỏ vào phong bì và đưa lại cho thành viên của hội thánh. </p>
 	</div>
 	<enh1>Check</enh1>
 	  <vh1>Bằng ngân phiếu</vh1>
@@ -198,7 +183,7 @@ Sau khi kiểm tra lại số tiền muốn gửi, nhấn vào Gửi ở trang k
 		
 	 
 	  <p>During church service hours, head to the reception area and tell a staff member that you want to donate with a check. The check should be made out to Glory Goodness Church.  </p>
-	  <p style = "padding-top: 5vw;">Xuyên suốt thời gian nhóm, quý vị vui lòng tới quầy tiếp tân và nói với nhân sự của HTVHTL rằng quý vị muốn dâng hiến bằng ngân phiếu. Ngân phiếu nên được ghi chuyển tới Glory Goodness Church </p>
+	  <p style = "padding-top: 3vw;">Xuyên suốt thời gian nhóm, quý vị vui lòng tới quầy tiếp tân và nói với nhân sự của HTVHTL rằng quý vị muốn dâng hiến bằng ngân phiếu. Ngân phiếu nên được ghi chuyển tới Glory Goodness Church </p>
 	</div>
 
 	  
@@ -219,14 +204,14 @@ Sau khi kiểm tra lại số tiền muốn gửi, nhấn vào Gửi ở trang k
 			
 			<p>
 			As we continue to grow in faith and community, we envision a space that reflects the warmth and inclusivity of our congregation—a place where we can gather in worship, celebration, and support. Your generous donations towards our building pledge will bring us closer to realizing this dream. With your support, we can lay the foundation for a permanent home, a sanctuary where all are welcome to find solace, inspiration, and belonging. Every contribution, big or small, brings us one step closer to creating a space that will serve as a beacon of hope and love for generations to come. Thank you for your generosity and belief in our shared vision.</p>
-		<p style = "padding-top: 5vw;">Khi chúng tôi tiếp tục phát triển về đức tin và cộng đồng, chúng tôi mong muốn tạo ra một không gian phản ánh sự ấm áp và hòa nhập của hội thánh chúng tôi—một nơi mà chúng ta có thể tụ họp để thờ phượng, ăn mừng và hỗ trợ lẫn nhau. Những khoản quyên góp hào phóng của quý vị cho việc cam kết xây dựng của chúng tôi sẽ mang chúng ta đến gần hơn với việc thực hiện giấc mơ này. Với sự hỗ trợ của bạn, chúng tôi có thể đặt nền móng cho một ngôi nhà lâu dài, một nơi tôn nghiêm, nơi mà tất cả đều được chào đón để tìm thấy niềm an ủi, nguồn cảm hứng và sự thuộc về. Mỗi đóng góp, dù lớn hay nhỏ, đều đưa chúng ta tiến một bước gần hơn đến việc tạo ra một không gian như ngọn hải đăng của hy vọng và tình yêu cho các thế hệ mai sau. Cảm ơn sự hào phóng và niềm tin của quý vị vào tầm nhìn chung của chúng tôi.</p>
+		<p style = "padding-top: 3vw;">Khi chúng tôi tiếp tục phát triển về đức tin và cộng đồng, chúng tôi mong muốn tạo ra một không gian phản ánh sự ấm áp và hòa nhập của hội thánh chúng tôi—một nơi mà chúng ta có thể tụ họp để thờ phượng, ăn mừng và hỗ trợ lẫn nhau. Những khoản quyên góp hào phóng của quý vị cho việc cam kết xây dựng của chúng tôi sẽ mang chúng ta đến gần hơn với việc thực hiện giấc mơ này. Với sự hỗ trợ của bạn, chúng tôi có thể đặt nền móng cho một ngôi nhà lâu dài, một nơi tôn nghiêm, nơi mà tất cả đều được chào đón để tìm thấy niềm an ủi, nguồn cảm hứng và sự thuộc về. Mỗi đóng góp, dù lớn hay nhỏ, đều đưa chúng ta tiến một bước gần hơn đến việc tạo ra một không gian như ngọn hải đăng của hy vọng và tình yêu cho các thế hệ mai sau. Cảm ơn sự hào phóng và niềm tin của quý vị vào tầm nhìn chung của chúng tôi.</p>
 		</div>
 		<enh1>How to Donate for Building Pledge</enh1>
 			<vh1>Cách để dâng hiến cho Cam kết xây dựng</vh1>
 		  <div class="bldpledge-item">
 			
-			<p>to donate for the building pledge, follow the instructions in the previous tabs (ex: Zelle, Text to Give, PayPal, In-Person, B) and include a note "Building Pledge"</p>
-			<p style = "padding-top: 5vw;">Để dâng hiến cho cam kết xây dựng, vui lòng thực hiện các bước chỉ dẫn của phần trước (ví dụ: Zelle hoặc trực tiếp) và trong phần ghi chú sẽ là "Building Pledge"</p>
+			<p>to donate for the building pledge, follow the instructions in the previous tabs (ex: Zelle, PayPal, in person) and include a note "Building Pledge"</p>
+			<p style = "padding-top: 3vw;">Để dâng hiến cho cam kết xây dựng, vui lòng thực hiện các bước chỉ dẫn của phần trước (ví dụ: Zelle, PayPal, hoặc trực tiếp) và trong phần ghi chú sẽ là "Building Pledge"</p>
 		  </div>
 	
 		  
