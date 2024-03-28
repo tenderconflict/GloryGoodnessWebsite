@@ -47,7 +47,7 @@ session_start();
 .notes h1 { 
     font-size: 2vw;
     color: #2c3093;
-    padding-bottom: 1vw;
+ 
     text-align: center;
   }
   .notes p {
@@ -98,28 +98,39 @@ session_start();
 
 
         <div class = "gridcontent">
-      <h1 class = "dashed-linebottom">Schedule</h1>
+      <h1 class = "dashed-linebottom">Schedule (Lịch)</h1>
       
 
         <h2>  <a href="<?php echo $pdf_fileschedule; ?>" target="_blank"> Click this link to access this week's schedule!</a>
         </h2>
+        <h2>  <a href="<?php echo $pdf_fileschedule; ?>" target="_blank">
+          Nhấn vào đây để truy cập vào lịch hàng tuần!</a>
+        </h2>
 
-        <h1 class = "dashed-linebottom">Prayer</h1>
+        <h1 class = "dashed-linebottom">Prayer (Cầu nguyện)</h1>
       
 
         <h2>  <a href="<?php echo $pdf_fileprayer; ?>" target="_blank"> Click this link to access this week's prayer list!</a>
         </h2>
+        <h2>  <a href="<?php echo $pdf_fileprayer; ?>" target="_blank">Nhấn vào đây để truy cập vào danh sách cầu nguyên hàng tuần!</a>
+        </h2>
 
-        <h1 class = "dashed-linebottom">Bible Study</h1>
+        <h1 class = "dashed-linebottom">Bible Study (Học Kinh Thánh)</h1>
       
 
         <h2>  <a href="<?php echo $pdf_filebible_study; ?>" target="_blank"> Click this link to access this week's bible study!</a>
         </h2>
+        <h2>  <a href="<?php echo $pdf_filebible_study; ?>" target="_blank">Nhấn vào đây để truy cập vào lịch học kinh thánh hàng tuần!</a>
+        </h2>
 
-        <h1 class = "dashed-linebottom">Bible Reading</h1>
+        <h1 class = "dashed-linebottom">Bible Reading (Đọc Kinh Thánh)</h1>
       
 
         <h2>  <a href="<?php echo $pdf_filebible_reading; ?>" target="_blank"> Click this link to access this week's bible reading!</a>
+        </h2>
+        
+        <h2>  <a href="<?php echo $pdf_filebible_reading; ?>" target="_blank"> Nhấn vào đây để truy cập vào lịch đọc kinh thánh hàng tuần!
+</a>
         </h2>
        
 
@@ -128,9 +139,12 @@ session_start();
     </div>
     <div class ="side-content">
     <div class = "servicetimes"><h1>Service Times</h1>
-    <p class="dashed-line">Every Sunday at 11:00am</p></div>
+    <h2>Thời gian nhóm lại</h2>
+    <p class="dashed-line">Every Sunday at 11:00am</p>
+    <p class="dashed-line">Mỗi Chúa Nhật lúc<br> 11 giờ sáng</p></div>
     <div class="notes">
        <h1>Notes</h1>
+       <h2>Ghi Chú</h2>
        <p>based on the weather, we will be meeting virtually this week</p>
        
 

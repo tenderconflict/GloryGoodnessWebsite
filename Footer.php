@@ -3,20 +3,24 @@
     
     background: linear-gradient(#342e63, #48508f);
     width: 100%;
-    position: relative;
     font-size: 12px;
-    top: 270px;
-    left: 50%;
-    transform: translate(-50%, -50%);
     display: flex;
     justify-content: center;
     align-items: center;
+    height: auto;
    
     font-family: "Arial", sans-serif;
     color: #fff;
     flex-direction: column;
 
 }
+
+.ContactChurch::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 .ContactChurch p{
 
     padding: 0px;

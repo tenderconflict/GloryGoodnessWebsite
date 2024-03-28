@@ -1,6 +1,7 @@
 
 *{
 	text-decoration: none;
+  list-style-type: none;
 	margin: 0;
     padding: 0; /*this makes it go all the way to the left of the page*/
     font-family: Arial, Helvetica, sans-serif;
@@ -316,7 +317,7 @@ text-decoration: none;
  
     background-color: white; /* Content box background */
     padding: 20px; /* Add padding for better readability */
-    height: 60vh;
+     height:auto;
 background-color: rgba(235, 235, 247, 0.7);
 
 
@@ -491,7 +492,27 @@ font-size: 19px;
 font-family: "Arial", sans-serif;
 }
 
+.servicetimes h1 {
+  padding: 0;
+}
+.servicetimes h2 {
+  font-size: 1.5vw;
+  color: #2c3093;
+  text-align: center;
+  padding: 0;
 
+}
+
+.notes h1 {
+  padding-bottom: 0;
+}
+.notes h2 {
+  font-size: 1.5vw;
+  color: #2c3093;
+  text-align: center;
+  padding: 0;
+
+}
 
 
 

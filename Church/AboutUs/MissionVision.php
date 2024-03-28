@@ -35,19 +35,28 @@ session_start();
 
         </div>
 
-
-
-
-
         <div class="ContactChurch">
+            <h3>1 Corinthians 14:26</h3>
+                    <p3>What then, brothers? When you come together, each one has a hymn, 
+                        a lesson, a revelation, a tongue, or an interpretation. Let all things 
+                        be done for building up.</p3>
 
-
-                    <h3>1 Corinthians 14:26</h3>
-                    <p3>What then, brothers? When you come together, each one has a hymn, a lesson, a revelation, a tongue, or an interpretation. Let all things be done for building up.</p3>
-
-
-                    <p4>&copy; Glory Goodness Church 2023. All rights reserved.</p4>
-
+                        <h2><br>Contact Information</h2>
+                        <div class="BottomContact">
+                            <div class="Email">
+                                   
+                                <span>Email: info@glorygoodnesschurch.org</span>
+                            </div>
+                            <div class="BottomInfo">
+                            
+                                <div class="PhoneNumber">
+                                  
+                                    <span>Phone number: +1 (123) 456-7890</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p4>&copy; Glory Goodness Church 2023. All rights reserved.</p4>
+            
         </div>
 
 </body>
