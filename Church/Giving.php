@@ -44,9 +44,18 @@ session_start();
 		<vh1>Bước 1</vh1>
 	  <div class="payment-item">
 		<img src="../Church/Pictures/zelle1.PNG" alt="Zelle Image" style="float: left; margin-right: 10px; width: 200px; height: 450px;" >
+		<img src="../Church/Pictures/zchase1.jpeg" alt="Zelle Image" style="float: left; margin-right: 10px; width: 200px; height: 450px;" >
 		<p>If your bank supports Zelle (ex: Wells Fargo, Bank of America) navigate to your bank through their application or on their website <br> In the Pay & Transfer section, select <span style="color: #20ccfa; font-weight: bold;">Send Money</span></p>
 	  	<p style = "padding-top: 5vw;">Nếu ngân hàng của quý vị có Zelle (Wells Fargo, Bank of America), kết nối với ngân hàng thông qua ứng dụng Zelle hoặc trên website của ngân hàng.
 Ở mục Gửi Tiền và Chuyển tiền, nhấn vào Gửi Tiền</p>
+<div style="clear: both;"></div> 
+			
+			<div style="float: left; margin-left: 10px;">
+				<p>Wells Fargo</p>
+			</div>
+			<div style="float: left; margin-left: 140px;">
+				<p>Chase Bank</p>
+			</div>
 	</div>
 	<enh1>Step 2</enh1>
 		<vh1>Bước 2</vh1>
@@ -78,11 +87,20 @@ session_start();
 	  <enh1>Step 5</enh1>
 		<vh1>Bước 5</vh1>
 	  <div class="payment-item">
-		
+	 
 		<img src="../Church/Pictures/zelle5.PNG" alt="Zelle Image2" style="float: left; margin-right: 10px; width: 200px; height: 450px;" >
+		<img src="../Church/Pictures/zchase2.PNG" alt="Chase Image2" style="float: left; margin-right: 10px; width: 200px; height: 450px;" >
 		<p>Double check the phone number you have entered, and that Zelle says "You're sending money to GLORY GOODNESS CHURCH INC Accounts" <br> select <span style="color: #20ccfa; font-weight: bold;">continue</span> </p>
 		<p style = "padding-top: 5vw;">Kiểm tra lần nữa số điện thoại quý vị đã điền và Zelle cho bạn biết là "Bạn đang gửi tiền đến tài khoản Glory Goodness Church INC".
 Chọn Tiếp Tục</p>
+<div style="clear: both;"></div> 
+			
+			<div style="float: left; margin-left: 10px;">
+				<p>Wells Fargo</p>
+			</div>
+			<div style="float: left; margin-left: 140px;">
+				<p>Chase Bank</p>
+			</div>
 	  </div>
 
 	  <enh1>Step 6</enh1>
@@ -90,10 +108,19 @@ Chọn Tiếp Tục</p>
 	  <div class="payment-item">
 		
 		<img src="../Church/Pictures/zelle6.PNG" alt="Zelle Image2" style="float: left; margin-right: 10px; width: 200px; height: 450px;" >
+		<img src="../Church/Pictures/zchase3.PNG" alt="Chase Image2" style="float: left; margin-right: 10px; width: 200px; height: 450px;" >
 		<p>Enter the donation amount along with a memo. The memo should include your name + donation amount + the current date. Select <span style="color: #20ccfa; font-weight: bold;">review</span> <br> After reviewing your donation amount, press send on the next page to finalize the payment</p>
 	  	<p style = "padding-top: 5vw;">Chọn số tiền quý vị muốn gửi với lời nhắn kèm theo. Trong lời nhắn xin điền vào tên của quý vị + số tiền + ngày/tháng. 
 Chọn Kiểm Tra lại
 Sau khi kiểm tra lại số tiền muốn gửi, nhấn vào Gửi ở trang kế tiếp để hoàn thành quá trình gửi tiền. </p>
+<div style="clear: both;"></div> 
+			
+			<div style="float: left; margin-left: 10px;">
+				<p>Wells Fargo</p>
+			</div>
+			<div style="float: left; margin-left: 140px;">
+				<p>Chase Bank</p>
+			</div>
 	</div>
 	 
 	</div>
