@@ -24,9 +24,20 @@ session_start();
             ?>
         </div>
 
+        <div class="container">
+            <div class="box mission">
+              <h2>Vision</h2>
+              <p>Our vision statement goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla felis libero, ultrices non odio id, cursus accumsan enim.</p>
+            </div>
+
+            <div class="box vision">
+              <h2>Mission</h2>
+              <p>Our mision statement goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla felis libero, ultrices non odio id, cursus accumsan enim.</p>
+            </div>
+          </div>
+
+
         <div class="ContactChurch">
-
-
                     <h3>2nd Peter 1:3</h3>
                     <p3> By his divine power, God has given us everything we need for living a godly life. We have
                         received all of this by coming to know him, the one who called us to himself by means of his
