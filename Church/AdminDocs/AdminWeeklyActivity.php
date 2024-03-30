@@ -76,7 +76,10 @@ session_start();
         require_once('../../Menu.php');
     ?>
 
-    <div class ="space"><h1>Weekly Message</h1></div>
+        <div class="content">
+            <h1>Weekly Message</h1>
+            
+        </div>
 
 
 

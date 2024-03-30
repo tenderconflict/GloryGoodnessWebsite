@@ -135,8 +135,5 @@ text-align: center;
             
         </div>
 
-        <div class="space">
-            <br> <br> <br> <br>  <br> <br>
 
-        </div>
 </div>

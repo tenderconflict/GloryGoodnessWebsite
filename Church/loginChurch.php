@@ -1,8 +1,10 @@
 <?php
-error_reporting(E_ALL); ini_set('display_errors', 1);
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
 include('db_connection.php');
 
+// Function to authenticate user
 function authenticateUser($username, $password) {
     global $connection_mysql;
 
@@ -23,34 +25,57 @@ function authenticateUser($username, $password) {
     } else {
         return false;
     }
-    
+}
+
+// Function to limit login attempts
+function limitLoginAttempts($username) {
+    $login_attempts = isset($_SESSION['login_attempts']) ? $_SESSION['login_attempts'] : 0;
+    $login_attempts++;
+    $_SESSION['login_attempts'] = $login_attempts;
+
+    // Limit login attempts to 5 within 10 minutes
+    if ($login_attempts >= 5) {
+        $last_login_time = isset($_SESSION['last_login_time']) ? $_SESSION['last_login_time'] : 0;
+        if (time() - $last_login_time < 600) { // 10 minutes = 600 seconds
+            return true; // Too many login attempts
+        } else {
+            $_SESSION['login_attempts'] = 0; // Reset login attempts
+        }
+    }
+
+    $_SESSION['last_login_time'] = time();
     return false;
 }
 
+// Check if login form is submitted
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+    $username = htmlspecialchars($_POST['username']);
+    $password = htmlspecialchars($_POST['password']);
 
-    if (authenticateUser($username, $password)) {
-        $role = $_SESSION['user']['UserRole'];
-        switch ($role) {
-            case 'admin':
-                header('Location: ../GloryGHome.php');
-                exit();
-            case 'student':
-                header('Location: student_dashboard.php');
-                exit();
-            default:
-                header('Location: ../GloryGHome.php');
-                exit();
-        }
+    // Check if login attempts limit reached
+    if (limitLoginAttempts($username)) {
+        $login_error = 'Too many login attempts. Please try again later.';
     } else {
-        $login_error = 'Invalid username or password.';
+        if (authenticateUser($username, $password)) {
+            $role = $_SESSION['user']['UserRole'];
+            switch ($role) {
+                case 'admin':
+                    header('Location: ../GloryGHome.php');
+                    exit();
+                case 'student':
+                    header('Location: student_dashboard.php');
+                    exit();
+                default:
+                    header('Location: ../GloryGHome.php');
+                    exit();
+            }
+        } else {
+            $login_error = 'Invalid username or password.';
+        }
     }
 }
 ?>
 
-<!-- Lines 1-69 written by Thomas -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -59,54 +84,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
     <script src="LoginSystemChurch.js"></script> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-
 </head>
-<!-- makes it so logo's in the top left and login is in the top right-TD -->
-
-<p style="text-align:center;">
-    <!-- clicking home should bring you to the homepage-TD -->
-    <li><a href="../GloryGHome.php"><img src="Pictures/GGCLogo.png" alt="ChurchLogo" height= "80"></a></li>
-
-    
-</p>
-
 <body>
     <div class="loginMain">
-
-      
-
-
         <h2>Sign in</h2>
-        &nbsp; 
-
         <form method="post">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
-            <br>
-            <br>
+            <br><br>
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
             <br>
             <input type="submit" name="login" value="Log In">
         </form>
+        <?php if (isset($login_error)) : ?>
+            <p><?= htmlspecialchars($login_error) ?></p>
+        <?php endif; ?>
         <p> </p>
-        &nbsp; 
-        <p><a href="RegisterChurch.html">Register for an Account Here</a></p>
-      </div>
-       <!-- links to the login script giving it actual functionality-->
-      <script src="LoginSystemChurch.js"></script>
-
-
-
-      
-
-    <!--  <script>
-        function submitForm() {
-            
-            return true;
-        }
-    </script>-->
-
+        <p><a href="forgot_password.php">Forgot Password</a></p>
     </div>
-
 </body>
+</html>
