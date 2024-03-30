@@ -188,13 +188,7 @@ ul li:hover .submenu {
     background-color: #e0e0e0;
   }
   
-  h2 {
-    color: #333;
-  }
-  
-  p {
-    color: #777;
-  }
+
 
 
 /*putting this here so header isnt beside the paragraph content -TD*/
@@ -210,15 +204,6 @@ ul li:hover .submenu {
     
     color: rgb(1, 19, 37);
 }
-
-
-
-
-
-
-
-
-
 
 .SloganBanner {
     z-index: 1; /*wow now it finally doesnt go over the submenu*/
