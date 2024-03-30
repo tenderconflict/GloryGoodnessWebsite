@@ -182,10 +182,12 @@ ul li:hover .submenu {
   
   .mission {
     background-color: #f2f2f2;
+    align-items: center;
   }
   
   .vision {
     background-color: #e0e0e0;
+    align-items: center;
   }
   
 
