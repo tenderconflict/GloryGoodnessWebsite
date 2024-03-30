@@ -35,21 +35,9 @@ session_start();
 	  	
 		
 	  
-	  <div class="verse">
-			<p>2nd Peter 1:3</p>
-			
-	  
-	  
-                    <p2>By his divine power, God has given us everything we need for living a godly life. We have
-                        received all of this by coming to know him, the one who called us to himself by means of his
-                        marvelous glory and excellence.</p2>
-					</div>
-
-                  
-	  <div class="bottomPage">
-	  		<p>&copy; Glory Goodness Church 2023. All rights reserved.<p>
-	  </div>
-    </div>
+	  <?php 
+        include('../Footer.php');
+    ?>
 </div>
 	
 </body>

@@ -69,7 +69,7 @@ session_start();
 
 
 
-                <div class ="grid-item2"><h1>Contact us</h1>
+                <div class ="grid-item2">
                    
 <?php
  //php that allows the email to be sent

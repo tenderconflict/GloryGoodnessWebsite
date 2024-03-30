@@ -2,20 +2,51 @@
 session_start();
 include('db_connection.php');
 
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (!empty($_POST["email"])) {
+        $email = $_POST["email"];
+        $reset_token = generate_reset_token($email);
+
+        if ($reset_token) {
+            send_reset_email($email, $reset_token);
+            header("Location: reset_email_sent.php");
+            exit;
+        } else {
+            $error = "Failed to generate reset token.";
+        }
+    } else {
+        $error = "Email is required.";
+    }
+}
+
 function generate_reset_token($email) {
     global $connection_mysql;
 
-    // Generate a random reset token
-    $reset_token = bin2hex(random_bytes(32)); // Generate a random 32-byte token
-
-    // Store the reset token in the database
-    $query = "INSERT INTO PasswordReset (email, reset_token) VALUES (?, ?)";
+    // Retrieve the UserID associated with the provided email
+    $query = "SELECT UserID FROM InfoUser WHERE Email = ?";
     $stmt = $connection_mysql->prepare($query);
-    $stmt->bind_param("ss", $email, $reset_token);
+    $stmt->bind_param("s", $email);
     $stmt->execute();
+    $result = $stmt->get_result();
 
-    // Return the generated reset token
-    return $reset_token;
+    if ($result->num_rows === 1) {
+        $user = $result->fetch_assoc();
+        $userID = $user['UserID'];
+
+        // Generate a random reset token
+        $reset_token = bin2hex(random_bytes(32)); // Generate a random 32-byte token
+
+        // Store the reset token in the database along with the UserID
+        $insert_query = "INSERT INTO PasswordReset (UserID, email, reset_token) VALUES (?, ?, ?)";
+        $insert_stmt = $connection_mysql->prepare($insert_query);
+        $insert_stmt->bind_param("sss", $userID, $email, $reset_token);
+        $insert_stmt->execute();
+
+        // Return the generated reset token
+        return $reset_token;
+    } else {
+        return false; // User with the provided email does not exist
+    }
 }
 
 function send_reset_email($email, $reset_token) {
@@ -24,26 +55,7 @@ function send_reset_email($email, $reset_token) {
     $subject = "Password Reset Request";
     $message = "Please click the link below to reset your password:\n\n$reset_link";
     $headers = "From: info@glorygoodnesschurch.com";
-
     mail($to, $subject, $message, $headers);
-}
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Check if email is set and not empty
-    if (isset($_POST["email"]) && !empty($_POST["email"])) {
-        // Generate and store reset token
-        $email = $_POST["email"];
-        $reset_token = generate_reset_token($email);
-
-        // Send email with reset link
-        send_reset_email($email, $reset_token);
-
-        // Redirect to a confirmation page
-        header("Location: reset_email_sent.php");
-        exit;
-    } else {
-        $error = "Email is required.";
-    }
 }
 ?>
 
@@ -61,10 +73,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <input type="email" id="email" name="email" required><br>
         <input type="submit" value="Reset Password">
     </form>
-    <?php
-    if (isset($error)) {
-        echo "<p>Error: $error</p>";
-    }
-    ?>
+    <?php if (isset($error)) echo "<p>Error: $error</p>"; ?>
 </body>
 </html>

@@ -62,10 +62,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_user'])) {
     // Get the last inserted UserID
     $lastInsertedUserId = $connection_mysql->insert_id;
 
+    // Hash the passkey
+    $hashedPasskey = password_hash($newPassword, PASSWORD_DEFAULT);
+
     // Insert into PassUser table
     $insertPassSql = "INSERT INTO PassUser (Username, PassKey, UserID) VALUES (?, ?, ?)";
     $stmt = $connection_mysql->prepare($insertPassSql);
-    $stmt->bind_param("ssi", $newUsername, $newPassword, $lastInsertedUserId);
+    $stmt->bind_param("ssi", $newUsername, $hashedPasskey, $lastInsertedUserId);
     $stmt->execute();
 
     header('Location: AddUsers.php');
@@ -107,22 +110,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_user'])) {
 
             <form method="post">
                 <label for="new_first_name">First Name:</label>
-                <input type="text" name="new_first_name" required><br>
+                <input type="text" name="new_first_name" required><br><br>
                 <label for="new_last_name">Last Name:</label>
-                <input type="text" name="new_last_name" required><br>
+                <input type="text" name="new_last_name" required><br><br>
                 <label for="new_email">Email:</label>
-                <input type="email" name="new_email" required><br>
+                <input type="email" name="new_email" required><br><br>
                 <label for="new_phone">Phone:</label>
-                <input type="text" name="new_phone" required><br>
+                <input type="text" name="new_phone" required><br><br>
                 <label for="new_username">New Username:</label>
-                <input type="text" name="new_username" required><br>
+                <input type="text" name="new_username" required><br><br>
                 <label for="new_password">New Password:</label>
-                <input type="password" name="new_password" required><br>
+                <input type="password" name="new_password" required><br><br>
                 <label for="new_user_role">User Role:</label>
                 <select name="new_user_role" required>
                     <option value="admin">Administrator</option>
                     <option value="student">Student</option>
-                </select><br>
+                </select><br><br>
                 <button type="submit" name="add_user">Add User</button>
             </form>
 

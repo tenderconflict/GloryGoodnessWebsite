@@ -1,7 +1,4 @@
 <?php
-session_start();
-
-error_reporting(E_ALL); ini_set('display_errors', 1);
 
 include('../db_connection.php');
 
@@ -52,7 +49,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_user'])) {
 <head>
     
     <title>Glory Goodness Church</title>
-    <link rel="stylesheet" href="../Styles/GloryGHomeStyles.css">
+    <link rel="stylesheet" href="../Styles/Dashboard.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
 
@@ -77,21 +74,24 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_user'])) {
 
 <form method="post">
     <label for="new_first_name">First Name:</label>
-    <input type="text" name="new_first_name" value="<?php echo $user['FirstName']; ?>" required><br>
+    <input type="text" name="new_first_name" value="<?php echo $user['FirstName']; ?>" required><br><br>
     <label for="new_last_name">Last Name:</label>
-    <input type="text" name="new_last_name" value="<?php echo $user['LastName']; ?>" required><br>
+    <input type="text" name="new_last_name" value="<?php echo $user['LastName']; ?>" required><br><br>
     <label for="new_email">Email:</label>
-    <input type="email" name="new_email" value="<?php echo $user['Email']; ?>" required><br>
+    <input type="email" name="new_email" value="<?php echo $user['Email']; ?>" required><br><br>
     <label for="new_phone">Phone:</label>
-    <input type="text" name="new_phone" value="<?php echo $user['Phone']; ?>" required><br>
+    <input type="text" name="new_phone" value="<?php echo $user['Phone']; ?>" required><br><br>
     <label for="new_user_role">User Role:</label>
     <select name="new_user_role" required>
         <option value="admin" <?php if($user['UserRole'] == 'admin') echo 'selected'; ?>>Administrator</option>
         <option value="student" <?php if($user['UserRole'] == 'student') echo 'selected'; ?>>Student</option>
-    </select><br>
+    </select><br><br>
     <button type="submit" name="update_user">Update User</button>
 </form>
         </div>
+        <?php 
+            include('../../Footer.php');
+        ?>
     </div>
 </body>
 

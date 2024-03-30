@@ -1,6 +1,4 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
 
 include('db_connection.php');
 
@@ -11,17 +9,19 @@ function authenticateUser($username, $password) {
     $query = "SELECT i.UserID, p.Username, p.PassKey, i.UserRole
               FROM InfoUser i 
               JOIN PassUser p ON i.UserID = p.UserID
-              WHERE Username = ? AND PassKey = ?";
+              WHERE Username = ?";
     $stmt = $connection_mysql->prepare($query);
-    $stmt->bind_param("ss", $username, $password);
+    $stmt->bind_param("s", $username);
     $stmt->execute();
 
     $result = $stmt->get_result();
 
     if ($result->num_rows === 1) {
         $user = $result->fetch_assoc();
+        if(password_verify($password, $user['PassKey'])){
         $_SESSION['user'] = $user;
         return true;
+        }
     } else {
         return false;
     }
@@ -36,7 +36,7 @@ function limitLoginAttempts($username) {
     // Limit login attempts to 5 within 10 minutes
     if ($login_attempts >= 5) {
         $last_login_time = isset($_SESSION['last_login_time']) ? $_SESSION['last_login_time'] : 0;
-        if (time() - $last_login_time < 600) { // 10 minutes = 600 seconds
+        if (time() - $last_login_time < 1) { // 10 minutes = 600 seconds
             return true; // Too many login attempts
         } else {
             $_SESSION['login_attempts'] = 0; // Reset login attempts
@@ -86,8 +86,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
     <meta charset="UTF-8">
 </head>
 <body>
+<div class="main">
+    <?php
+    	include('../Header.php');
+    	include('../Menu.php');
+  	?>
+
+    <div class="content">
+        <h1>Sign In</h1>  
+    </div>
+
+
     <div class="loginMain">
-        <h2>Sign in</h2>
         <form method="post">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
@@ -95,13 +105,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
             <br>
+            <br>
             <input type="submit" name="login" value="Log In">
         </form>
         <?php if (isset($login_error)) : ?>
             <p><?= htmlspecialchars($login_error) ?></p>
         <?php endif; ?>
         <p> </p>
+        <br>
+        <br>
         <p><a href="forgot_password.php">Forgot Password</a></p>
     </div>
+
+    <?php 
+        include('../Footer.php');
+    ?>
+</div>
 </body>
 </html>
