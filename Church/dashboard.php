@@ -34,6 +34,7 @@ session_start();
             <br><br>
             <li><a href="AdminDocs/AdminWeeklyActivity.php">Edit Weekly Activity</a></li>
             <li><a href="AdminDocs/AddUsers.php">Add and Delete Users</a></li>
+            <li><a href="../GloryGHometest.php">Test</a></li>
             <br>
             <li><a href="AdminDocs/signout.php">Sign Out</a></li>
         </div>

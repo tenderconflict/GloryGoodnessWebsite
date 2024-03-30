@@ -135,93 +135,21 @@ margin-bottom: 10px;
 }
 
 
-.menu{
-display: flex;
-justify-content: center;
-align-items: center;
-}
-ul{
-	list-style-type: none;
-	list-style: none;
-	float:left;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	}
-	/*lines 97-159 written by Thomas*/
-.menu ul li {
-    list-style: none;
-    margin-left: 25px;
-    margin-right: 25px;/* This spaces out the tabs-TD*/
-    font-size: 20px;
-    position: relative;
-}
-.menu ul li a:hover {
-    color: rgb(214, 193, 0);
+
+
+.content {
+  background: linear-gradient(to bottom, white, rgb(243, 219, 83));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+
+  color: royalblue;
+  text-shadow: 0 0 3px #ffffff, 0 0 5px #ffffff;
+
+  padding: 40px;
 }
 
-
-/*cosmetics Home, About, Ministries, ETC...-TD*/
-ul li a{
-    text-decoration: none;
-    color: green;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    transition: .5s ease-in-out;
-}
-
-
-/*transition hovering color-TD*/
-ul li a:hover{
-    color: rgb(214, 193, 0);
-}
-
-
-
-
-
-
-/*when hovering this will show the submenus-TD*/
-ul .submenu {
-    
-    text-align: left;
-    margin: 0;
-    z-index: 2;/*wow now it finally doesnt go under the banner, big headache figuring this out*/
-    display: none;
-    position: absolute;
-    top: 90%; 
-    left: 0;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    padding: 5px;
-    width: 300%; 
-    /*gives it some space between submenu lines, so annoying initially-TD*/
-    line-height: 26px;
-}
-
-
-
-.sub-menu li {
-    padding: 15px 20px;
-}
-
-
-
-ul li:hover .submenu {
-    display:block; 
-}
-
-.space {
-	display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
-	height: 15vh;
-
-	background-color: #ebebf7;
-    
-}
 /*lines 160-209 written by Jillian */
 .menu2{
 display: flex;
