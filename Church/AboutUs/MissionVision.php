@@ -27,12 +27,12 @@ session_start();
         <div class="container">
             <div class="box mission">
               <h2>Vision</h2>
-              <p>Our vision statement goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla felis libero, ultrices non odio id, cursus accumsan enim.</p>
+              <p>Our vision statement goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla felis libero, ultrices non odio id, cursus accumsan enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla felis libero, ultrices non odio id, cursus accumsan enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla felis libero, ultrices non odio id, cursus accumsan enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla felis libero, ultrices non odio id, cursus accumsan enim.</p>
             </div>
 
             <div class="box vision">
               <h2>Mission</h2>
-              <p>Our mision statement goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla felis libero, ultrices non odio id, cursus accumsan enim.</p>
+              <p>Our mision statement goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla felis libero, ultrices non odio id, cursus accumsan enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla felis libero, ultrices non odio id, cursus accumsan enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla felis libero, ultrices non odio id, cursus accumsan enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla felis libero, ultrices non odio id, cursus accumsan enim.</p>
             </div>
           </div>
 
