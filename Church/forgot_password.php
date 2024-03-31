@@ -65,14 +65,31 @@ function send_reset_email($email, $reset_token) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forgot Password</title>
+    <link rel="stylesheet" href="Styles/Dashboard.css">
 </head>
 <body>
-    <h2>Forgot Password</h2>
-    <form method="post">
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required><br>
-        <input type="submit" value="Reset Password">
-    </form>
-    <?php if (isset($error)) echo "<p>Error: $error</p>"; ?>
+<div class="main">
+    <?php 
+        include('../Header.php');
+        include('../Menu.php');
+    ?>
+
+    <div class="content">
+        <h1>Forgot Password</h1>
+    </div>
+    
+    <div class="AdminLinks">
+        <h2>Forgot Password</h2><br><br>
+        <form method="post">
+           <label for="email">Email:</label><br><br>
+           <input type="email" id="email" name="email" required><br><br>
+           <input type="submit" value="Reset Password">
+        </form>
+        <?php if (isset($error)) echo "<p>Error: $error</p>"; ?>
+    </div>
+    <?php 
+        include('../Footer.php');
+    ?>
+</div>
 </body>
 </html>

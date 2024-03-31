@@ -84,18 +84,40 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles/Dashboard.css">
     <title>Reset Password</title>
 </head>
 <body>
-    <h2>Reset Password</h2>
-    <form method="post">
-        <label for="password">New Password:</label><br>
-        <input type="password" id="password" name="password" required><br>
-        <label for="confirm_password">Confirm Password:</label><br>
-        <input type="password" id="confirm_password" name="confirm_password" required><br>
-        <input type="hidden" name="token" value="<?php echo htmlspecialchars($reset_token); ?>">
-        <input type="submit" value="Reset Password">
-    </form>
-    <?php if (isset($error)) echo "<p>Error: $error</p>"; ?>
+    <div class="main">
+        <?php 
+            include('../Header.php');
+            include('../Menu.php');
+        ?>
+
+        <div class="content">
+            <h1>Reset Password</h1>
+        </div>
+
+        <div class="AdminLinks">
+            <h2>Reset Password</h2><br><br>
+            <form method="post">
+                <label for="password">New Password:</label><br><br>
+                <input type="password" id="password" name="password" required><br><br>
+                <label for="confirm_password">Confirm Password:</label><br><br>
+                <input type="password" id="confirm_password" name="confirm_password" required><br><br>
+                <input type="hidden" name="token" value="<?php echo htmlspecialchars($reset_token); ?>">
+                <input type="submit" value="Reset Password">
+            </form>
+
+            <br>
+            <?php if (isset($error)) echo "<p>Error: $error</p>"; ?>
+        </div>
+
+        
+
+        <?php 
+            include('../Footer.php');
+        ?>
+    </div>
 </body>
 </html>

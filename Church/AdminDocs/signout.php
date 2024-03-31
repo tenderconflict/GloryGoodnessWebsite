@@ -7,8 +7,8 @@ session_start();
 
 <head>
     
-    <title>Glory Goodness Church</title>
-    <link rel="stylesheet" href="../Styles/GloryGHomeStyles.css">
+    <title>Signout</title>
+    <link rel="stylesheet" href="../Styles/Dashboard.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
 
@@ -33,7 +33,11 @@ session_start();
 				<?php else: ?>
         			<a href="../loginChurch.php">Log In</a>
                 <?php endif; ?>
-            </div>
+        </div>
+
+        <?php 
+            include('../../Footer.php');
+        ?>
     </div>
 </body>
 

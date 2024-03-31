@@ -36,7 +36,7 @@ function limitLoginAttempts($username) {
     // Limit login attempts to 5 within 10 minutes
     if ($login_attempts >= 5) {
         $last_login_time = isset($_SESSION['last_login_time']) ? $_SESSION['last_login_time'] : 0;
-        if (time() - $last_login_time < 1) { // 10 minutes = 600 seconds
+        if (time() - $last_login_time < 600) { // 10 minutes = 600 seconds
             return true; // Too many login attempts
         } else {
             $_SESSION['login_attempts'] = 0; // Reset login attempts
