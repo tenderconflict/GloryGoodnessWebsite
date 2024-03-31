@@ -136,9 +136,9 @@ background-position-x: -10;
        /* background: linear-gradient(to bottom, white, #7393B3);*/
     
      
-        background-color: rgb(135, 135, 247);
+       /*  background-color: rgb(135, 135, 247);*/
      
-      
+       background-color:navy; /*  awesome! -TD*/
     
     height: auto;
     }
