@@ -174,9 +174,9 @@ ul li:hover .submenu {
   }
 
   .box {
-    width: 45%;
+    width: 40%;
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid rgba(235, 235, 247, 0.7);
     border-radius: 8px;
   }
   
