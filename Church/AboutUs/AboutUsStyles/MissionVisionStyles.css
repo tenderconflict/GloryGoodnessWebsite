@@ -234,7 +234,15 @@ background-position-x: -10;
     font-size: 20px; 
 }
 
-
+h2 {
+    color: #333;
+    align-items: center;
+  }
+  
+  p {
+    color: #777;
+    align-items: center;
+  }
 
 
 
