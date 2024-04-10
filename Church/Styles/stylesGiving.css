@@ -156,6 +156,32 @@ margin-bottom: 10px;
 }
 
 
+.grid-containerwhygive{
+  display: grid;
+  gap: 10px;
+
+
+}
+
+.whygive-item{
+  text-align: center;
+border-bottom: 2px solid #ccc; /* Add a bottom border to create a division line */
+  padding-bottom: 10px;
+}
+.grid-containerwhygive enh1{
+  /* padding-top: 1vw; */
+  /* text-align:center;  */
+  font-weight:bold;
+  font-size: 20px;
+}
+.grid-containerwhygive vh1 {
+/* text-align:center; */
+color: blue;
+
+/* font-weight: bold; */
+font-size: 18px;
+}
+
 
 .grid-containerpayment {
     display: grid;
