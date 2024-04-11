@@ -28,12 +28,39 @@ session_start();
 	
 	  <div class="middle">
 	<div class="tab">
-	<button class="tablinks" onclick="openGiving(event, 'Zelle')"id ="DefaultOpen">Zelle</button>
+	<button class="tablinks" onclick="openGiving(event, 'WhyGive')"id ="DefaultOpen">Why Give</button>
+	<button class="tablinks" onclick="openGiving(event, 'Zelle')">Zelle</button>
 	<!-- <button class="tablinks" onclick="openGiving(event, 'Text to Give')">Text to Give</button> -->
 	<button class="tablinks" onclick="openGiving(event, 'PayPal')">PayPal</button>
 	<button class="tablinks" onclick="openGiving(event, 'In-Person')">In-Person (Gửi trực tiếp)</button>
 	<button class="tablinks" onclick="openGiving(event, 'Building Pledge')">Building Pledge</button>
   </div>
+
+  <div id="WhyGive" class="tabcontent">
+	<div class="grid-containerwhygive">
+		<enh1>Importance of Donating</enh1>
+		<vh1>translation here</vh1>
+	  <div class="whygive-item">
+		
+		<p>The Bible calls believers to tithe a portion of their income. Leviticus 27:30 states, “A tithe of everything from the land, whether grain from the soil or fruit from the trees, belongs to the Lord; it is holy to the Lord."
+			Tithing expresses our gratitude for all that God has done for us, and contributes to our church's spirtual growth. 
+		</p>
+	  </div>
+	  <enh1>How to Donate</enh1>
+	  <vh1>translation here</vh1>
+
+	  <div class="whygive-item">
+		
+		
+		<p>To submit your donation, click on the desired tab link above. You can donate through Zelle, PayPal, or in person. PayPal allows you to donate with your 
+			credit/debit card online and does not require you to have a PayPal account. If you do not want to donate online, you can donate in person using cash or check. Finally, you can 
+		read more about how to donate towards the construction of a permanent building for our church by viewing the "Donation Pledge" tab. Thank you for supporting the mission of Glory Goodness Church! </p>
+	  
+	</div>
+	</div>
+	</div>
+
+
   
   <div id="Zelle" class="tabcontent">
 	
