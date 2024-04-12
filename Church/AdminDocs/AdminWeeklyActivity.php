@@ -131,10 +131,12 @@ session_start();
     <p class="dashed-line">Every Sunday at 11:00am</p></div>
     <div class="notes">
        <h1>Notes</h1>
-       <form action="update_text.php" method="post">
-        <label for="message">Update Message:</label><br>
-        <textarea id="message" name="message" rows="4" cols="30"></textarea><br>
-        <input type="submit" value="Submit">
+        <form action="update_message.php" method="post">
+    <textarea name="content" rows="4" cols="30"><?php echo file_get_contents('message.txt'); ?></textarea><br>
+    <input type="submit" value="Submit">
+</form>
+
+
       </form>
 
 

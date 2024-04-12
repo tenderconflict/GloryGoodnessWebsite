@@ -141,7 +141,11 @@ session_start();
     <div class="notes">
        <h1>Notes</h1>
        <h2>Ghi Chú</h2>
-       <p>based on the weather, we will be meeting virtually this week</p>
+       <?php
+            // Retrieve content from text file
+            $content = file_get_contents('AdminDocs/message.txt');
+            echo $content;
+            ?>
        
 
 
