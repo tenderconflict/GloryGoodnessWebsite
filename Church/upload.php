@@ -1,80 +1,127 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit"])) {
-    $section = $_POST["section"];
-    $target_dir = "uploads/";
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if ($_POST["action"] == "upload_schedule") {
+        $target_dir = "uploads/";
+        $target_file = $target_dir . basename($_FILES["schedule_file"]["name"]);
+        $uploadOk = 1;
+        $pdfFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
-    // Remove the existing file if it exists
-    if (file_exists($target_dir . $section . ".pdf")) {
-        unlink($target_dir . $section . ".pdf");
-    }
+        // Check if file is a PDF
+        if ($pdfFileType != "pdf") {
+            echo "Only PDF files are allowed.";
+            $uploadOk = 0;
+        }
 
-    $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-    $uploadOk = 1;
-    $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+        // Delete existing file if exists
+        if (file_exists($target_file)) {
+            unlink($target_file);
+        }
 
-    // Check file size
-    if ($_FILES["fileToUpload"]["size"] > 500000) {
-        echo "Sorry, your file is too large.";
-        $uploadOk = 0;
-    }
-
-    // Allow only PDF files
-    if ($imageFileType != "pdf") {
-        echo "Sorry, only PDF files are allowed.";
-        $uploadOk = 0;
-    }
-
-    // Check if $uploadOk is set to 0 by an error
-    if ($uploadOk == 0) {
-        echo "Sorry, your file was not uploaded.";
-    // if everything is ok, try to upload file
-    } else {
-        if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_dir . $section . ".pdf")) {
-            echo "The file ". htmlspecialchars(basename($_FILES["fileToUpload"]["name"])). " has been uploaded.";
-            ${"pdf_file" . $section} = $target_dir . $section . ".pdf"; // Update the variable with the new file name
+        // Check if $uploadOk is set to 0 by an error
+        if ($uploadOk == 0) {
+            echo "Sorry, your file was not uploaded.";
         } else {
-            echo "Sorry, there was an error uploading your file.";
+            // Rename and upload the file
+            $new_file_name = "schedule.pdf";
+            if (move_uploaded_file($_FILES["schedule_file"]["tmp_name"], $target_dir . $new_file_name)) {
+                echo "The file " . htmlspecialchars(basename($_FILES["schedule_file"]["name"])) . " has been uploaded as schedule.pdf.";
+            } else {
+                echo "Sorry, there was an error uploading your file.";
+            }
+        }
+    }
+
+    if ($_POST["action"] == "upload_bible_reading") {
+        $target_dir = "uploads/";
+        $target_file = $target_dir . basename($_FILES["bible_reading_file"]["name"]);
+        $uploadOk = 1;
+        $pdfFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+
+        // Check if file is a PDF
+        if ($pdfFileType != "pdf") {
+            echo "Only PDF files are allowed.";
+            $uploadOk = 0;
+        }
+
+        // Delete existing file if exists
+        if (file_exists($target_file)) {
+            unlink($target_file);
+        }
+
+        // Check if $uploadOk is set to 0 by an error
+        if ($uploadOk == 0) {
+            echo "Sorry, your file was not uploaded.";
+        } else {
+            // Rename and upload the file
+            $new_file_name = "bible_reading.pdf";
+            if (move_uploaded_file($_FILES["bible_reading_file"]["tmp_name"], $target_dir . $new_file_name)) {
+                echo "The file " . htmlspecialchars(basename($_FILES["bible_reading_file"]["name"])) . " has been uploaded as bible_reading.pdf.";
+            } else {
+                echo "Sorry, there was an error uploading your file.";
+            }
+        }
+    }
+
+    if ($_POST["action"] == "upload_bible_study") {
+        $target_dir = "uploads/";
+        $target_file = $target_dir . basename($_FILES["bible_study_file"]["name"]);
+        $uploadOk = 1;
+        $pdfFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+
+        // Check if file is a PDF
+        if ($pdfFileType != "pdf") {
+            echo "Only PDF files are allowed.";
+            $uploadOk = 0;
+        }
+
+        // Delete existing file if exists
+        if (file_exists($target_file)) {
+            unlink($target_file);
+        }
+
+        // Check if $uploadOk is set to 0 by an error
+        if ($uploadOk == 0) {
+            echo "Sorry, your file was not uploaded.";
+        } else {
+            // Rename and upload the file
+            $new_file_name = "bible_study.pdf";
+            if (move_uploaded_file($_FILES["bible_study_file"]["tmp_name"], $target_dir . $new_file_name)) {
+                echo "The file " . htmlspecialchars(basename($_FILES["bible_study_file"]["name"])) . " has been uploaded as bible_study.pdf.";
+            } else {
+                echo "Sorry, there was an error uploading your file.";
+            }
+        }
+    }
+
+    if ($_POST["action"] == "upload_prayer_list") {
+        $target_dir = "uploads/";
+        $target_file = $target_dir . basename($_FILES["prayer_list_file"]["name"]);
+        $uploadOk = 1;
+        $pdfFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+
+        // Check if file is a PDF
+        if ($pdfFileType != "pdf") {
+            echo "Only PDF files are allowed.";
+            $uploadOk = 0;
+        }
+
+        // Delete existing file if exists
+        if (file_exists($target_file)) {
+            unlink($target_file);
+        }
+
+        // Check if $uploadOk is set to 0 by an error
+        if ($uploadOk == 0) {
+            echo "Sorry, your file was not uploaded.";
+        } else {
+            // Rename and upload the file
+            $new_file_name = "prayer_list.pdf";
+            if (move_uploaded_file($_FILES["prayer_list_file"]["tmp_name"], $target_dir . $new_file_name)) {
+                echo "The file " . htmlspecialchars(basename($_FILES["prayer_list_file"]["name"])) . " has been uploaded as prayer_list.pdf.";
+            } else {
+                echo "Sorry, there was an error uploading your file.";
+            }
         }
     }
 }
 ?>
-
-
-
-
-<!-- 
-$target_dir = "uploads/";
-$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-$uploadOk = 1;
-$pdfFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
-if (empty($_FILES)) {
-    exit('$_FILES is empty - is file_uploads set to "Off" in php.ini?');
-}
-// Check if file is a PDF
-if (isset($_POST["submit"])) {
-    if ($pdfFileType != "pdf") {
-        echo "Sorry, only PDF files are allowed.";
-        $uploadOk = 0;
-    }
-}
-
-
-
-// Check file size
-if ($_FILES["fileToUpload"]["size"] > 500000) {
-    echo "Sorry, your file is too large.";
-    $uploadOk = 0;
-}
-
-// Check if $uploadOk is set to 0 by an error
-if ($uploadOk == 0) {
-    echo "Sorry, your file was not uploaded.";
-// if everything is ok, try to upload file
-} else {
-    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-        echo "The file " . htmlspecialchars(basename($_FILES["fileToUpload"]["name"])) . " has been uploaded.";
-    } else {
-        echo "Sorry, there was an error uploading your file.";
-    }
-}
-?> -->

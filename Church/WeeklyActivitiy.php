@@ -70,9 +70,9 @@ session_start();
 
 <body>
   <?php
-    $pdf_dir = "uploads/";
+    $pdf_dir = "AdminDocs/uploads/";
     $pdf_fileschedule = $pdf_dir . "schedule.pdf";
-    $pdf_fileprayer = $pdf_dir . "prayer.pdf";
+    $pdf_fileprayer = $pdf_dir . "prayer_list.pdf";
     $pdf_filebible_study = $pdf_dir . "bible_study.pdf";
     $pdf_filebible_reading = $pdf_dir . "bible_reading.pdf";
 ?>

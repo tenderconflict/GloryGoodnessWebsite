@@ -92,38 +92,37 @@ session_start();
       <h1 class = "dashed-linebottom">Schedule</h1>
       
 
-      <h2><form action="../Church/upload.php" method="post" enctype="multipart/form-data">
-        Select file to upload
-        <input type="file" name="section" id="schedule">
-        <input type="submit" value="Upload File" name="submit">
-      </form></h2>
+      <h2><form action="upload.php" method="post" enctype="multipart/form-data">
+        <input type="file" name="schedule_file" id="schedule_file">
+        <input type="hidden" name="action" value="upload_schedule">
+        <input type="submit" value="Upload Schedule">
+    </form></h2>
 
         <h1 class = "dashed-linebottom">Prayer</h1>
       
 
-        <h2><form action="../Church/upload.php" method="post" enctype="multipart/form-data">
-          Select file to upload
-          <input type="file" name="section" id="prayer">
-          <input type="submit" value="Upload File" name="submit">
-        </form></h2>
+        <h2><form action="upload.php" method="post" enctype="multipart/form-data">
+        <input type="file" name="prayer_list_file" id="prayer_list_file">
+        <input type="hidden" name="action" value="upload_prayer_list">
+        <input type="submit" value="Upload Prayer List">
+    </form></h2>
         <h1 class = "dashed-linebottom">Bible Study</h1>
       
 
-        <h2><form action="../Church/upload.php" method="post" enctype="multipart/form-data">
-          Select file to upload
-          <input type="file" name="section" id="bible_study">
-          <input type="submit" value="Upload File" name="submit">
-        </form></h2>
+        <h2> <form action="upload.php" method="post" enctype="multipart/form-data">
+        <input type="file" name="bible_study_file" id="bible_study_file">
+        <input type="hidden" name="action" value="upload_bible_study">
+        <input type="submit" value="Upload Bible Study">
+    </form></h2>
         <h1 class = "dashed-linebottom">Bible Reading</h1>
       
-
+        <h2><form action="upload.php" method="post" enctype="multipart/form-data">
+        <input type="file" name="bible_reading_file" id="bible_reading_file">
+        <input type="hidden" name="action" value="upload_bible_reading">
+        <input type="submit" value="Upload Bible Reading">
+    </form></h2>
     
-        <form action="../Church/upload.php" method="post" enctype="multipart/form-data">
-    <input type="hidden" name="section" value="bible_reading">
-    Select file to upload:
-    <input type="file" name="fileToUpload" id="fileToUpload">
-    <input type="submit" value="Upload File" name="submit">
-    </form>
+    
 
 
     </div>
