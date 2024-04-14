@@ -35,12 +35,12 @@ session_start();
                 echo '<li><a href="../../Church/dashboard.php">Dashboard</a></li>';
                 break;
             default:
-                echo '<li><a href="../../Church/loginChurch.php">Login</a></li>';
+                echo '<li><a href="../../Church/loginChurch.php">Login<br>Đăng Nhập</a></li>';
                 break;
         }
     } else {
         // If not logged in, show link to login page
-        echo '<li><a href="../../Church/loginChurch.php">Login</a></li>';
+        echo '<li><a href="../../Church/loginChurch.php">Login<br>Đăng Nhập</a></li>';
     }
 ?>
     </span>
