@@ -40,7 +40,7 @@
 .ContactChurch h3 {
     font-size: 23px; 
     color: rgb(253, 238, 151);
-    
+    padding-top: 30px;
 text-align: center;    
 }
 
