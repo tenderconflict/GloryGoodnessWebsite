@@ -16,7 +16,7 @@ session_start();
 </head>
 
 <body>
-    < class="main">
+    <div class= "main">
         <div class="navbar">
             <?php 
                 include('../../Header.php');
@@ -38,14 +38,14 @@ session_start();
               <h2>Mission</h2>
               <p>Our mision statement goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla felis libero, ultrices non odio id, cursus accumsan enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla felis libero, ultrices non odio id, cursus accumsan enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla felis libero, ultrices non odio id, cursus accumsan enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla felis libero, ultrices non odio id, cursus accumsan enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla felis libero, ultrices non odio id, cursus accumsan enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla felis libero, ultrices non odio id, cursus accumsan enim.</p>
 
-              <?php 
-            include('Footer.php');
-        ?>
+         
             </div>
 
-
+</div>
         
-
+            <?php 
+            include('../../Footer.php');
+        ?>
           </div>
 
 </body>
