@@ -5,7 +5,7 @@ session_start();
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Test Weekly Activity</title>
+  <title>Weekly Activity</title>
   <link rel="stylesheet" href="../Church/Styles/stylesWeeklyMessage.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
@@ -51,7 +51,7 @@ session_start();
     text-align: center;
   }
   .notes p {
-    text-align: center;
+  
     padding-top: .5vw;
   padding-bottom:.5vw;
   }
@@ -141,12 +141,13 @@ session_start();
     <div class="notes">
        <h1>Notes</h1>
        <h2>Ghi Chú</h2>
+       <p>
        <?php
             // Retrieve content from text file
             $content = file_get_contents('AdminDocs/message.txt');
             echo $content;
             ?>
-       
+       </p>
 
 
 
