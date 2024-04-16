@@ -70,9 +70,9 @@ session_start();
 
 <body>
   <?php
-    $pdf_dir = "uploads/";
+    $pdf_dir = "AdminDocs/uploads/";
     $pdf_fileschedule = $pdf_dir . "schedule.pdf";
-    $pdf_fileprayer = $pdf_dir . "prayer.pdf";
+    $pdf_fileprayer = $pdf_dir . "prayer_list.pdf";
     $pdf_filebible_study = $pdf_dir . "bible_study.pdf";
     $pdf_filebible_reading = $pdf_dir . "bible_reading.pdf";
 ?>
@@ -100,38 +100,34 @@ session_start();
         <div class = "gridcontent">
       <h1 class = "dashed-linebottom">Schedule (Lịch)</h1>
       
-
-        <h2>  <a href="<?php echo $pdf_fileschedule; ?>" target="_blank"> Click this link to access this week's schedule!</a>
-        </h2>
-        <h2>  <a href="<?php echo $pdf_fileschedule; ?>" target="_blank">
-          Nhấn vào đây để truy cập vào lịch hàng tuần!</a>
-        </h2>
+      <a href = "<?php echo $pdf_fileschedule; ?>"><button type="button" class ="button">Schedule</button></a>
+        <p>Click the button to access the Schedule PDF</p>
 
         <h1 class = "dashed-linebottom">Prayer (Cầu nguyện)</h1>
       
+        <a href = "<?php echo $pdf_fileprayer; ?>" target="_blank"><button type="button" class ="button">Prayer List</button></a>
+        <p>Click the button to access the Prayer List PDF</p>
 
-        <h2>  <a href="<?php echo $pdf_fileprayer; ?>" target="_blank"> Click this link to access this week's prayer list!</a>
-        </h2>
-        <h2>  <a href="<?php echo $pdf_fileprayer; ?>" target="_blank">Nhấn vào đây để truy cập vào danh sách cầu nguyên hàng tuần!</a>
-        </h2>
+
+       
 
         <h1 class = "dashed-linebottom">Bible Study (Học Kinh Thánh)</h1>
       
+        <a href = "<?php echo $pdf_filebible_study; ?>" target="_blank"><button type="button" class ="button">Bible Study</button></a>
+        <p>Click the button to access the Bible Study PDF</p>
 
-        <h2>  <a href="<?php echo $pdf_filebible_study; ?>" target="_blank"> Click this link to access this week's bible study!</a>
-        </h2>
-        <h2>  <a href="<?php echo $pdf_filebible_study; ?>" target="_blank">Nhấn vào đây để truy cập vào lịch học kinh thánh hàng tuần!</a>
-        </h2>
+
+
+    
 
         <h1 class = "dashed-linebottom">Bible Reading (Đọc Kinh Thánh)</h1>
-      
+        <a href = "<?php echo $pdf_filebible_reading; ?>" target="_blank"><button type="button" class ="button">Bible Reading</button></a>
+        <p>Click the button to access the Bible Reading PDF</p>
 
-        <h2>  <a href="<?php echo $pdf_filebible_reading; ?>" target="_blank"> Click this link to access this week's bible reading!</a>
-        </h2>
-        
-        <h2>  <a href="<?php echo $pdf_filebible_reading; ?>" target="_blank"> Nhấn vào đây để truy cập vào lịch đọc kinh thánh hàng tuần!
-</a>
-        </h2>
+
+
+
+      
        
 
 
@@ -145,7 +141,11 @@ session_start();
     <div class="notes">
        <h1>Notes</h1>
        <h2>Ghi Chú</h2>
-       <p>based on the weather, we will be meeting virtually this week</p>
+       <?php
+            // Retrieve content from text file
+            $content = file_get_contents('AdminDocs/message.txt');
+            echo $content;
+            ?>
        
 
 

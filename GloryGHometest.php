@@ -1,16 +1,15 @@
-<!-- Lines 1-147 written by Thomas -->
 <?php
 session_start();
 ?>
 
+<!-- Lines 1-147 written by Thomas -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     
-    <title>Glory Goodness Church</title>
+    <title>Glory Goodness Church Home</title>
     <link rel="stylesheet" href="Church/Styles/GloryGHomeStyles.css">
-    <link rel="stylesheet" href="Church/Styles/GloryGHomeStyles.css?v=<?php echo time(); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
 
@@ -19,96 +18,10 @@ session_start();
 <body>
     <div class="main">
         <div class="navbar">
-            <div class="icon">
-                <h2 class="logo"> </h2>
-
-            </div>
-
-
-            <!-- makes it so logo's in the top left and login is in the top right-TD -->
-            <div class="login">
-                <span style="float:right;">
-                    <li><a href="Church/loginChurch.php">Sign in</a></li>
-                </span>
-            </div>
-
-            <p style="text-align:center;">
-                <!-- clicking home should bring you to the homepage-TD -->
-                <li><a href="GloryGHome.html#"><img src="Church/Pictures/GGCLogo.png" alt="ChurchLogo" height="80"></a>
-                </li>
-
-
-            </p>
-
-
-
-
-
-
-
-
-
-            <div class="menu">
-                <ul>
-                    <!-- clicking home should bring you to the homepage-TD -->
-                    <!-- <li><a href="#"><img src="GGCLogo.png" alt="ChurchLogo" height= "70"></a></li> -->
-
-
-                    <!-- <li><a href="#">HOME</a></li>-->
-
-
-
-
-                    <li><a href="GloryGHome.html#">Home <br><span style="color: rgb(18, 18, 161);">Trang chủ</span></a></li>
-
-
-
-                    <li class="has-submenu"><a href="#">About Us <br> <span style="color: rgb(18, 18, 161);">Về Hội Thánh</span></a>
-
-
-                        <ul class="submenu">
-                            <li><a href="Church/AboutUs/MissionVision.html">Mission & Vision <br><span style="color: rgb(18, 18, 161);">Sứ Mạng và Tầm Nhìn</span></a></li>
-                            <li><a href="Church/AboutUs/ChurchStaff.html">Church Staff <br><span style="color: rgb(18, 18, 161);">Thành viên</span></a>
-                            </li>
-                            <li><a href="Church/AboutUs/ChurchHistory.html">Church History <br> <span style="color: rgb(18, 18, 161);">Lịch sử</span></a></li>
-                            <!--more may be added in the future here -TD -->
-                        </ul>
-
-
-                    </li>
-
-
-                    <li><a href="#">Ministries <br><span style="color: rgb(18, 18, 161);">Mục Vụ</span></a>
-
-                        <ul class="submenu">
-                            <li><a href="Church/ChurchEventCalandar.html">Church Event Calendar <br><span
-                                        style="color: rgb(18, 18, 161);">Thời Khoá Biểu của</span></a></li>
-                            <li><a href="Church/WeeklyActivitiy.html">Weekly Activity <br><span style="color: rgb(18, 18, 161);">Hoạt Động Hằng Tuần</span></a></li>
-                            <li><a href="Church/WeeklyBibleReadings.html">Weekly Bible Reading <br><span style="color: rgb(18, 18, 161);">Lịch đọc Kinh Thánh Hằng Năm</span></a></li>
-
-                        </ul>
-
-
-                    </li>
-
-
-                    <li><a href="Church/Giving.html">Giving <br><span style="color: rgb(18, 18, 161);">Dâng Hiến</span></a></li>
-
-
-
-                    <li><a href="#">Education <br><span style="color: rgb(18, 18, 161);">Giáo Dục</span></a>
-
-                        <ul class="submenu">
-                            <li><a href="School/GloryGSchool.html">School <br><span
-                                        style="color: rgb(18, 18, 161);">Trường học</span></a></li>
-
-                        </ul>
-
-
-                    </li>
-
-                </ul>
-            </div>
+            <?php 
+                include('Header.php');
+                include('Menu.php');
+            ?>
         </div>
 
 
@@ -129,7 +42,7 @@ session_start();
 
             <p>Worshiping Every Sunday at 11:00 am</p>
         </div>
-        
+
 
 
 
@@ -155,11 +68,9 @@ session_start();
                 </div>
 
 
- 
 
-<div class ="grid-item2">
-
-
+                <div class ="grid-item2">
+                   
 <?php
  //php that allows the email to be sent
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -202,22 +113,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <input type="submit" id="search" value="Submit" style="height:35px; width:90px" />
 </form>
 
-</div>
-
-
-
-
+                </div>
         </div>
- 
 
-
-
-       
         <?php 
             include('Footer.php');
         ?>
 
-       
+    </div>
 </body>
 
 </html>

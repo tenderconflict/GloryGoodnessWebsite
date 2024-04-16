@@ -8,7 +8,7 @@
     justify-content: center;
     align-items: center;
     height: auto;
-   
+    color: rgb(253, 238, 151);
     font-family: "Arial", sans-serif;
     color: #fff;
     flex-direction: column;
@@ -30,14 +30,17 @@
 .ContactChurch h2{
     font-size: 30px;
 }
+.ContactChurch h1 {
+    font-size: 30px;
+    color: rgb(253, 238, 151);
+}
 
 /*Below is for the bible verse in gold -TD*/
 
 .ContactChurch h3 {
-    padding-top:60px;
     font-size: 23px; 
     color: rgb(253, 238, 151);
-    
+    padding-top: 30px;
 text-align: center;    
 }
 
@@ -112,12 +115,16 @@ text-align: center;
 
 <div class="Footer">
     <div class="ContactChurch">
-            <h3>2nd Peter 1:3</h3>
-                    <p3>By his divine power, God has given us everything we need for living a godly life. We have
-                        received all of this by coming to know him, the one who called us to himself by means of his
-                        marvelous glory and excellence.</p3>
+            <h3>II Peter 1:3 KJV</h3>
+                    <p3>According as his divine power hath given unto us all things that pertain unto life and godliness, through the knowledge of him that hath called us to glory and virtue.</p3>
 
-                        <h2><br>Contact Information</h2>
+                        <h3>II Phi-e-rơ 1:3 VIE1925</h3>
+                        <p3>Quyền-phép Đức Chúa Trời đã ban cho chúng ta mọi điều thuộc về sự sống và sự tin-kính, khiến chúng ta biết Đấng lấy vinh-hiển và nhân-đức mà gọi chúng ta.</p3>
+
+
+                  <!--  keeping this in case client changes mind for 100th time
+                    
+                    <h2><br>Contact Information</h2>
                         <div class="BottomContact">
                             <div class="Email">
                                    
@@ -127,10 +134,11 @@ text-align: center;
                             
                                 <div class="PhoneNumber">
                                   
-                                    <span>Phone number: +1 (123) 456-7890</span>
+                                    <span>Phone number: 571-789-7855</span>
                                 </div>
                             </div>
                         </div>
+                    -->
                         <p4>&copy; Glory Goodness Church 2023. All rights reserved.</p4>
             
         </div>

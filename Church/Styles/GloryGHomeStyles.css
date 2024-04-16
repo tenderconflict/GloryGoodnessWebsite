@@ -37,6 +37,7 @@
 }
 
 .content {
+    
     background: linear-gradient(to bottom, white, rgb(243, 219, 83));
     display: flex;
     justify-content: center;
@@ -63,6 +64,16 @@
     
 }
 
+.content h1 {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: royalblue;
+   
+}
 
 
 
@@ -73,6 +84,7 @@
 
 
 .SloganBanner {
+  
     z-index: 1; /*wow now it finally doesnt go over the submenu*/
 background-position-x: -10;
     width: 100%;
@@ -103,14 +115,14 @@ background-position-x: -10;
 .englishSlogan {
     position: absolute;
     top: 20px;
-    left: 20px;
+    left: 50px;
     font-size: 16px;
 }
 
 .VietnameseSlogan {
     position: absolute;
     top: 20px;
-    right: 20px;
+    right: 50px;
     
     font-size: 16px;
 }
@@ -123,6 +135,7 @@ background-position-x: -10;
     padding: 20px;
     font-size: 20px; 
     bottom: 10px;
+    text-align: center;
 }
 
 
@@ -199,9 +212,9 @@ background-position-x: -10;
         .grid-item2 iframe{
             width: 80%; 
             
-            height: 450px; 
+            height: 420px; 
             border: 0;
-            border-radius: 50px;
+           
         }
 
 .grid-item2 p{
@@ -225,13 +238,11 @@ textarea {
     outline:none;
     background-color: #d9e9e9;
     border: 2px solid royalblue;
-    border-radius: 4px;
     resize: none;
     
     height:auto;
     line-height:1.5;
     font-size: large;
-    border-radius: 10px;
   }
 
   
@@ -244,6 +255,8 @@ textarea {
 
 
 .button {
+    border-radius: 10px;
+
 	border: none;
 	color: white;
 	padding: 15px 32px;
@@ -261,4 +274,16 @@ textarea {
   }
 .button:hover {
 	background-color: darkgoldenrod;
+}
+
+
+@media only screen and (max-width: 623px) {/*shrink the slogan for phone view -TD*/
+    .SloganBanner h2{
+
+        font-size: 15px; 
+        margin: 0; 
+
+
+    }
+   
 }
