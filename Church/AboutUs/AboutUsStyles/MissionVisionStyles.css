@@ -178,6 +178,7 @@ ul li:hover .submenu {
     padding: 20px;
     border: 1px solid rgba(235, 235, 247, 0.7);
     border-radius: 8px;
+    text-align: center;
   }
   
   .mission {
