@@ -157,7 +157,7 @@ ul .button{
 
 
                         <ul class="submenu">
-                            <li><a href="../../Church/AboutUs/MissionVision.php">Mission & Vision <br><span style="color: rgb(18, 18, 161);">Sứ Mạng và Tầm Nhìn</span></a></li>
+                            <li><a href="../../Church/AboutUs/MissionVision.php">Vision & Mission <br><span style="color: rgb(18, 18, 161);">Sứ Mạng và Tầm Nhìn</span></a></li>
                             <li><a href="../../Church/AboutUs/ChurchStaff.php">Church Staff <br><span style="color: rgb(18, 18, 161);">Thành viên</span></a>
                             </li>
                             <li><a href="../../Church/AboutUs/ChurchHistory.php">Church History <br> <span style="color: rgb(18, 18, 161);">Lịch sử</span></a></li>
