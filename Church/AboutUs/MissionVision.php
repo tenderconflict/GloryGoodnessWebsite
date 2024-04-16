@@ -24,6 +24,10 @@ session_start();
             ?>
         </div>
 
+        <div class="content">
+            <h1>Glory Goodness Vision and Mission</h1>
+        </div>
+
         <div class="container">
             <div class="box mission">
               <h2>Vision</h2>
