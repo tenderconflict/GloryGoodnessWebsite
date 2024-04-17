@@ -16,7 +16,7 @@ session_start();
 </head>
 
 <body>
-    <div class="main">
+    <div class= "main">
         <div class="navbar">
             <?php 
                 include('../../Header.php');
@@ -25,7 +25,7 @@ session_start();
         </div>
 
         <div class="content">
-            <h1>Glory Goodness Vision and Mission</h1>
+            <h1>Vision and Mission</h1>
         </div>
 
         <div class="container">
@@ -37,29 +37,16 @@ session_start();
             <div class="box vision">
               <h2>Mission</h2>
               <p>Our mision statement goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla felis libero, ultrices non odio id, cursus accumsan enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla felis libero, ultrices non odio id, cursus accumsan enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla felis libero, ultrices non odio id, cursus accumsan enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla felis libero, ultrices non odio id, cursus accumsan enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla felis libero, ultrices non odio id, cursus accumsan enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla felis libero, ultrices non odio id, cursus accumsan enim.</p>
+
+         
             </div>
-          </div>
 
-
-        <div class="ContactChurch">
-                    <h3>2nd Peter 1:3</h3>
-                    <p3> By his divine power, God has given us everything we need for living a godly life. We have
-                        received all of this by coming to know him, the one who called us to himself by means of his
-                        marvelous glory and excellence.</p3>
-
-                        <h2><br>Contact Information</h2>
-                        <div class="BottomContact">
-                            <div class="Email">
-                                   
-                                <span>Email: info@glorygoodnesschurch.org</span>
-                            </div>
-                            <div class="BottomInfo">
-                            
-                                <div class="PhoneNumber">
-                                  
-                                    <span>Phone number: +1 (123) 456-7890</span>
-        </div>
+</div>
         
+            <?php 
+            include('../../Footer.php');
+        ?>
+          </div>
 
 </body>
 
