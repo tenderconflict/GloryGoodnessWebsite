@@ -171,6 +171,7 @@ ul li:hover .submenu {
     justify-content: space-around;
     align-items: flex-start;
     padding: 20px;
+    background-color: rgb(0, 0, 145)
   }
 
   .box {
@@ -238,11 +239,13 @@ background-position-x: -10;
 h2 {
     color: #333;
     align-items: center;
+    font-size: 40px;
   }
   
   p {
     color: #777;
     align-items: center;
+    font-size: 28px;
   }
 
 
