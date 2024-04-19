@@ -191,7 +191,8 @@ Sau khi kiểm tra lại số tiền muốn gửi, nhấn vào Gửi ở trang k
 	  <div class="paypal-item">
 		
 		<a href = 'https://www.paypal.com/donate/?hosted_button_id=5CWW5HUH3TV8G'><button type="button" style="float: left; margin-right: 20px;" class ="button">Donate</button></a>
-		<p>Click the donation button to the left to donate through PayPal</p>
+		<p>Click the donation button to the left to donate through PayPal <br style="padding-top: 5vw"> Nhấn vào nút "Donation" bên trái để dâng hiến bằng PayPal</p>
+	
 	  </div>
 	  <enh1>Step 2</enh1>
 		<vh1>Bước 2</vh1>
@@ -201,6 +202,7 @@ Sau khi kiểm tra lại số tiền muốn gửi, nhấn vào Gửi ở trang k
 		<p>Enter your donation amount. If you would like to donate through your paypal account, select "Donate with PayPal." Otherwise 
 			you can donate online with your credit/debit card through the PayPal link using the "Donate with Debit or Credit Card"
 		</p>
+		<p style = "padding-top: 5vw;">Nhấn vào số tiền muốn gửi. Nếu quý vị muốn gửi bằng tài khoản Paypal, xin nhấn vào "Donate with PayPal." Hoặc quý vị có thể dâng hiến online bằng thẻ credit/debit qua đường link của PayPal bằng cách nhấn vào "Donate with Debit or Credit Card"</p>
 	  </div>
 
 	  <enh1>Step 3</enh1>
@@ -209,7 +211,8 @@ Sau khi kiểm tra lại số tiền muốn gửi, nhấn vào Gửi ở trang k
 		
 		<img src="../Church/Pictures/paypal2.PNG" alt="Paypal Image 2" style="float: left; margin-right: 10px; width: 200px; height: 400px;" >
 		<p>After signing into your PayPal account, or entering your card information, write a memo that includes your name + donation amount + current date. Ensure that the card that is selected is the one you want to use and then click "Donate Now" </p>
-	  </div>
+		<p style = "padding-top: 5vw;">Sau khi đăng nhập vào tài khoản PayPal, hoặc điền vào thông tin thẻ ngân hàng của quý vị, vui lòng viết ở phần ghi chú tên họ, số tiền, và ngày tháng hiện tại. Lưu ý thẻ ngân hàng quý vị chọn sẽ là tài khoản quý vị muốn sử dụng để dâng hiến, sau đó nhấn vào "Donate Now".</p>
+	</div>
 
 	  
 	 

@@ -284,7 +284,8 @@ display: grid;
 grid-template-columns: 50% 50%;
 grid-template-rows: 400px;
 justify-content: center;
-align-items: center;
+/* align-items: center; */
+
 
 
 
