@@ -44,7 +44,7 @@ session_start();
 					<li><a href="../School/GloryGSchool.php">Home</a></li>
 					<li><a href="../School/AboutUs.php">About GGS</a></li>
 					<li><a href="../School/WhyGGS.php">Why GGS</a></li>
-				<li> <a href="../School/calendar.php">Calendar</a></li>	
+				<!-- <li> <a href="../School/calendar.php">Calendar</a></li> there is no calendar for the school	 -->
 				<li><a href="../School/Programs.php">Programs</a></li>
 		
 			

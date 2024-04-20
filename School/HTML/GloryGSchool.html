@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <title>Glory Goodness School</title>
-  <link rel="stylesheet" href="stylesSchool.css">
+  <link rel="stylesheet" href="../Styles/stylesSchool.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
 </head>
@@ -119,7 +119,7 @@
 					<li><a href="../School/GloryGSchool.html">Home</a></li>
 					<li><a href="../School/AboutUs.html">About GGS</a></li>
 					<li><a href="../School/WhyGGS.html">Why GGS</a></li>
-				<li> <a href="../School/calendar.php">Calendar</a></li>	
+				<!-- <li> <a href="../School/calendar.php">Calendar</a></li>	 -->
 				<li><a href="../School/Programs.html">Programs</a></li>
 		
 			
@@ -139,19 +139,78 @@
 		
 		</div>
 	<!-- Lines 131 - 144 written by Jillian -->
-	  <div class="middle">
-		<div class="grid-container2">
-			<div class ="grid-item2"><h1>Upcoming Events</h1>
-				
-					<div class="leftrightbutton"><a href = '#'><button class = "button">Events</button></a></div>
-				  <div class ='leftrightbutton'><a href = '#'><button class = "button">Sự kiện</button></a></div>
+	  <div class = "middle">
+		<h1>Gallery</h1>
+		<div class="slideshow-container">
+
+			<div class="mySlides fade">
+			  <div class="numbertext">1 / 5</div>
+			  <img src="../images/school7.jpg" style="width:100%">
+			  <!-- <div class="text">Caption Text</div> -->
+			</div>
+			
+			<div class="mySlides fade">
+			  <div class="numbertext">2 / 5</div>
+			  <img src="../images/school5.jpg" style="width:100%">
+			  <!-- <div class="text">Caption Two</div> -->
+			</div>
+			
+			<div class="mySlides fade">
+			  <div class="numbertext">3 / 5</div>
+			  <img src="../images/school3.jpg" style="width:100%">
+			  <!-- <div class="text">Caption Three</div> -->
+			</div>
+
+			<div class="mySlides fade">
+				<div class="numbertext">4 / 5</div>
+				<img src="../images/school4.jpg" style="width:100%">
+				<!-- <div class="text">Caption Three</div> -->
 			  </div>
-			<div class ="grid-item2">
-				<h1>Event Calendar</h1>
-				<div class="leftrightbutton"><a href = '../School/calendar.html'><button class = "button">Calendar</button></a></div>
-				  <div class ='leftrightbutton'><a href = '../School/calendar.php'><button class = "button">Lịch sự kiện</button></a></div>
-			  </div></div>
+
+			  <div class="mySlides fade">
+				<div class="numbertext">5 / 5</div>
+				<img src="../images/school8.jpg" style="width:100%">
+				<!-- <div class="text">Caption Three</div> -->
+			  </div>
+			
+			<a class="prev" onclick="plusSlides(-1)">❮</a>
+			<a class="next" onclick="plusSlides(1)">❯</a>
+			
+			</div>
 		</div>
+			
+			
+			
+			
+			<script>
+			let slideIndex = 1;
+			showSlides(slideIndex);
+			
+			function plusSlides(n) {
+			  showSlides(slideIndex += n);
+			}
+			
+			function currentSlide(n) {
+			  showSlides(slideIndex = n);
+			}
+			
+			function showSlides(n) {
+			  let i;
+			  let slides = document.getElementsByClassName("mySlides");
+			  let dots = document.getElementsByClassName("dot");
+			  if (n > slides.length) {slideIndex = 1}    
+			  if (n < 1) {slideIndex = slides.length}
+			  for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";  
+			  }
+			  for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			  }
+			  slides[slideIndex-1].style.display = "block";  
+			  dots[slideIndex-1].className += " active";
+			}
+			</script>
+		
 	  	
 		
 	  	
