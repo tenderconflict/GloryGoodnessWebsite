@@ -219,7 +219,7 @@ background-position-x: -10;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 460px;
+    height: auto;
     background-image: url(../Pictures/HomepageBannerImage.jpg);
     background-position: center;
     font-size: 24px;
@@ -232,8 +232,10 @@ background-position-x: -10;
  }
 
 .SloganBanner p {
-    padding: 20px;
-    font-size: 20px; 
+    color: #777;
+    align-items: center;
+    font-size: 22px;
+    font-family: "Arial", sans-serif;
 }
 
 h2 {

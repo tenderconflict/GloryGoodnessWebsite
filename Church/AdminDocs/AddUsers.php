@@ -8,40 +8,39 @@ function displayUsers() {
     $sql = "SELECT i.UserID, i.FirstName, i.LastName, i.Email, i.Phone, p.Username, p.PassKey, i.UserRole 
             FROM InfoUser i 
             JOIN PassUser p ON i.UserID = p.UserID";
-    $result = mysqli_query($connection_mysql, $sql);
+    $result = $connection_mysql->query($sql);
 
     if ($result->num_rows > 0) {
-        echo "<div class='user-list'>"; // Opening container for users
-        echo "<h2>Users: </h2>";
-        while ($user = $result->fetch_assoc()) {
-            echo "<div class='user'>"; // Opening container for each user
-            echo "<p>{$user['FirstName']} {$user['LastName']} - Username: {$user['Username']}, Email: {$user['Email']}, Phone: {$user['Phone']}, Role: {$user['UserRole']} - <a href='?delete={$user['UserID']}'>Delete</a></p>";
-            echo "</div>"; // Closing container for each user
+        echo "<table>";
+        echo "<tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Action</th>
+              </tr>";
+
+        while ($row = $result->fetch_assoc()) {
+            echo "<tr>
+                    <td>" . $row["FirstName"] . "</td>
+                    <td>" . $row["LastName"] . "</td>
+                    <td>" . $row["Username"] . "</td>
+                    <td>" . $row["Email"] . "</td>
+                    <td>" . $row["Phone"] . "</td>
+                    <td>
+                        <form method='post' action='" . $_SERVER['PHP_SELF'] . "' style='display: inline;'>
+                            <input type='hidden' name='userId' value='" . $row["UserID"] . "'>
+                            <input type='submit' name='delete' value='Delete'>
+                        </form>
+                    </td>
+                </tr>";
         }
-        echo "</div>"; // Closing container for users
+
+        echo "</table>";
     } else {
-        echo "No users found.";
+        echo "No history found.";
     }
-}
-
-
-if (isset($_GET['delete'])) {
-    $userIdToDelete = $_GET['delete'];
-
-    // Delete user from PassUser table first
-    $deletePassSql = "DELETE FROM PassUser WHERE UserID = ?";
-    $stmt = $connection_mysql->prepare($deletePassSql);
-    $stmt->bind_param("i", $userIdToDelete);
-    $stmt->execute();
-
-    // Then delete user from InfoUser table
-    $deleteInfoSql = "DELETE FROM InfoUser WHERE UserID = ?";
-    $stmt = $connection_mysql->prepare($deleteInfoSql);
-    $stmt->bind_param("i", $userIdToDelete);
-    $stmt->execute();
-
-    header('Location: AddUsers.php');
-    exit();
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_user'])) {
@@ -74,6 +73,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_user'])) {
     header('Location: AddUsers.php');
     exit();
 }
+
+// Delete history
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["delete"])) {
+    $userId = $_POST["userId"];
+
+    $sql = "DELETE FROM PassUser WHERE UserID = $userId";
+
+    if (mysqli_query($connection_mysql, $sql)) {
+        echo "History deleted successfully.";
+    } else {
+        echo "Error deleting history: " . mysqli_error($connection_mysql);
+    }
+
+    $sql = "DELETE FROM InfoUser WHERE UserID = $userId";
+
+    if (mysqli_query($connection_mysql, $sql)) {
+        echo "History deleted successfully.";
+    } else {
+        echo "Error deleting history: " . mysqli_error($connection_mysql);
+    }
+}
 ?>
 
 <!-- Lines 1-147 written by Thomas -->
@@ -86,7 +106,44 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_user'])) {
     <link rel="stylesheet" href="../../Church/Styles/Dashboard.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
+    <style>
+        .centered-table {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
+        table {
+            border-collapse: collapse;
+            width: 60%;
+            margin-bottom: 20px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 2px solid black;
+            border-top: 2px solid black;
+            border-left: 2px solid black;
+            border-right: 2px solid black;
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: grey;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .AddInfo {
+            padding: 20px;
+        }
+    </style>
 </head>
 
 <body>
@@ -102,36 +159,50 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_user'])) {
             <h1>Add and Delete Users</h1>
             
         </div>
+        
         <div class="AddInfo">
-            <?php displayUsers(); ?>
+            <br>
+            <h1>Add Users:</h1><br>
+
+            <div class="centered-form">
+                <div class="form-container">
+                    <form method="post">
+                        <label for="new_first_name">First Name:</label>
+                        <input type="text" name="new_first_name" required><br>
+                        <label for="new_last_name">Last Name:</label>
+                        <input type="text" name="new_last_name" required><br>
+                        <label for="new_email">Email:</label>
+                        <input type="email" name="new_email" required><br>
+                        <label for="new_phone">Phone:</label>
+                        <input type="text" name="new_phone" required><br>
+                        <label for="new_username">New Username:</label>
+                        <input type="text" name="new_username" required><br>
+                        <label for="new_password">New Password:</label>
+                        <input type="password" name="new_password" required><br>
+                        <label for="new_user_role">User Role:</label>
+                        <select name="new_user_role" required>
+                            <option value="admin">Administrator</option>
+                            <option value="student">Student</option>
+                        </select><br>
+                        <button type="submit" name="add_user">Add User</button>
+                    </form>
+                </div>
+            </div>
+
+            <br><br>
+
+            <h1>Current Users</h1><br>
+            <div class="centered-table">
+                <?php displayUsers(); ?>
+            </div>
+            
+            <br><br>
+
             <br>
 
-            <h2>Add Users:</h2>
-
-            <form method="post">
-                <label for="new_first_name">First Name:</label>
-                <input type="text" name="new_first_name" required><br><br>
-                <label for="new_last_name">Last Name:</label>
-                <input type="text" name="new_last_name" required><br><br>
-                <label for="new_email">Email:</label>
-                <input type="email" name="new_email" required><br><br>
-                <label for="new_phone">Phone:</label>
-                <input type="text" name="new_phone" required><br><br>
-                <label for="new_username">New Username:</label>
-                <input type="text" name="new_username" required><br><br>
-                <label for="new_password">New Password:</label>
-                <input type="password" name="new_password" required><br><br>
-                <label for="new_user_role">User Role:</label>
-                <select name="new_user_role" required>
-                    <option value="admin">Administrator</option>
-                    <option value="student">Student</option>
-                </select><br><br>
-                <button type="submit" name="add_user">Add User</button>
-            </form>
-
+            <li class="menu-item"><a href="EditUsers.php">Edit Users</a></li>
             <br>
-
-            <li><a href="EditUsers.php">Edit Users</a></li>
+            
         </div>
 
         <?php 

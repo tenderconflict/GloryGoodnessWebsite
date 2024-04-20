@@ -1,5 +1,11 @@
 <?php
-session_start();
+include('../db_connection.php');
+
+$sql = "SELECT StaffName, StaffPicture, StaffBio FROM StaffInfo;";
+$result = $connection_mysql->query($sql);
+
+$sql2 = "SELECT StaffPosition, StaffInfoName FROM ChurchStaffInfo;";
+$results = $connection_mysql->query($sql2);
 ?>
 
 <!-- Lines 1-150 written by Thomas -->
@@ -30,41 +36,36 @@ session_start();
         </div>
 
         <div class="SloganBanner">
-            <h2>Pastor:<h2>
-            <p>Auctor augue mauris augue neque gravida in fermentum et. Faucibus et molestie ac feugiat sed lectus vestibulum.</p>
+            <?php
+                if ($result->num_rows > 0) {
+                    // Output data for each row
+                    while($row = $result->fetch_assoc()) {
+                        echo "<h2>" . $row["StaffName"]. "</h2> <br>";
+                        echo "<td><img src='" . $row["StaffPicture"] . "' alt='Staff Picture' style='max-width:200px; max-height:200px;'></td><br>";
+                        echo "<p>" . $row["StaffBio"]. "</p><br><br>";
+                    }
+                } else {
+                    echo "No results found.";
+                }
 
-            <h2>Volunteers:<h2>
-            <p>Nunc sed velit dignissim sodales ut eu. Posuere lorem ipsum dolor sit amet consectetur adipiscing elit duis.</p>
-            
-            <h2>Elders:<h2>
-            <p>Mattis rhoncus urna neque viverra justo nec ultrices dui sapien. In fermentum posuere urna nec tincidunt. Eu consequat ac felis donec et odio. Enim facilisis gravida neque convallis a cras. </p>
+                echo"<br><br><br>";
+
+                echo "<h1>Other Staff</h1><br>";
+
+                if ($results->num_rows > 0) {
+                    // Output data for each row
+                    while($row = $results->fetch_assoc()) {
+                        echo "<p>" . $row["StaffPosition"] . ": " . $row["StaffInfoName"] . "</p> <br>";
+                    }
+                } else {
+                    echo "No results found.";
+                }
+            ?>
         </div>
 
-        <div class="ContactChurch">
-            <h3>Revelation 4:11</h3>
-                    <p3>Worthy are you, our Lord and God,
-                        to receive glory and honor and power,
-                        for you created all things,
-                        and by your will they existed and were created.</p3>
-
-                        <h2><br>Contact Information</h2>
-                        <div class="BottomContact">
-                            <div class="Email">
-                                   
-                                <span>Email: info@glorygoodnesschurch.org</span>
-                            </div>
-                            <div class="BottomInfo">
-                            
-                                <div class="PhoneNumber">
-                                  
-                                    <span>Phone number: +1 (123) 456-7890</span>
-                                </div>
-                            </div>
-                        </div>
-                        <p4>&copy; Glory Goodness Church 2023. All rights reserved.</p4>
-            
-        </div>
-
+        <?php 
+                include('../../Footer.php');
+        ?>
 </body>
 
 </html>

@@ -5,7 +5,6 @@ session_start();
 <!-- Lines 1-147 written by Thomas -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     
     <title>Glory Goodness Church</title>
@@ -14,7 +13,6 @@ session_start();
     <meta charset="UTF-8">
 
 </head>
-
 <body>
     <div class="main">
         <div class="navbar">
@@ -25,17 +23,23 @@ session_start();
         </div>
 
         <div class="content">
-            <h1>Welcome Admin!</h1>
+            <h1>Admin Dashboard</h1>
             
         </div>
 
         <div class="AdminLinks">
-            <h2>Choose What To Edit:</h2>
             <br><br>
-            <li><a href="AdminDocs/AdminWeeklyActivity.php">Edit Weekly Activity</a></li>
-            <li><a href="AdminDocs/AddUsers.php">Add and Delete Users</a></li>
-            <br>
-            <li><a href="AdminDocs/signout.php">Sign Out</a></li>
+            <h1>Choose What To Edit:</h1>
+            <br><br>
+            <li class="menu-item"><a href="AdminDocs/AdminWeeklyActivity.php">Edit Weekly Activity</a></li><br>
+            <li class="menu-item"><a href="AdminDocs/editHomePage.php">Edit Home Page</a></li><br>
+            <li class="menu-item"><a href="AdminDocs/AddUsers.php">Add and Delete Users</a></li><br>
+            <li class="menu-item"><a href="AdminDocs/editStaff.php">Add and Delete Staff</a></li><br>
+            <li class="menu-item"><a href="AdminDocs/editHistory.php">Add and Delete History</a></li><br>
+            <br><br>
+            <li class="menu-item"><a href="AdminDocs/signout.php">Sign Out</a></li>
+
+            <br><br>
         </div>
 
         <?php 

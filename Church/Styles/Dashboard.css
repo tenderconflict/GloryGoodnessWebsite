@@ -52,10 +52,10 @@
 }
 
 .AdminLinks {
-    height: 450px;
+    height: auto;
     width: 100%;
 
-    background-color: rgb(135, 135, 247);
+    background-color: #6495ED;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -85,8 +85,8 @@
     min-height: 125px;
     overflow: auto;
     text-align: center;
-    justify-content: center;
-    background-color: rgb(135, 135, 247);
+    align-items: center;
+    background-color: #6495ED;
     padding-bottom: 10px;
     padding-top: 10px;
 }
@@ -106,4 +106,77 @@
     text-decoration: none; 
     font-size: 1.2em;
     margin: 0 10px;
+}
+
+/* Center the form on the screen */
+.centered-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto; /* Adjust to your preference */
+}
+
+/* Style the form container */
+.form-container {
+    width: auto; /* Adjust to your preference */
+    min-width: 300px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the input fields and button */
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.menu-item {
+    margin-bottom: 10px; /* Adjust margin as needed */
+}
+
+.menu-item a {
+    display: block;
+    padding: 10px 15px; /* Adjust padding as needed */
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    border: 5px black;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Smooth transition */
+    max-width: 100px;
+    margin: 0 auto;
+    font-size: 15px;
+}
+
+.menu-item a:hover {
+    background-color: #f0f0f0;
 }

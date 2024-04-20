@@ -1,3 +1,9 @@
+<?php
+include('Church/db_connection.php');
+
+$sql = "SELECT EnglishVerse, EnglishVerseText, VietnameseVerse, VietnameseVerseText FROM FooterInfo";
+$result = $connection_mysql->query($sql);
+?>
 <style>
     .ContactChurch{
     
@@ -115,12 +121,21 @@ text-align: center;
 
 <div class="Footer">
     <div class="ContactChurch">
-            <h3>II Peter 1:3 KJV</h3>
-                    <p3>According as his divine power hath given unto us all things that pertain unto life and godliness, through the knowledge of him that hath called us to glory and virtue.</p3>
+        <?php
+        if ($result->num_rows > 0) {
+                    // Output data for each row
+                    while($row = $result->fetch_assoc()) {
+                        echo "<h3>" . $row["EnglishVerse"]. "</h3>";
+                        echo "<p3>" . $row["EnglishVerseText"]. "</p3>";
+                        echo "<h3>" . $row["VietnameseVerse"]. "</h3>";
+                        echo "<p3>" . $row["VietnameseVerseText"]. "</p3>";
+                    }
+                } else {
+                    echo "No results found.";
+                }
+        ?>
 
-                        <h3>II Phi-e-rơ 1:3 VIE1925</h3>
-                        <p3>Quyền-phép Đức Chúa Trời đã ban cho chúng ta mọi điều thuộc về sự sống và sự tin-kính, khiến chúng ta biết Đấng lấy vinh-hiển và nhân-đức mà gọi chúng ta.</p3>
-
+        <br><br>
 
                   <!--  keeping this in case client changes mind for 100th time
                     
@@ -139,9 +154,9 @@ text-align: center;
                             </div>
                         </div>
                     -->
-                        <p4>&copy; Glory Goodness Church 2023. All rights reserved.</p4>
+        <p4>&copy; Glory Goodness Church 2023. All rights reserved.</p4>
             
-        </div>
+    </div>
 
 
 </div>

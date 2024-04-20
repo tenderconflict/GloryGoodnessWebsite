@@ -1,6 +1,22 @@
 <?php
-session_start();
+include('Church/db_connection.php');
+
+function displayHeader() {
+    global $connection_mysql;
+
+    $sql = "SELECT EnglishHeader, VietnameseHeader FROM MainPageHeader";
+    $result = $connection_mysql->query($sql);
+
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            echo "<h1>" . $row["EnglishHeader"] . "<br>" . $row["VietnameseHeader"] . "</h1>";
+        } 
+    } else {
+        echo "No results found.";
+    }
+}
 ?>
+
 
 <!-- Lines 1-147 written by Thomas -->
 <!DOCTYPE html>
@@ -26,7 +42,9 @@ session_start();
 
 
         <div class="content">
-            <h1>Welcome to Glory Goodness Church! <br> Chào mừng đến với Hội Thánh Vinh Hiển Tốt Lành!</h1>
+            <?php
+                displayHeader();
+            ?>
 
         </div>
 
@@ -116,7 +134,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
 
         <?php 
-            include('../../Footer.php');
+            include('Footer.php');
         ?>
 
     </div>
