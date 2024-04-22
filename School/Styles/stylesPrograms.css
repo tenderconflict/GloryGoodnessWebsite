@@ -334,6 +334,7 @@ text-align: center;
 /* border:1px solid black; */
 }
 .grid-item2 h1 {
+padding-top: 80px;
 color: black;
 font-family: "Arial", sans-serif;
 font-size: 20px;

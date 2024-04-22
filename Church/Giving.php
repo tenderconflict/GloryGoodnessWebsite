@@ -27,6 +27,7 @@ session_start();
 	
 	
 	  <div class="middle">
+		<!-- tab code for switching between the tabs  -->
 	<div class="tab">
 	<button class="tablinks" onclick="openGiving(event, 'WhyGive')"id ="DefaultOpen">Why Give</button>
 	<button class="tablinks" onclick="openGiving(event, 'Zelle')">Zelle</button>
@@ -59,8 +60,8 @@ session_start();
 	</div>
 	</div>
 	</div>
-
-
+<!-- 
+the div for zelle  -->
   
   <div id="Zelle" class="tabcontent">
 	
@@ -154,7 +155,7 @@ Sau khi kiểm tra lại số tiền muốn gửi, nhấn vào Gửi ở trang k
 	
  
   </div>
-  
+  <!-- text 2 give container has been removed, but left as the clients may add it in the future  -->
   <!-- <div id="Text to Give" class="tabcontent">
 	
 	<h3>Step 1</h3>
@@ -184,6 +185,7 @@ Sau khi kiểm tra lại số tiền muốn gửi, nhấn vào Gửi ở trang k
   </div> -->
   <div id="PayPal" class="tabcontent">
 	
+	<!-- Grid container for paypal option -->
 	
 	<div class="grid-containerpaypal">
 	<enh1>Step 1</enh1>
@@ -287,7 +289,7 @@ Sau khi kiểm tra lại số tiền muốn gửi, nhấn vào Gửi ở trang k
     </div>
 	<!-- lines 146-159 written by Jillian -->
 	<script>
-
+		// script for switching between tabs
 		function openGiving(evt, givingName) {
 		  var i, tabcontent, tablinks;
 		  tabcontent = document.getElementsByClassName("tabcontent");

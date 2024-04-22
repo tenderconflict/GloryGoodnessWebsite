@@ -281,9 +281,9 @@ padding-bottom: 20px;
 .grid-container2 {
 display: grid;
 grid-template-columns: 50% 50%;
-grid-template-rows: 400px;
+grid-template-rows: auto;
 justify-content: center;
-align-items: center;
+/* align-items: center; */
 
 
 
@@ -330,6 +330,7 @@ text-align: center;
 /* border:1px solid black; */
 }
 .grid-item2 h1 {
+
 color: black;
 font-family: "Arial", sans-serif;
 font-size: 20px;
@@ -337,6 +338,13 @@ font-size: 20px;
 .grid-item2 p {
 font-size: 19px; 
 font-family: "Arial", sans-serif;
+
+}
+
+.grid-item2 p2 {
+	color:black;
+	font-family: "Arial", sans-serif;
+	font-size: 19px; 
 
 }
 
@@ -369,7 +377,7 @@ font-family: "Arial", sans-serif;
 	
 }
 .grid-item2 h1 {
-	padding-bottom: 15px;
+	/* padding-bottom: 15px; */
 	font-size: 25px;
 	color: darkgoldenrod;
 }
