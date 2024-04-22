@@ -74,7 +74,7 @@ session_start();
 <?php
  //php that allows the email to be sent
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $to = "tenderconflict@gmail.com";//replace with church email when fixed
+    $to = "info@glorygoodnesschurch.org";//replace with church email when fixed
 
     $subject = "New Church Member Message";//title
 
