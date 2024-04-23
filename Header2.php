@@ -1,7 +1,18 @@
 <?php 
 session_start();
 ?>
+<style>
+    .login a {
+    
+    list-style-type: none;
+    list-style: none;
+    text-decoration: none;
+    color: green;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
 
+}
+</style>
 <div class="top">
 	<div class="login">
 		<span style="float:right;">
