@@ -26,19 +26,19 @@ session_start();
 
         <div class="content">
             <h1>Glory Goodness Church</h1>
-            <h1>Vision and Mission</h1>
+            <h2>Vision and Mission</h2>
         </div>
 
         <div class="container">
             <div class="box mission">
-              <h2>Vision</h2>
+              <h3>Vision</h3>
               <p>To bridge the generations of Vietnamise affected by many wars and are i foreign lands.</p>
 
               <h3>Isaiah 61:4 NKJV</h3>
             </div>
 
             <div class="box vision">
-              <h2>Mission</h2>
+              <h3>Mission</h3>
               <p>To the Vietnamese American</p>
               <h3>Isaiah 61:1 NKJV</h3>
 
