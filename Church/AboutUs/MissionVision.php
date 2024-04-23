@@ -26,7 +26,7 @@ session_start();
 
         <div class="content">
             <h1>Glory Goodness Church</h1>
-            <h2>Vision and Mission</h2>
+            <h1>Vision and Mission</h1>
         </div>
 
         <div class="container">
