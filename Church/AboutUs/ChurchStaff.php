@@ -15,12 +15,10 @@ $results = $connection_mysql->query($sql2);
 <head>
     
     <title>Glory Goodness Church</title>
-    <link rel="stylesheet" href="AboutUsStyles/MissionVisionStyles.css">
+    <link rel="stylesheet" href="AboutUsStyles/ChurchStaff.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-
-</head>
-
+   
 <body>
     <div class="main">
         <div class="navbar">
