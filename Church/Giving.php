@@ -2,6 +2,8 @@
 session_start();
 ?>
 
+<!-- enh1 - use this for english headers
+vh1 - use this for vietnamese headers -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,6 +18,7 @@ session_start();
  	<?php
     	include('../Header.php');
     	include('../Menu.php');
+		//header is included for navigation links 
   	?>
 
 	<div class="content">
@@ -24,7 +27,7 @@ session_start();
 
 
     
-	
+	<!-- lines 30-289 written by Jillian -->
 	
 	  <div class="middle">
 		<!-- tab code for switching between the tabs  -->
@@ -156,6 +159,7 @@ Sau khi kiểm tra lại số tiền muốn gửi, nhấn vào Gửi ở trang k
  
   </div>
   <!-- text 2 give container has been removed, but left as the clients may add it in the future  -->
+  
   <!-- <div id="Text to Give" class="tabcontent">
 	
 	<h3>Step 1</h3>
