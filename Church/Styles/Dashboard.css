@@ -51,6 +51,8 @@
     
 }
 
+/* From here down written by Brandon Eacho */
+
 .AdminLinks {
     height: auto;
     width: 100%;
@@ -82,10 +84,11 @@
 
 .AddInfo {
     height: auto;
-    min-height: 125px;
+    min-height: 220px;
     overflow: auto;
     text-align: center;
     align-items: center;
+    justify-content: center;
     background-color: #6495ED;
     padding-bottom: 10px;
     padding-top: 10px;
