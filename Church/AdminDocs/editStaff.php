@@ -1,3 +1,4 @@
+<!-- All lines written by Brandon Eacho -->
 <?php
 include('../db_connection.php');
 
@@ -5,7 +6,7 @@ include('../db_connection.php');
 function displayMainStaffInfo() {
     global $connection_mysql;
 
-    $sql = "SELECT StaffID, StaffName, StaffPicture, StaffBio FROM StaffInfo";
+    $sql = "SELECT StaffID, StaffName, StaffPicture FROM StaffInfo";
     $result = mysqli_query($connection_mysql, $sql);
 
     if ($result->num_rows > 0) {
@@ -13,7 +14,6 @@ function displayMainStaffInfo() {
         echo "<tr>
                 <th>Staff Name</th>
                 <th>Staff Picture</th>
-                <th>Staff Bio</th>
                 <th>Action</th>
               </tr>";
 
@@ -21,11 +21,47 @@ function displayMainStaffInfo() {
             echo "<tr>
                     <td>" . $row["StaffName"] . "</td>
                     <td><img src='" . $row["StaffPicture"] . "' alt='Staff Picture' style='max-width:200px; max-height:200px;'></td>
-                    <td>" . $row["StaffBio"] . "</td>
                     <td>
                         <form method='post' action='" . $_SERVER['PHP_SELF'] . "' style='display: inline;'>
                             <input type='hidden' name='staffId' value='" . $row["StaffID"] . "'>
                             <input type='submit' name='delete' value='Delete'>
+                        </form>
+                    </td>
+                </tr>";
+        }
+
+        echo "</table>";
+    } else {
+        echo "No staff members found.";
+    }
+}
+
+function displayMainStaffBio() {
+    global $connection_mysql;
+
+    $sql = "SELECT s.StaffID, s.StaffName, b.BioLineText , b.BioLineID
+            FROM StaffInfo s JOIN StaffInfoBio b
+                ON s.StaffID = b.StaffID
+            ORDER BY s.StaffID, b.BioLineID";
+
+    $result = mysqli_query($connection_mysql, $sql);
+
+    if ($result->num_rows > 0) {
+        echo "<table>";
+        echo "<tr>
+                <th>Staff Name</th>
+                <th>Staff Bio Line</th>
+                <th>Action</th>
+              </tr>";
+
+        while ($row = $result->fetch_assoc()) {
+            echo "<tr>
+                    <td>" . $row["StaffName"] . "</td>
+                    <td>" . $row["BioLineText"] . "</td>
+                    <td>
+                        <form method='post' action='" . $_SERVER['PHP_SELF'] . "' style='display: inline;'>
+                            <input type='hidden' name='bioLineID' value='" . $row["BioLineID"] . "'>
+                            <input type='submit' name='delete3' value='Delete'>
                         </form>
                     </td>
                 </tr>";
@@ -71,11 +107,40 @@ function displayStafferInfo()
     }
 }
 
+
+function fetchStaffNamesAndIds() {
+    global $connection_mysql;
+
+    $sql = "SELECT StaffID, StaffName FROM StaffInfo";
+    $result = mysqli_query($connection_mysql, $sql);
+    
+    $staff_list = array();
+    while ($row = mysqli_fetch_assoc($result)) {
+        $staff_list[] = $row;
+    }
+
+    return $staff_list;
+}
+
+
+
 // Delete a staff member
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["delete"])) {
     $staffId = $_POST["staffId"];
 
     $sql = "DELETE FROM StaffInfo WHERE StaffID = $staffId";
+
+    if (mysqli_query($connection_mysql, $sql)) {
+        echo "Staff member deleted successfully.";
+    } else {
+        echo "Error deleting staff member: " . mysqli_error($connection_mysql);
+    }
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["delete3"])) {
+    $bioLineID = $_POST["bioLineID"];
+
+    $sql = "DELETE FROM StaffInfoBio WHERE BioLineID = $bioLineID";
 
     if (mysqli_query($connection_mysql, $sql)) {
         echo "Staff member deleted successfully.";
@@ -129,6 +194,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["add_staff"])) {
         echo "New staff member added successfully.";
     } else {
         echo "Error adding staff member: " . mysqli_error($connection_mysql);
+    }
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["add_staff_bio"])) {
+    $selected_staff_id = $_POST["selected_staff"];
+    $staff_bio = $_POST["new_staff_bio"];
+
+    $sql = "INSERT INTO StaffInfoBio (StaffID, BioLineText) VALUES ('$selected_staff_id', '$staff_bio')";
+
+    if (mysqli_query($connection_mysql, $sql)) {
+        echo "New staff bio added successfully.";
+    } else {
+        echo "Error adding staff bio: " . mysqli_error($connection_mysql);
     }
 }
 
@@ -237,6 +315,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["add_staffer"])) {
             </div>
 
             <br><br>
+
+            <?php $staff_list = fetchStaffNamesAndIds(); ?>
+
+            <h1>Main Staff Bio Lines</h1><br><br>
+
+            <div class="centered-form">
+                <div class="form-container">
+                    <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" enctype="multipart/form-data">
+                        <label for="selected_staff">Select Staff:</label>
+                        <select name="selected_staff">
+                            <?php
+                            foreach ($staff_list as $staff) {
+                                echo "<option value='" . $staff['StaffID'] . "'>" . $staff['StaffName'] . "</option>";
+                            }
+                            ?>
+                        </select><br><br>
+                        <label for="new_staff_bio">Staff Bio Line:</label>
+                        <textarea name="new_staff_bio" required></textarea><br><br>
+                        <button type="submit" name="add_staff_bio">Add Staff Bio Line</button>
+                    </form>
+                </div>
+            </div>
+
+            <br><br>
+            <h2>Current Staff Bio</h2><br>
+
+            <div class="centered-table">
+                <?php displayMainStaffBio(); ?>
+            </div><br><br>
 
             <h1>Other Staff</h1><br><br>
 

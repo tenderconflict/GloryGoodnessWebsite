@@ -1,3 +1,4 @@
+<!-- All lines written by Brandon Eacho -->
 <?php
 session_start();
 
@@ -12,7 +13,7 @@ function displayUsers() {
 
     if ($result->num_rows > 0) {
         while ($user = $result->fetch_assoc()) {
-            echo "<div><a href='edit_users.php?id={$user['UserID']}'>{$user['FirstName']} {$user['LastName']}</a></div>";
+            echo "<div><li class='menu-item'><a href='edit_users.php?id={$user['UserID']}'>{$user['FirstName']} {$user['LastName']}</a></li></div><br>";
         }
     } else {
         echo "No users found.";
