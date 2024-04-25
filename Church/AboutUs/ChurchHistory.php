@@ -1,4 +1,5 @@
 <?php
+// All PHP written by Brandon Eacho
 include('../db_connection.php');
 
 $sql = "SELECT HistoryTitle, HistoryText FROM HistoryInfo;";

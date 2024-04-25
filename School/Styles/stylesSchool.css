@@ -1,6 +1,10 @@
 
 *{
-	text-decoration: none;
+	
+
+	list-style-type: none;
+    list-style: none;
+    text-decoration: none;
 	
 }
 .main{
@@ -394,15 +398,8 @@ align-items: center;
 
 
 }
-/*changes the color of the school side menu*/
-/* .grid-item:nth-child(1) {
-	background-color:  rgb(49, 94, 49);
-	
-  }
- 
-  .grid-item:nth-child(3) {
-	background-color:  rgb(49, 94, 49);
-  } */
+
+
   .grid-itemgreen {
     background-color: rgb(49, 94, 49);
     font-size: 30px;
@@ -513,180 +510,3 @@ font-family: Arial, Helvetica, sans-serif;
 
 
 
-/*OLD CODE... BEFORE DESIGN CHANGE
- .main{
-	width: 100%;
-	height: 150vh;
-	
-}
-.top{
-	background-color: white;
-}
-.logo{
-	display: flex;
-	justify-content: left;
-	align-items: center;
-	height: auto;
-	list-style: none;
-
-}
-.login a {
-    list-style-type: none;
-    list-style: none;
-    text-decoration: none;
-    color: green;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    transition: .5s ease-in-out;
-    font-size: 18px;
-    outline: 0; 
-}
-
-.navbar{
-
-	width: 100%;
-	height: auto;
-	background-color: white;
-	padding: 20px;
-}
-
-.menu{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-ul{
-	float: left;
-	display: flex;
-	margin: 0;
-	padding: 0;
-}
-
-ul li a{
-	color: green;
-	font-family: Arial, Helvetica, sans-serif;
-	font-weight: bold;
-    transition: .5s ease-in-out;
-	text-decoration: none;
-}
-
-.menu ul li {
-	list-style: none;
-	text-decoration: none;
-	margin-left: 20px;
-	font-size: 20px;
-}
-
-.content {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-image: url(School.jpg);
-	background-position: center;
-	height: 300px;
-	color: white;
-
-}
-
-.middle{
-	background: linear-gradient(to bottom, #32CD32, white );
-
-	   background: linear-gradient(to bottom, white, #7393B3);
-
-    background: linear-gradient(to bottom, rgb(49, 94, 49), white);
-	height: auto;
-	
-}
-.info{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	flex-direction: column;
-	padding-left: 200px;
-	padding-right: 200px;
-	height: auto;
-	color: white;
-	font-family: Arial, Helvetica, sans-serif;
-
-	
-    
-}
-.UpcomingEvents{
-	
-    width: 60%;
-    position: relative;
-
-    top: 275px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-    font-family: "Arial", sans-serif;
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    opacity: 0.9;
-
-    flex-direction: column;
-	
-	
-
-}
-.UpcomingEvents p{
-
-    padding: 20px;
-    font-size: 19px; 
-
-}
-
-
-
-.calendar{
-	padding-top: 200px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	font-size: 40px;
-
-	color: white;
-	padding-bottom: 30px;
-	font-family: Arial, Helvetica, sans-serif;
-	
-	
-  
-}
-
-.verse {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	text-align: center;
-	align-items: center;
-	color: white;
-	background-color: rgb(49, 94, 49);
-	font-size: 30px;
-	padding-bottom: 30px;
-	font-family: Arial, Helvetica, sans-serif;
-}
-.verse p2 {
-	font-size: 25px;
-	font-family: Arial, Helvetica, sans-serif;
-}
-
-.bottomPage p{
-	width: 100%;
-    position: relative;
-	bottom: 15px;
-    background-color: #333; 
-    color: #fff;
-    text-align: center; 
- 
-    font-size: 14px; 
-	font-family: Arial, Helvetica, sans-serif;
-} 
-*/

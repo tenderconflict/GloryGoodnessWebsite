@@ -1,3 +1,4 @@
+<!-- All lines written by Brandon Eacho -->
 <?php
 session_start();
 

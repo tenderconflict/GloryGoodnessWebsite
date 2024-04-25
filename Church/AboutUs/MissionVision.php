@@ -16,34 +16,42 @@ session_start();
 </head>
 
 <body>
-    <div class= "main">
-        <div class="navbar">
-            <?php 
-                include('../../Header.php');
-                include('../../Menu.php');
-            ?>
+<div>
+        <div class= "content">
+        <h1>Glory Goodness Church</h1>
+        <div class="subtitle">Vision and Mission</div>
         </div>
-
-        <div class="content">
-            <h1>Glory Goodness Church</h1>
-            <h1>Vision and Mission</h1>
+        <div class="dates">Commanded by the Lord in Isaiah 61 in NIV</div>
+        <div class="dates"> 2-24-1998, 5-16-1998, 9-27-2001</div>
         </div>
+    <div class="container">
+        
+        <div>
+            <h2>Vision</h2>
+            <p>To bridge the generations of Vietnamese affected by many wars and are in foreign lands.</p>
+            <p><strong>Isaiah 61:4 NKJV</strong></p>
+            <ol>
+                <li>They shall rebuild the old ruins,</li>
+                <li>They shall raise up the former desolations,</li>
+                <li>And they shall repair the ruined cities,</li>
+                <li>The desolations of many generations.</li>
+            </ol>
+        </div>
+        <div>
+            <h2>Mission</h2>
+            <p>To the Vietnamese Americans.</p>
+            <p><strong>Isaiah 61:1 NKJV</strong></p>
+            <ol>
+                <li>To preach good tidings to the poor;</li>
+                <li>To heal the brokenhearted;</li>
+                <li>To proclaim liberty to the captives;</li>
+                <li>And the opening of the prison to those who are bound;</li>
+            </ol>
+        </div>
+    </div>
+</div> 
 
-        <div class="container">
-            <div class="box mission">
-              <h2>Vision</h2>
-              <p>To bridge the generations of Vietnamise affected by many wars and are i foreign lands.</p>
-
-              <h3>Isaiah 61:4 NKJV</h3>
-            </div>
-
-            <div class="box vision">
-              <h2>Mission</h2>
-              <p>To the Vietnamese American</p>
-              <h3>Isaiah 61:1 NKJV</h3>
-
-         
-            </div>
+          
 
 </div>
         

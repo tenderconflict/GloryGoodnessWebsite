@@ -1,3 +1,4 @@
+<!-- All lines written by Brandon Eacho -->
 <?php
 
 include('../db_connection.php');
@@ -70,24 +71,30 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_user'])) {
         </div>
 
         <div class="AddInfo">
-        <h2>Edit User: <?php echo $user['FirstName'] . " " . $user['LastName']; ?></h2>
+            <br>
+            <h2>Edit User: <?php echo $user['FirstName'] . " " . $user['LastName']; ?></h2><br><br><br>
 
-<form method="post">
-    <label for="new_first_name">First Name:</label>
-    <input type="text" name="new_first_name" value="<?php echo $user['FirstName']; ?>" required><br><br>
-    <label for="new_last_name">Last Name:</label>
-    <input type="text" name="new_last_name" value="<?php echo $user['LastName']; ?>" required><br><br>
-    <label for="new_email">Email:</label>
-    <input type="email" name="new_email" value="<?php echo $user['Email']; ?>" required><br><br>
-    <label for="new_phone">Phone:</label>
-    <input type="text" name="new_phone" value="<?php echo $user['Phone']; ?>" required><br><br>
-    <label for="new_user_role">User Role:</label>
-    <select name="new_user_role" required>
-        <option value="admin" <?php if($user['UserRole'] == 'admin') echo 'selected'; ?>>Administrator</option>
-        <option value="student" <?php if($user['UserRole'] == 'student') echo 'selected'; ?>>Student</option>
-    </select><br><br>
-    <button type="submit" name="update_user">Update User</button>
-</form>
+            <div class="centered-form">
+                <div class="form-container">
+                    <form method="post">
+                        <label for="new_first_name">First Name:</label>
+                        <input type="text" name="new_first_name" value="<?php echo $user['FirstName']; ?>" required><br><br>
+                        <label for="new_last_name">Last Name:</label>
+                        <input type="text" name="new_last_name" value="<?php echo $user['LastName']; ?>" required><br><br>
+                        <label for="new_email">Email:</label>
+                        <input type="email" name="new_email" value="<?php echo $user['Email']; ?>" required><br><br>
+                        <label for="new_phone">Phone:</label>
+                        <input type="text" name="new_phone" value="<?php echo $user['Phone']; ?>" required><br><br>
+                        <label for="new_user_role">User Role:</label>
+                        <select name="new_user_role" required>
+                            <option value="admin" <?php if($user['UserRole'] == 'admin') echo 'selected'; ?>>Administrator</option>
+                            <option value="student" <?php if($user['UserRole'] == 'student') echo 'selected'; ?>>Student</option>
+                        </select><br><br>
+                        <button type="submit" name="update_user">Update User</button>
+                    </form>
+                </div>
+            </div>
+            <br><br>
         </div>
         <?php 
             include('../../Footer.php');

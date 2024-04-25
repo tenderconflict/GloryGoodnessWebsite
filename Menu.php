@@ -1,3 +1,4 @@
+<!-- Styled by Thomas Doss. All PHP by Brandon Eacho -->
 <style>
     .navbar{
     /*background: linear-gradient(to top, white, #7393B3);*/
