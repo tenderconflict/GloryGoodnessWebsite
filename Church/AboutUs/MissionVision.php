@@ -7,10 +7,11 @@ session_start();
 <html lang="en">
 
 <head>
-  <title>Glory Goodness Church</title>
-  <link rel="stylesheet" href="stylesChurchCalendar.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="UTF-8">
+     
+<title>Glory Goodness Church</title>
+    <link rel="stylesheet" href="AboutUsStyles/MissionVisionStyles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
 </head>
 
 <body>
