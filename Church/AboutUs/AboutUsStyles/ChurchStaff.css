@@ -167,7 +167,8 @@ ul li:hover .submenu {
     justify-content: space-around;
     align-items: flex-start;
     padding: 20px;
-    background-color: rgb(0, 0, 145)
+    background-color: rgb(0, 0, 145);
+    color:#f7f4f4
   }
 
 
