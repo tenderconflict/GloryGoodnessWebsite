@@ -67,9 +67,10 @@ session_start();
 
 </style>
 </head>
-
+ <!-- lines 70-84, 88-159 written by Jillian -->
 <body>
   <?php
+  //gets the files from a2hosting 
     $pdf_dir = "AdminDocs/uploads/";
     $pdf_fileschedule = $pdf_dir . "schedule.pdf";
     $pdf_fileprayer = $pdf_dir . "prayer_list.pdf";
@@ -96,7 +97,7 @@ session_start();
 
 	  <div class="middle">
 
-
+          
         <div class = "gridcontent">
       <h1 class = "dashed-linebottom">Schedule (Lịch)</h1>
       
@@ -143,7 +144,7 @@ session_start();
        <h2>Ghi Chú</h2>
        <p>
        <?php
-            // Retrieve content from text file
+            // Retrieve content from text file message.txt that is updated on the admin dashboard 
             $content = file_get_contents('AdminDocs/message.txt');
             echo $content;
             ?>
