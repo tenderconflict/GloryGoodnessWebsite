@@ -29,11 +29,10 @@ session_start();
 
 </div>
         
-            <?php 
-            include('../../Footer.php');
-        ?>
+<?php include('../../Footer.php'); ?>
           </div>
 
 </body>
 
 </html>
+
