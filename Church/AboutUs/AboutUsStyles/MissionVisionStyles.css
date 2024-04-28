@@ -154,6 +154,7 @@ ul li:hover .submenu {
 
 
 .content {
+    
     background: linear-gradient(to bottom, white, rgb(243, 219, 83));
     display: flex;
     justify-content: center;
@@ -162,7 +163,6 @@ ul li:hover .submenu {
 
     color: royalblue;
     text-shadow: 0 0 3px #ffffff, 0 0 5px #ffffff;
-
     padding: 40px;
 }
 
@@ -227,7 +227,8 @@ background-position-x: -10;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Arial, Helvetica, sans-serif;color: royalblue;
+    font-family: Arial, sans-serif;
+    color: royalblue;
   }
   
   p {
@@ -390,57 +391,3 @@ text-align: center;
     font-style: italic;
     margin-bottom: 10px;
   }
-
-  .staff-info {
-    margin-bottom: 20px;
-    text-align: left;
-}
-
-.staff-name {
-    margin-bottom: 10px;
-}
-
-.staff-image-bio {
-    display: flex;
-    align-items: flex-start;
-}
-
-.staff-image {
-    margin-right: 20px;
-}
-
-.staff-image img {
-    max-width: 200px;
-    max-height: 200px;
-}
-
-.staff-bio {
-    text-align: left;
-}
-
-.SloganBanner2 {
-    z-index: 1; /*wow now it finally doesnt go over the submenu*/
-background-position-x: -10;
-    width: 100%;
-    position: relative;
-
-    top: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: left;
-    height: auto;
-    font-size: 24px;
-    font-family: "Arial", sans-serif;
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    opacity: 0.9;
-    flex-direction: column;
- }
-
-.SloganBanner2 p {
-    color: #777;
-    align-items: left;
-    font-size: 22px;
-    font-family: "Arial", sans-serif;
-}

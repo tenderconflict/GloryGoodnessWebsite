@@ -12,10 +12,12 @@ session_start();
 </head>
 
 <body>
+	
  <div class="main">
  	<?php
-    	include('../Header2.php');
-    	include('../Menu2.php');
+    	include('../Header2.php'); 
+    	include('../Menu2.php'); 
+		//header file is included for navigation links
   	?>
 
 			<div class="space">
@@ -26,8 +28,9 @@ session_start();
 	  <div class="grid-container">
 		
 		<div class ='grid-itemgreen'>
+			
 			<div class="schoollogin">
-				
+				<!-- sign in option for the school in the green box on the left. REPLACE THE A HREF FOR REDIRECTION TO MOODLE  -->
 				<li type="none"><span class="menu-icon" onclick="toggleMenu()">&#9776;</span><a href="../School/schoolLogin.php" id="school-login">Sign in</a></li>
 			</div>
 				
@@ -44,7 +47,7 @@ session_start();
 					<li><a href="../School/GloryGSchool.php">Home</a></li>
 					<li><a href="../School/AboutUs.php">About GGS</a></li>
 					<li><a href="../School/WhyGGS.php">Why GGS</a></li>
-				<!-- <li> <a href="../School/calendar.php">Calendar</a></li> there is no calendar for the school	 -->
+				<!-- <li> <a href="../School/calendar.php">Calendar</a></li> there is no calendar for the school atm	 -->
 				<li><a href="../School/Programs.php">Programs</a></li>
 		
 			
@@ -66,6 +69,7 @@ session_start();
 	
 	  <div class="middle">
 		<div class="grid-container2">
+			<!-- grid-item 2 are set at 50% 50% column, so two boxes next to each other -->
 			<div class ="grid-item2"><h1>A.C.E Convention</h1>
 				<p>A.C.E School of Tomorrow encourages development of leadership skills through A.C.E Student Conventions. Regional Conventions are followed by the
 					<a href ='https://www.aceschooloftomorrow.com/about-isc'>International Student Convention (ISE)</a>.To compete in these competitions students must register on the ACE website.</a>
@@ -73,11 +77,13 @@ session_start();
 			
 				
 				<div class ='side-by-side'>
+					<!-- class puts buttons side by side  -->
 					<div class="leftrightbutton"><a href = 'https://www.aceschooloftomorrow.com/convention-guidelines'><button class = "button">Guidelines</button></a></div>
 				  <div class ='leftrightbutton'><a href = 'https://www.aceschooloftomorrow.com/media/pageimg/Guide3a-ISC_Student_Preparation_Handbook.pdf'><button class = "button">Handbook</button></a></div>
 			  </div>	
 			  </div>
 			<div class ="grid-item2">
+			
 				<h1>Leadership</h1>
 				<p>At Glory Goodness Church students will be presented with opportunities to lead in prayer, and class activities in order to improve their 
 					leadership and communication skills. In addition to this, students will are encouraged to volunteer within the church during service and other events. 
@@ -100,6 +106,8 @@ session_start();
     </div>
 	<!-- lines 169-182 written by Jillian -->
 	<script>
+		//this script changes the background of the side school login with the hamburger icon is selected to white so that the 
+		//options are not seen. 
 		function toggleMenu() {
 			var menu = document.getElementById("school-menu");
 			menu.style.display = (menu.style.display === 'block' || menu.style.display === '') ? 'none' : 'block';
@@ -117,70 +125,3 @@ session_start();
 </body>
 </html>
 
-<!-- <!DOCTYPE html>
-	OLD CODE BEFORE DESIGN CHANGE 
-<html lang="en">
-<head>
-  <title>Glory Goodness School</title>
-  <link rel="stylesheet" href="stylesSchool.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-
-<body>
-    <div class="main">
-	  <div class="top">
-		<div class="login">
-			<span style="float:right;">
-				<li type="none"><a href="../Church/LoginChurch.html">Sign in</a></li>
-			</span>
-		</div>
-		<div class="logo">
-			<li><a href="../GloryGHome.html"><img src="GGCLogo.png" alt="ChurchLogo" height= "80"></a></li>			
-		</div>
-		
-	  </div>
-	  <div class="navbar">
-	   <div class="menu">
-	      <ul>
-		  
-		  <li><a href="../School/calendar.html">Calendar</a></li>	
-
-		  <li><a href="../School/convention.html">Convention Info</a></li>
-
-		  <li><a href="#">School Handbook</a></li>
-
-		  <li><a href="#">Education</a></li>
-	      </ul>		
-
-
-	   </div>
-	  </div>
-
-	  <div class="content">
-		<h1>Welcome to Glory Goodness School!</h1>
-	  </div>
-	  <div class="middle">
-	  	<div class="info">
-			<h1>Information</h1>
-			<p2>Glory Goodness School uses Accelerated Christian Education(ACE). ACE provides a Christian K-12 education. They learn not only the skills they will need in life, but spiritual 
-			materials as well. Students will have to show mastery of a subject, then will be allowed to move on to the next skill, better preparing them for future learning.</p2>
-	  	</div>
-		<div class = 'UpcomingEvents'> 
-			<h1>Upcoming Events</h1>
-			<p>put events <br> here </p>
-		</div>
-	  	<div class="calendar">
-			<p>Event Calendar</p>
-			<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&src=ZWFjaG8uYnJhbmRvbkBnbWFpbC5jb20&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%237986CB&color=%2333B679&color=%230B8043" style="border:solid 1px #777" width="600" height="450" frameborder="0" scrolling="no"></iframe>
-	  	</div>
-	  </div>
-	  <div class="verse">
-			<p>James 1:17</p>
-			<p2>Every good gift and every perfect gift is from above, coming down from the Father of lights, with whom there is no variation or shadow due to change.</p2>
-	  </div>
-	  <div class="bottomPage">
-	  		<p>&copy; Glory Goodness Church 2023. All rights reserved.<p>
-	  </div>
-    </div>
-</body>
-</html> -->

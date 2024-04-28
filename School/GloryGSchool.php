@@ -1,7 +1,7 @@
 <?php
 session_start();
 ?>
-
+<!-- THIS IS THE HOME PAGE FOR THE SCHOOL -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,6 +16,7 @@ session_start();
  	<?php
     		include('../Header2.php');
     		include('../Menu2.php');
+			//header file is included for navigation links
   	?>
 
 		<div class="space">
@@ -26,7 +27,7 @@ session_start();
 	  <div class="grid-container">
 		<div class ='grid-itemgreen'>
 			<div class="schoollogin">
-				
+				<!-- maybe replace this A HREF with moodle link when the LMS is added  -->
 				<li type="none"><span class="menu-icon" onclick="toggleMenu()">&#9776;</span><a href="../School/schoolLogin.php" id="school-login">Sign in</a></li>
 			</div>
 				
@@ -66,7 +67,7 @@ session_start();
 	<div class = "middle">
 		<h1>Gallery</h1>
 		<div class="slideshow-container">
-
+		<!-- This is the code for the gallery -->
 			<div class="mySlides fade">
 			  <div class="numbertext">1 / 5</div>
 			  <img src="images/school7.jpg" style="width:100%">
@@ -107,6 +108,7 @@ session_start();
 			
 			
 			<script>
+				//this is the script for the gallery 
 			let slideIndex = 1;
 			showSlides(slideIndex);
 			
