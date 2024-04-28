@@ -4,6 +4,17 @@
 
 include('../db_connection.php');
 
+// Check if user is an admin
+function isAdmin() {
+    return (isset($_SESSION['user']) && $_SESSION['user']['UserRole'] === 'admin');
+}
+
+// Restrict access if user is not an admin
+if (!isAdmin()) {
+    header('Location: ../Unauthorized.php'); // Redirect to unauthorized page if not admin
+    exit();
+}
+
 // Displays users to delete
 function displayUsers() {
     global $connection_mysql;

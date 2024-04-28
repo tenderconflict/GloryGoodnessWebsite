@@ -2,6 +2,17 @@
      the security of the login system. -->
 <?php
 session_start();
+
+// Check if user is an admin
+function isAdmin() {
+    return (isset($_SESSION['user']) && $_SESSION['user']['UserRole'] === 'admin');
+}
+
+// Restrict access if user is not an admin
+if (!isAdmin()) {
+    header('Location: ../Unauthorized.php'); // Redirect to unauthorized page if not admin
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
