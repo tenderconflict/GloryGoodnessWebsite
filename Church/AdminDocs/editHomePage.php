@@ -1,6 +1,18 @@
+<!-- This page allows admin to edit parts of the home page and the footer that goes on all pages. -->
 <!-- All lines written by Brandon Eacho -->
 <?php
 include('../db_connection.php');
+
+// Check if user is an admin
+function isAdmin() {
+    return (isset($_SESSION['user']) && $_SESSION['user']['UserRole'] === 'admin');
+}
+
+// Restrict access if user is not an admin
+if (!isAdmin()) {
+    header('Location: ../Unauthorized.php'); // Redirect to unauthorized page if not admin
+    exit();
+}
 
 // Function to display history information table
 function displayHeader() {
@@ -24,6 +36,7 @@ function displayHeader() {
     }
 }
 
+// Function to display verse information table
 function displayVerse() {
     global $connection_mysql;
 
@@ -84,11 +97,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["replace_verse"])) {
 
 ?>
 
-<!-- Lines 1-147 written by Thomas -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Glory Goodness Church</title>
+    <title>Edit Home Page</title>
     <link rel="stylesheet" href="../../Church/Styles/Dashboard.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
@@ -172,6 +184,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["replace_verse"])) {
         </div>
 
         <div class="AddInfo">
+            <!-- Displays header table -->
             <div class="centered-table">
                 <?php displayHeader(); ?>
             </div>
@@ -179,6 +192,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["replace_verse"])) {
             <br><br>
             <h2>Replace Main Page Header</h2><br>
             
+            <!-- Form to get new header information -->
             <div class="centered-form">
                 <div class="form-container">
                     <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" enctype="multipart/form-data">
@@ -193,6 +207,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["replace_verse"])) {
 
             <br><br>
 
+            <!-- Displays verse table -->
             <div class="centered-table">
                 <?php displayVerse(); ?>
             </div>
@@ -200,6 +215,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["replace_verse"])) {
             <br><br>
             <h2>Replace Footer Verses</h2><br>
 
+            <!-- Form to get new verse information -->
             <div class="centered-form">
                 <div class="form-container">
                     <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" enctype="multipart/form-data">

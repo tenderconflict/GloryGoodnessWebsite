@@ -1,3 +1,4 @@
+<!-- This page notifies the user that the reset email has been sent -->
 <!-- All lines written by Brandon Eacho -->
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +20,7 @@
             <h1>Email Sent</h1>
         </div>
 
-        <div class="AdminLinks">
+        <div class="AddInfo">
             <h2>Reset Email Sent</h2>
             <br><br>
             <p>An email containing instructions to reset your password has been sent to your email address. Please check your inbox (and spam folder) and follow the instructions provided.</p>

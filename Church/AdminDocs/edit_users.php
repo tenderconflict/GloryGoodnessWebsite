@@ -1,8 +1,21 @@
+<!-- This page allows the admin to edit the information of a selected user. -->
 <!-- All lines written by Brandon Eacho -->
 <?php
 
 include('../db_connection.php');
 
+// Check if user is an admin
+function isAdmin() {
+    return (isset($_SESSION['user']) && $_SESSION['user']['UserRole'] === 'admin');
+}
+
+// Restrict access if user is not an admin
+if (!isAdmin()) {
+    header('Location: ../Unauthorized.php'); // Redirect to unauthorized page if not admin
+    exit();
+}
+
+// Determines if there is a user with selected ID
 if(isset($_GET['id'])) {
     $userId = $_GET['id'];
 
@@ -43,7 +56,6 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_user'])) {
 }
 ?>
 
-<!-- Lines 1-147 written by Thomas -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -74,6 +86,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_user'])) {
             <br>
             <h2>Edit User: <?php echo $user['FirstName'] . " " . $user['LastName']; ?></h2><br><br><br>
 
+            <!-- Form that recieves new information on user -->
             <div class="centered-form">
                 <div class="form-container">
                     <form method="post">

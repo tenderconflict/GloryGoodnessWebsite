@@ -1,8 +1,20 @@
+<!-- This page allows admin to pick which users profile they want to edit -->
 <!-- All lines written by Brandon Eacho -->
 <?php
 session_start();
 
 include('../db_connection.php');
+
+// Check if user is an admin
+function isAdmin() {
+    return (isset($_SESSION['user']) && $_SESSION['user']['UserRole'] === 'admin');
+}
+
+// Restrict access if user is not an admin
+if (!isAdmin()) {
+    header('Location: ../Unauthorized.php'); // Redirect to unauthorized page if not admin
+    exit();
+}
 
 // Function to display users
 function displayUsers() {
@@ -27,7 +39,7 @@ function displayUsers() {
 
 <head>
     
-    <title>Glory Goodness Church</title>
+    <title>Edit Users</title>
     <link rel="stylesheet" href="../Styles/Dashboard.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
@@ -48,6 +60,7 @@ function displayUsers() {
             <h1>Edit a User</h1>
         </div>
 
+        <!-- Displays users -->
         <div class="AddInfo">
             <h2>Pick a User to Edit:</h2>
             <br>

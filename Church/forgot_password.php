@@ -1,8 +1,10 @@
+<!-- This page allows the user to enter their email to reset their password -->
 <!-- All lines written by Brandon Eacho -->
 <?php
 session_start();
 include('db_connection.php');
 
+//Sends email
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!empty($_POST["email"])) {
         $email = $_POST["email"];
@@ -20,6 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
+//Generates the reset token that determines whos password is reset.
 function generate_reset_token($email) {
     global $connection_mysql;
 
@@ -50,6 +53,7 @@ function generate_reset_token($email) {
     }
 }
 
+//Generates email
 function send_reset_email($email, $reset_token) {
     $reset_link = "http://www.glorygoodnesschurch.com/Church/reset_password.php?token=$reset_token";
     $to = $email;
@@ -79,13 +83,17 @@ function send_reset_email($email, $reset_token) {
         <h1>Forgot Password</h1>
     </div>
     
-    <div class="AdminLinks">
+    <div class="AddInfo">
         <h2>Forgot Password</h2><br><br>
-        <form method="post">
-           <label for="email">Email:</label><br><br>
-           <input type="email" id="email" name="email" required><br><br>
-           <input type="submit" value="Reset Password">
-        </form>
+        <div class="centered-form">
+            <div class="form-container">
+                <form method="post">
+                <label for="email">Email:</label><br><br>
+                <input type="email" id="email" name="email" required><br><br>
+                <input type="submit" value="Reset Password">
+                </form>
+            </div>
+        </div>
         <?php if (isset($error)) echo "<p>Error: $error</p>"; ?>
     </div>
     <?php 

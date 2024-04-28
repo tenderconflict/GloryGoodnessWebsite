@@ -84,7 +84,7 @@
 
 .AddInfo {
     height: auto;
-    min-height: 220px;
+    min-height: 45vh;
     overflow: auto;
     text-align: center;
     align-items: center;
@@ -102,6 +102,8 @@
 
 .AddInfo li {
     margin: 0;
+    align-items: center;
+    justify-content: center;
 }
 
 .AddInfo a {

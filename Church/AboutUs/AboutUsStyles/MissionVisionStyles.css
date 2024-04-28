@@ -203,6 +203,7 @@ background-position-x: -10;
     justify-content: center;
     align-items: center;
     height: auto;
+    min-height: 45vh;
     background-image: url(../Pictures/HomepageBannerImage.jpg);
     background-position: center;
     font-size: 24px;
@@ -348,3 +349,45 @@ text-align: center;
 
 /* Vision/Mission */
 
+.container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+  }
+  header {
+    background: rgb(243, 219, 83);
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 24px;
+  }
+  .subtitle {
+    text-align: center;
+    color: #333;
+    font-size: 20px;
+    padding: 10px 0;
+    margin-top: 10px;
+    background-color: royalblue ;
+  }
+
+  h2 {
+    color: royalblue;
+    margin-bottom: 10px;
+  }
+  ol {
+    
+    padding-left: 40px;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  li:before {
+    color: rgb(253, 238, 151);
+    font-weight: bold;
+  }
+  .dates {
+    font-style: italic;
+    margin-bottom: 10px;
+  }
