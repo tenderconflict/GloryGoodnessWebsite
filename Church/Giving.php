@@ -43,15 +43,17 @@ vh1 - use this for vietnamese headers -->
   <div id="WhyGive" class="tabcontent">
 	<div class="grid-containerwhygive">
 		<enh1>Importance of Donating</enh1>
-		<vh1>translation here</vh1>
+		<vh1>Điều quan trọng của việc Dâng Hiến</vh1>
 	  <div class="whygive-item">
 		
 		<p>The Bible calls believers to tithe a portion of their income. Leviticus 27:30 states, “A tithe of everything from the land, whether grain from the soil or fruit from the trees, belongs to the Lord; it is holy to the Lord."
 			Tithing expresses our gratitude for all that God has done for us, and contributes to our church's spirtual growth. 
 		</p>
+		<p style = "padding-top: 3vw;">Kinh Thánh kêu gọi tín đồ dâng hiến một phần tiền lương mà họ nhận được. Lê-vi-ký nói rằng, "Một phần mười mùa màng thuộc về Chúa kể cả các hoa lợi trong đồng ruộng hay các trái cây. Phần mười đó là thánh cho Chúa." Việc dâng hiến là cách để bày tỏ sự biết ơn đối với những việc Chúa đã làm cho chúng ta, và đóng góp vào sự phát triển thuộc linh của hội thánh.  </p>
+
 	  </div>
 	  <enh1>How to Donate</enh1>
-	  <vh1>translation here</vh1>
+	  <vh1></vh1>
 
 	  <div class="whygive-item">
 		
@@ -59,7 +61,7 @@ vh1 - use this for vietnamese headers -->
 		<p>To submit your donation, click on the desired tab link above. You can donate through Zelle, PayPal, or in person. PayPal allows you to donate with your 
 			credit/debit card online and does not require you to have a PayPal account. If you do not want to donate online, you can donate in person using cash or check. Finally, you can 
 		read more about how to donate towards the construction of a permanent building for our church by viewing the "Donation Pledge" tab. Thank you for supporting the mission of Glory Goodness Church! </p>
-	  
+		<p style = "padding-top: 3vw;">Để dâng hiến, vui lòng nhấn vào các ô tướng ứng. Quý vị có thể dâng hiến qua Zelle, PayPal, hoặc trực tiếp. Qua PayPal, quý vị có thể dâng hiến bằng thẻ tín dụng trực tuyến và không cần phải có tài khoản PayPal. Nếu quý vị không muốn dâng hiến trực tuyến, quý vị có thể dâng hiến trực tiếp bằng tiền mặt hoặc ngân phiếu. Cuối cùng, quý vị có thể tìm hiểu thêm vẻ cách dân ghiến cho việc xây dựng hội thánh trong phần "Donation Pledge". Cảm ơn sự ủng hộ của quý vị cho mục vụ của Hội Thánh VInh Hiển Tốt Lành.  </p>
 	</div>
 	</div>
 	</div>
