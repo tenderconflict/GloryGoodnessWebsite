@@ -1,3 +1,4 @@
+<!-- This page allows the users to enter their new password -->
 <!-- All lines written by Brandon Eacho -->
 <?php
 include('db_connection.php');
@@ -97,17 +98,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <h1>Reset Password</h1>
         </div>
 
-        <div class="AdminLinks">
+        <div class="AddInfo">
             <h2>Reset Password</h2><br><br>
-            <form method="post">
-                <label for="password">New Password:</label><br><br>
-                <input type="password" id="password" name="password" required><br><br>
-                <label for="confirm_password">Confirm Password:</label><br><br>
-                <input type="password" id="confirm_password" name="confirm_password" required><br><br>
-                <input type="hidden" name="token" value="<?php echo htmlspecialchars($reset_token); ?>">
-                <input type="submit" value="Reset Password">
-            </form>
-
+            <div class="centered-form">
+                <div class="form-container">
+                    <form method="post">
+                        <label for="password">New Password:</label><br><br>
+                        <input type="password" id="password" name="password" required><br><br>
+                        <label for="confirm_password">Confirm Password:</label><br><br>
+                        <input type="password" id="confirm_password" name="confirm_password" required><br><br>
+                        <input type="hidden" name="token" value="<?php echo htmlspecialchars($reset_token); ?>">
+                        <input type="submit" value="Reset Password">
+                    </form>
+                </div>
+            </div>
             <br>
             <?php if (isset($error)) echo "<p>Error: $error</p>"; ?>
         </div>

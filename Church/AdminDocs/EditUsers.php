@@ -1,3 +1,4 @@
+<!-- This page allows admin to pick which users profile they want to edit -->
 <!-- All lines written by Brandon Eacho -->
 <?php
 session_start();
@@ -27,7 +28,7 @@ function displayUsers() {
 
 <head>
     
-    <title>Glory Goodness Church</title>
+    <title>Edit Users</title>
     <link rel="stylesheet" href="../Styles/Dashboard.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
@@ -48,6 +49,7 @@ function displayUsers() {
             <h1>Edit a User</h1>
         </div>
 
+        <!-- Displays users -->
         <div class="AddInfo">
             <h2>Pick a User to Edit:</h2>
             <br>

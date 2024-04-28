@@ -1,8 +1,11 @@
+<!-- This page is the gub for all admin functionality. This page houses the links to each admin page. The link for this page
+     will be visible in place of the login button once an admin has signed in.  -->
+<!--  Styled by Thomas Doss and Brandon Eacho -->
 <?php
 session_start();
 ?>
 
-<!-- Lines 1-147 written by Thomas -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,6 +30,7 @@ session_start();
             
         </div>
 
+        <!-- All links -->
         <div class="AdminLinks">
             <br><br>
             <h1>Choose What To Edit:</h1>
@@ -36,6 +40,7 @@ session_start();
             <li class="menu-item"><a href="AdminDocs/AddUsers.php">Add and Delete Users</a></li><br>
             <li class="menu-item"><a href="AdminDocs/editStaff.php">Add and Delete Staff</a></li><br>
             <li class="menu-item"><a href="AdminDocs/editHistory.php">Add and Delete History</a></li><br>
+            <li class="menu-item"><a href="AdminDocs/testLogin.php">Test Login</a></li><br>
             <br><br>
             <li class="menu-item"><a href="AdminDocs/signout.php">Sign Out</a></li>
 

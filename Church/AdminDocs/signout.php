@@ -1,3 +1,4 @@
+<!-- This page allows a user to sign out -->
 <!-- All lines written by Brandon Eacho -->
 <?php
 session_start();
@@ -28,11 +29,14 @@ session_start();
             <h1>Sign Out</h1>
         </div>
 
-        <div class="AdminLinks">
+        <!-- Gives user an option to sign out if currently logged in or 
+             takes them to the login page if they are not currently logged in -->
+        <div class="AddInfo">
+            <br><br><br><br>
                 <?php if (isset($_SESSION['user'])): ?>
-                    <a href="signoutCode.php">Log Out</a>
+                    <li class="menu-item"><a href="signoutCode.php">Log Out</a></li>
 				<?php else: ?>
-        			<a href="../loginChurch.php">Log In</a>
+        			<li class="menu-item"><a href="../loginChurch.php">Log In</a></li>
                 <?php endif; ?>
         </div>
 

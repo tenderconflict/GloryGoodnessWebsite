@@ -1,3 +1,4 @@
+<!-- This page allows admin to edit all of the staff page. -->
 <!-- All lines written by Brandon Eacho -->
 <?php
 include('../db_connection.php');
@@ -36,6 +37,7 @@ function displayMainStaffInfo() {
     }
 }
 
+// Function to display main staff bio table
 function displayMainStaffBio() {
     global $connection_mysql;
 
@@ -73,6 +75,7 @@ function displayMainStaffBio() {
     }
 }
 
+//Function to display staffer info table
 function displayStafferInfo()
 {
     global $connection_mysql;
@@ -107,7 +110,7 @@ function displayStafferInfo()
     }
 }
 
-
+//Function to fetch staff names and ids so they can be used to add bio
 function fetchStaffNamesAndIds() {
     global $connection_mysql;
 
@@ -128,15 +131,25 @@ function fetchStaffNamesAndIds() {
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["delete"])) {
     $staffId = $_POST["staffId"];
 
-    $sql = "DELETE FROM StaffInfo WHERE StaffID = $staffId";
+    // Delete associated bio links first
+    $sqlDeleteBioLinks = "DELETE FROM StaffInfoBio WHERE StaffID = $staffId";
+    if (mysqli_query($connection_mysql, $sqlDeleteBioLinks)) {
+        echo "Associated bio links deleted successfully.";
+    } else {
+        echo "Error deleting associated bio links: " . mysqli_error($connection_mysql);
+    }
 
-    if (mysqli_query($connection_mysql, $sql)) {
-        echo "Staff member deleted successfully.";
+    // Delete the staff member
+    $sqlDeleteStaff = "DELETE FROM StaffInfo WHERE StaffID = $staffId";
+    if (mysqli_query($connection_mysql, $sqlDeleteStaff)) {
+        // Refresh the page after successful deletion
+        header("Refresh:0");
     } else {
         echo "Error deleting staff member: " . mysqli_error($connection_mysql);
     }
 }
 
+// Delete a staff bio line
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["delete3"])) {
     $bioLineID = $_POST["bioLineID"];
 
@@ -149,6 +162,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["delete3"])) {
     }
 }
 
+// Delete church staffer
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["delete2"])) {
     $infoId = $_POST["infoId"];
 
@@ -197,6 +211,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["add_staff"])) {
     }
 }
 
+//Add new staff bio line
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["add_staff_bio"])) {
     $selected_staff_id = $_POST["selected_staff"];
     $staff_bio = $_POST["new_staff_bio"];
@@ -210,6 +225,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["add_staff_bio"])) {
     }
 }
 
+//Add new staffer
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["add_staffer"])) {
     $stafferPosition = $_POST["new_staffer_position"];
     $stafferName = $_POST["new_staffer_name"];
@@ -226,11 +242,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["add_staffer"])) {
 
 ?>
 
-<!-- Lines 1-147 written by Thomas -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Glory Goodness Church</title>
+    <title>Edit Staff</title>
     <link rel="stylesheet" href="../../Church/Styles/Dashboard.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
@@ -293,6 +308,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["add_staffer"])) {
 
             <h2>Add New Staff Member</h2><br>
             
+            <!-- Form to get information for new staff member -->
             <div class="centered-form">
                 <div class="form-container">
                     <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" enctype="multipart/form-data">
@@ -310,6 +326,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["add_staffer"])) {
             <br><br>
             <h2>Current Added Staff</h2><br>
 
+            <!-- Display main staff info table -->
             <div class="centered-table">
                 <?php displayMainStaffInfo(); ?>
             </div>
@@ -320,6 +337,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["add_staffer"])) {
 
             <h1>Main Staff Bio Lines</h1><br><br>
 
+            <!-- Form to get information for new staff bio line -->
             <div class="centered-form">
                 <div class="form-container">
                     <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" enctype="multipart/form-data">
@@ -341,6 +359,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["add_staffer"])) {
             <br><br>
             <h2>Current Staff Bio</h2><br>
 
+            <!-- Display main staff bio table -->
             <div class="centered-table">
                 <?php displayMainStaffBio(); ?>
             </div><br><br>
@@ -349,6 +368,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["add_staffer"])) {
 
             <h2>Add New Other Staff Member</h2><br>
 
+            <!-- Form to get information for new staffer -->
             <div class="centered-form">
                 <div class="form-container">
                     <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
@@ -364,6 +384,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["add_staffer"])) {
             <br><br>
             <h2>Current Added Staff</h2><br>
 
+            <!-- Display staffer table -->
             <div class="centered-table">
                 <?php displayStafferInfo() ?>
             </div>

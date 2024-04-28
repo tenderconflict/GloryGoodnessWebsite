@@ -1,3 +1,4 @@
+<!-- This page allows the admin to edit the information on ChurchHistory.php.  -->
 <!-- All lines written by Brandon Eacho -->
 <?php
 include('../db_connection.php');
@@ -51,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["delete"])) {
 
 
 
-// Add a new history
+// Add new history
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["add_history"])) {
     $historyTitle = $_POST["new_history_title"];
     $historyText = $_POST["new_history_text"];
@@ -68,11 +69,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["add_history"])) {
 
 ?>
 
-<!-- Lines 1-147 written by Thomas -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Glory Goodness Church</title>
+    <title>Edit History</title>
     <link rel="stylesheet" href="../../Church/Styles/Dashboard.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
@@ -133,6 +133,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["add_history"])) {
             <br>
             <h1>Add New History</h1><br>
             
+            <!-- Form to get new information for the history page -->
             <div class="centered-form">
                 <div class="form-container">
                     <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" enctype="multipart/form-data">
@@ -147,7 +148,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["add_history"])) {
 
             <br><br>
 
-            <h1>Current Users</h1><br>
+            <!-- Displays current history information -->
+            <h1>Current History</h1><br>
             <div class="centered-table">
                 <?php displayHistory(); ?>
             </div>
