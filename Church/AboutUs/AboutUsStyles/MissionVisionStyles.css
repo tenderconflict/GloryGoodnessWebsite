@@ -154,6 +154,7 @@ ul li:hover .submenu {
 
 
 .content {
+    
     background: linear-gradient(to bottom, white, rgb(243, 219, 83));
     display: flex;
     justify-content: center;
@@ -162,7 +163,6 @@ ul li:hover .submenu {
 
     color: royalblue;
     text-shadow: 0 0 3px #ffffff, 0 0 5px #ffffff;
-
     padding: 40px;
 }
 
@@ -203,6 +203,7 @@ background-position-x: -10;
     justify-content: center;
     align-items: center;
     height: auto;
+    min-height: 45vh;
     background-image: url(../Pictures/HomepageBannerImage.jpg);
     background-position: center;
     font-size: 24px;
@@ -226,7 +227,8 @@ background-position-x: -10;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Arial, Helvetica, sans-serif;color: royalblue;
+    font-family: Arial, sans-serif;
+    color: royalblue;
   }
   
   p {

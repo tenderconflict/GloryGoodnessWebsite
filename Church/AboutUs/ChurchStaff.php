@@ -13,39 +13,145 @@ $result = $connection_mysql->query($sql);
 $sql2 = "SELECT StaffPosition, StaffInfoName FROM ChurchStaffInfo;";
 $results = $connection_mysql->query($sql2);
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Glory Goodness Church</title>
-    <link rel="stylesheet" href="AboutUsStyles/MissionVisionStyles.css">
+    <link rel="stylesheet" href="AboutUsStyles/ChurchStaff.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <style>
-        .staff-info {
-            margin-bottom: 20px;
+        /* Put the modified CSS here */
+        /*code may be messy, sorry!! -TD*/
+        /* Lines 1-450 written by TD*/
+        *{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main{
+            max-width: 100%;
+            overflow-x: hidden;
+            width: 100%;
+            background: linear-gradient(to bottom, white, rgb(52, 52, 156));
+            position: relative;
+            background-position: center;
+            background-size: cover;
+            height: fit-content;
+            overflow: hidden;
+        }
+
+        .navbar{
+            width: 100%;
+            height: auto;
+            background-color: white;
+        }
+
+        .menu{
+            display:flex;
+            justify-content: space-around;
+            text-align: center;
+            align-items: center;
+            list-style: none;
+            margin: 0;
+        }
+
+        .menu ul li {
+            margin-left: 25px;
+            margin-right: 25px;
+            font-size: 20px;
+            position: relative;
+        }
+
+        .menu ul li a:hover {
+            color: rgb(214, 193, 0);
+        }
+
+        ul li a{
+            text-decoration: none;
+            color: green;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            transition: .5s ease-in-out;
+        }
+
+        ul li a:hover{
+            color: rgb(214, 193, 0);
+        }
+
+        ul .submenu {
             text-align: left;
+            margin: 0;
+            z-index: 2;
+            display: none;
+            position: absolute;
+            top: 90%; 
+            left: 0;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            padding: 5px;
+            width: 300%; 
+            line-height: 26px;
         }
 
-        .staff-name {
-            margin-bottom: 10px;
+        ul li:hover .submenu {
+            display:block; 
         }
 
-        .staff-image-bio {
+        .content {
+            background: linear-gradient(to bottom, white, rgb(243, 219, 83));
+            font-family: Arial, Helvetica, sans-serif;
+            color: royalblue;
+            text-shadow: 0 0 3px #ffffff, 0 0 5px #ffffff;
+            padding: 40px;
+        }
+
+        .container {
             display: flex;
+            justify-content: space-around;
             align-items: flex-start;
+            padding: 20px;
+            background-color: rgb(0, 0, 145)
         }
 
-        .staff-image {
-            margin-right: 20px;
+        .header-content {
+            text-align: center;
+            margin-bottom: 20px;
+            list-style-type: none;
         }
 
-        .staff-image img {
-            max-width: 200px;
-            max-height: 200px;
+        .paragraph-content {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(1, 19, 37);
         }
 
-        .staff-bio {
-            text-align: left;
+        .SloganBanner2 {
+            z-index: 1;
+            width: 100%;
+            position: relative;
+            top: 0px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: left;
+            height: auto;
+            font-size: 24px;
+            font-family: "Arial", sans-serif;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            opacity: 0.9;
+            flex-direction: column;
+        }
+
+        .SloganBanner2 p {
+            color: #777;
+            align-items: left;
+            font-size: 22px;
+            font-family: "Arial", sans-serif;
         }
     </style>
 </head>
@@ -57,7 +163,7 @@ $results = $connection_mysql->query($sql2);
     <div class="content">
         <h1>Church Staff</h1>
     </div>
-    <div class="SloganBanner">
+    <div class="SloganBanner2">
         <?php
         $currentStaffID = null;
         if ($result->num_rows > 0) {
@@ -89,6 +195,16 @@ $results = $connection_mysql->query($sql2);
                 echo "</div>"; // Close staff-bio div
                 echo "</div>"; // Close staff-image-bio div
                 echo "</div>"; // Close staff-info div
+            }
+        } else {
+            echo "No results found.";
+        }
+
+        if ($results->num_rows > 0) {
+            // Output data for each row
+            while($row = $results->fetch_assoc()) {
+                echo "<h2>" . $row["StaffPosition"]. "</h2> <br>";
+                echo "<p>" . $row["StaffInfoName"]. "</p>";
             }
         } else {
             echo "No results found.";

@@ -1,10 +1,11 @@
+<!-- This page allows users to login to the system -->
 <!-- All lines written by Brandon Eacho -->
 <?php
 
 include('db_connection.php');
 
-// Function to authenticate user
-function authenticateUser($username, $password) {
+//Uses information from form to attempt to login to the system
+function loginAttempt($username, $password) {
     global $connection_mysql;
 
     $query = "SELECT i.UserID, p.Username, p.PassKey, i.UserRole
@@ -20,24 +21,22 @@ function authenticateUser($username, $password) {
     if ($result->num_rows === 1) {
         $user = $result->fetch_assoc();
         if(password_verify($password, $user['PassKey'])){
-        $_SESSION['user'] = $user;
-        return true;
+            $_SESSION['user'] = $user;
+            return true;
         }
-    } else {
-        return false;
     }
+    return false;
 }
 
-// Function to limit login attempts
+//Limits user to 5 attempts before it locks the system down
 function limitLoginAttempts($username) {
     $login_attempts = isset($_SESSION['login_attempts']) ? $_SESSION['login_attempts'] : 0;
     $login_attempts++;
     $_SESSION['login_attempts'] = $login_attempts;
 
-    // Limit login attempts to 5 within 10 minutes
     if ($login_attempts >= 5) {
         $last_login_time = isset($_SESSION['last_login_time']) ? $_SESSION['last_login_time'] : 0;
-        if (time() - $last_login_time < 600) { // 10 minutes = 600 seconds
+        if (time() - $last_login_time < 600) {
             return true; // Too many login attempts
         } else {
             $_SESSION['login_attempts'] = 0; // Reset login attempts
@@ -48,16 +47,15 @@ function limitLoginAttempts($username) {
     return false;
 }
 
-// Check if login form is submitted
+//Runs function the determines where user is sent after login is successful
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
     $username = htmlspecialchars($_POST['username']);
     $password = htmlspecialchars($_POST['password']);
 
-    // Check if login attempts limit reached
     if (limitLoginAttempts($username)) {
         $login_error = 'Too many login attempts. Please try again later.';
     } else {
-        if (authenticateUser($username, $password)) {
+        if (loginAttempt($username, $password)) {
             $role = $_SESSION['user']['UserRole'];
             switch ($role) {
                 case 'admin':

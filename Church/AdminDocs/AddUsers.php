@@ -1,8 +1,21 @@
+<!-- This page allows admin to add and delete users from the system. -->
 <!-- All lines written by Brandon Eacho -->
 <?php
 
 include('../db_connection.php');
 
+// Check if user is an admin
+function isAdmin() {
+    return (isset($_SESSION['user']) && $_SESSION['user']['UserRole'] === 'admin');
+}
+
+// Restrict access if user is not an admin
+if (!isAdmin()) {
+    header('Location: ../Unauthorized.php'); // Redirect to unauthorized page if not admin
+    exit();
+}
+
+// Displays users to delete
 function displayUsers() {
     global $connection_mysql;
 
@@ -44,6 +57,7 @@ function displayUsers() {
     }
 }
 
+//Adds users to the database
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_user'])) {
     $newFirstName = $_POST['new_first_name'];
     $newLastName = $_POST['new_last_name'];
@@ -75,7 +89,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_user'])) {
     exit();
 }
 
-// Delete history
+// Delete users
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["delete"])) {
     $userId = $_POST["userId"];
 
@@ -103,7 +117,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["delete"])) {
 
 <head>
     
-    <title>Glory Goodness Church</title>
+    <title>Add Users</title>
     <link rel="stylesheet" href="../../Church/Styles/Dashboard.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
@@ -165,6 +179,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["delete"])) {
             <br>
             <h1>Add Users:</h1><br>
 
+            <!-- Form recieving information on new users -->
             <div class="centered-form">
                 <div class="form-container">
                     <form method="post">
@@ -192,6 +207,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["delete"])) {
 
             <br><br>
 
+            <!-- Displays current users -->
             <h1>Current Users</h1><br>
             <div class="centered-table">
                 <?php displayUsers(); ?>
