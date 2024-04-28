@@ -222,9 +222,9 @@ background-position-x: -10;
 }
   
   p {
-    color: white;
+    color: green;
     align-items: center;
-    font-size: 28px;
+    font-size: 20px;
   }
 
 .ContactChurch{
@@ -345,10 +345,12 @@ text-align: center;
     border: 2px solid rgba(0, 0, 0, 0.1); 
     padding: 20px;
     box-sizing: border-box;
+    text-align: center;
   }
   
   .vision {
     color: green; 
+    font-size: ;
   }
   
   .mission {
@@ -363,7 +365,7 @@ text-align: center;
   .info-text {
     text-align: center; 
     padding: 20px;
-    color: rgb(243, 219, 83); 
+    background-color: rgb(52, 52, 156); 
   }
 
   .boxvision h2 {
