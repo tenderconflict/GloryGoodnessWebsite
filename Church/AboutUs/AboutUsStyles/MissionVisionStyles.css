@@ -149,7 +149,7 @@ h1 {
 }
 h2 {
     color: royalblue;
-    font-size: 20px; 
+    font-size: 24px; 
     margin-bottom: 10px;
 }
 
@@ -221,11 +221,7 @@ background-position-x: -10;
     font-family: "Arial", sans-serif;
 }
   
-  p {
-    color: green;
-    align-items: center;
-    font-size: 20px;
-  }
+  
 
 .ContactChurch{
     
@@ -346,20 +342,25 @@ text-align: center;
     padding: 20px;
     box-sizing: border-box;
     text-align: center;
+    font-size: 25px;
+    height: 300px;
   }
   
   .vision {
     color: green; 
-    font-size: ;
+    font-size: 20px;
   }
   
   .mission {
     color: green; 
+    font-size: 20px;
+
   }
   .verse {
     margin-top: 20px;
-    font-style: italic;
     color: green;
+    margin-bottom: 10px;
+    
   }
   
   .info-text {
@@ -369,24 +370,26 @@ text-align: center;
   }
 
   .boxvision h2 {
-    font-size: 24px; 
+    font-size: 30px; 
     font-weight: bold; 
     color: green;
   }
 
   .boxmission h2 {
-    font-size: 24px; 
+    font-size: 30px; 
     font-weight: bold; 
     color: green;
   }
 
   .verse p strong {
-    font-size: 20px; 
+    font-size: 24px; 
     font-weight: bold; 
     color: royalblue;
+    margin-bottom: 20px;
+    font-style: italic;
   }
   .content h1 {
-    font-size: 25px;
+    font-size: 40px;
   }
 
   .boxvision p {
@@ -397,4 +400,16 @@ text-align: center;
   .boxmission p {
     font-size: 20px;
     color: green;
+  }
+
+  p {
+    color: green;
+    align-items: center;
+    font-size: 22px;
+  }
+
+  .info-text p {
+    color: white;
+    align-items: center;
+    font-size: 24px;
   }
