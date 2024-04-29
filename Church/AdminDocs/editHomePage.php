@@ -65,35 +65,51 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["replace_header"])) {
     $englishHeader = $_POST["replace_english_header"];
     $vietnameseHeader = $_POST["replace_vietnamese_header"];
 
-    $sql = "UPDATE MainPageHeader SET EnglishHeader = '$englishHeader', VietnameseHeader = '$vietnameseHeader' WHERE HeaderID = 1";
+    // Prepare the SQL statement
+    $sql = "UPDATE MainPageHeader SET EnglishHeader = ?, VietnameseHeader = ? WHERE HeaderID = 1";
+    $stmt = $connection_mysql->prepare($sql);
 
-    if (mysqli_query($connection_mysql, $sql)) {
+    // Bind parameters and execute the statement
+    $stmt->bind_param("ss", $englishHeader, $vietnameseHeader);
+    
+    if ($stmt->execute()) {
         echo "Header replaced successfully.";
     } else {
-        echo "Error replacing header: " . mysqli_error($connection_mysql);
+        echo "Error replacing header: " . $stmt->error;
     }
 
+    // Close the statement
+    $stmt->close();
 }
 
-//Add a new verse
+
+// Add a new verse
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["replace_verse"])) {
     $englishVerse = $_POST["replace_english_verse"];
     $englishVerseText = $_POST["replace_english_verse_text"];
     $vietnameseVerse = $_POST["replace_vietnamese_verse"];
     $vietnameseVerseText = $_POST["replace_vietnamese_verse_text"];
 
+    // Prepare the SQL statement
     $sql = "UPDATE FooterInfo 
-            SET EnglishVerse = '$englishVerse', EnglishVerseText = '$englishVerseText', 
-                VietnameseVerse = '$vietnameseVerse', VietnameseVerseText = '$vietnameseVerseText'
+            SET EnglishVerse = ?, EnglishVerseText = ?, 
+                VietnameseVerse = ?, VietnameseVerseText = ?
             WHERE FooterID = 1";
+    $stmt = $connection_mysql->prepare($sql);
 
-    if (mysqli_query($connection_mysql, $sql)) {
+    // Bind parameters and execute the statement
+    $stmt->bind_param("ssss", $englishVerse, $englishVerseText, $vietnameseVerse, $vietnameseVerseText);
+    
+    if ($stmt->execute()) {
         echo "Verse replaced successfully.";
     } else {
-        echo "Error replacing verse: " . mysqli_error($connection_mysql);
+        echo "Error replacing verse: " . $stmt->error;
     }
 
+    // Close the statement
+    $stmt->close();
 }
+
 
 ?>
 

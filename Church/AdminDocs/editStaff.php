@@ -190,6 +190,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["delete2"])) {
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["add_staff"])) {
     $staffName = $_POST["new_staff_name"];
     $staffBio = $_POST["new_staff_bio"];
+    $staffPicture = null;
 
     // Check if a file was uploaded
     if (isset($_FILES["new_staff_picture"]) && $_FILES["new_staff_picture"]["error"] === UPLOAD_ERR_OK) {
@@ -209,47 +210,71 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["add_staff"])) {
         } else {
             echo "Error uploading file.";
         }
-    } else {
-        echo "No file was uploaded.";
     }
 
-    $sql = "INSERT INTO StaffInfo (StaffName, StaffPicture, StaffBio) VALUES ('$staffName', '$staffPicture', '$staffBio')";
+    // Prepare the SQL statement
+    $sql = "INSERT INTO StaffInfo (StaffName, StaffPicture, StaffBio) VALUES (?, ?, ?)";
+    $stmt = $connection_mysql->prepare($sql);
 
-    if (mysqli_query($connection_mysql, $sql)) {
+    // Bind parameters and execute the statement
+    $stmt->bind_param("sss", $staffName, $staffPicture, $staffBio);
+    
+    if ($stmt->execute()) {
         echo "New staff member added successfully.";
     } else {
-        echo "Error adding staff member: " . mysqli_error($connection_mysql);
+        echo "Error adding staff member: " . $stmt->error;
     }
+
+    // Close the statement
+    $stmt->close();
 }
 
-//Add new staff bio line
+
+// Add new staff bio line
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["add_staff_bio"])) {
     $selected_staff_id = $_POST["selected_staff"];
     $staff_bio = $_POST["new_staff_bio"];
 
-    $sql = "INSERT INTO StaffInfoBio (StaffID, BioLineText) VALUES ('$selected_staff_id', '$staff_bio')";
+    // Prepare the SQL statement
+    $sql = "INSERT INTO StaffInfoBio (StaffID, BioLineText) VALUES (?, ?)";
+    $stmt = $connection_mysql->prepare($sql);
 
-    if (mysqli_query($connection_mysql, $sql)) {
+    // Bind parameters and execute the statement
+    $stmt->bind_param("is", $selected_staff_id, $staff_bio);
+    
+    if ($stmt->execute()) {
         echo "New staff bio added successfully.";
     } else {
-        echo "Error adding staff bio: " . mysqli_error($connection_mysql);
+        echo "Error adding staff bio: " . $stmt->error;
     }
+
+    // Close the statement
+    $stmt->close();
 }
 
-//Add new staffer
+
+// Add new staffer
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["add_staffer"])) {
     $stafferPosition = $_POST["new_staffer_position"];
     $stafferName = $_POST["new_staffer_name"];
 
-    $sql = "INSERT INTO ChurchStaffInfo (StaffPosition, StaffInfoName) VALUES ('$stafferPosition', '$stafferName')";
+    // Prepare the SQL statement
+    $sql = "INSERT INTO ChurchStaffInfo (StaffPosition, StaffInfoName) VALUES (?, ?)";
+    $stmt = $connection_mysql->prepare($sql);
 
-    if (mysqli_query($connection_mysql, $sql)) {
+    // Bind parameters and execute the statement
+    $stmt->bind_param("ss", $stafferPosition, $stafferName);
+    
+    if ($stmt->execute()) {
         echo "New staff member added successfully.";
     } else {
-        echo "Error adding staff member: " . mysqli_error($connection_mysql);
+        echo "Error adding staff member: " . $stmt->error;
     }
 
+    // Close the statement
+    $stmt->close();
 }
+
 
 ?>
 

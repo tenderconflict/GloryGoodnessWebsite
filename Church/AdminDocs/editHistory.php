@@ -68,14 +68,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["add_history"])) {
     $historyTitle = $_POST["new_history_title"];
     $historyText = $_POST["new_history_text"];
 
-    $sql = "INSERT INTO HistoryInfo (HistoryTitle, HistoryText) VALUES ('$historyTitle', '$historyText')";
+    // Prepare the SQL statement
+    $sql = "INSERT INTO HistoryInfo (HistoryTitle, HistoryText) VALUES (?, ?)";
+    $stmt = $connection_mysql->prepare($sql);
 
-    if (mysqli_query($connection_mysql, $sql)) {
+    // Bind parameters and execute the statement
+    $stmt->bind_param("ss", $historyTitle, $historyText);
+    
+    if ($stmt->execute()) {
         echo "New history added successfully.";
     } else {
-        echo "Error adding history: " . mysqli_error($connection_mysql);
+        echo "Error adding history: " . $stmt->error;
     }
 
+    // Close the statement
+    $stmt->close();
 }
 
 ?>
@@ -149,7 +156,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["add_history"])) {
                 <div class="form-container">
                     <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" enctype="multipart/form-data">
                         <label for="new_history_title">Title:</label>
-                        <input type="text" name="new_history_title" required><br><br>
+                        <input type="text" name="new_history_title"><br><br>
                         <label for="new_history_text">Text:</label>
                         <textarea name="new_history_text" required></textarea><br><br>
                         <button type="submit" name="add_history">Add History</button>
